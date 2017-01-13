@@ -1,0 +1,1114 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head id=Head1>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="开题报告.files/filelist.xml">
+<title> 无标题页 </title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>hp</o:Author>
+  <o:LastAuthor>hp</o:LastAuthor>
+  <o:Revision>8</o:Revision>
+  <o:TotalTime>3</o:TotalTime>
+  <o:Created>2014-10-30T12:44:00Z</o:Created>
+  <o:LastSaved>2014-11-18T06:17:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>355</o:Words>
+  <o:Characters>2028</o:Characters>
+  <o:Company>Hewlett-Packard Company</o:Company>
+  <o:Lines>16</o:Lines>
+  <o:Paragraphs>4</o:Paragraphs>
+  <o:CharactersWithSpaces>2379</o:CharactersWithSpaces>
+  <o:Version>11.5606</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+@font-face
+	{font-family:楷体_GB2312;
+	panose-1:2 1 6 9 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+@font-face
+	{font-family:"\@楷体_GB2312";
+	panose-1:2 1 6 9 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:新宋体;
+	panose-1:2 1 6 9 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+@font-face
+	{font-family:楷体;
+	panose-1:2 1 6 9 6 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-2147482945 953122042 22 0 262145 0;}
+@font-face
+	{font-family:"\@楷体";
+	panose-1:2 1 6 9 6 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-2147482945 953122042 22 0 262145 0;}
+@font-face
+	{font-family:"\@新宋体";
+	panose-1:2 1 6 9 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:widow-orphan;
+	font-size:10.5pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:38.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:26.9pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-26.9pt;
+	line-height:18.0pt;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;}
+p.MsoDate, li.MsoDate, div.MsoDate
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:5.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:widow-orphan;
+	font-size:10.5pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;}
+p.style1, li.style1, div.style1
+	{mso-style-name:style1;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:新宋体;
+	mso-bidi-font-family:宋体;}
+p.p16, li.p16, div.p16
+	{mso-style-name:p16;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:宋体;
+	mso-bidi-font-family:宋体;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 89.85pt 2.0cm 89.85pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	layout-grid:15.6pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:普通表格;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+<script language="JavaScript">
+ 
+/**//* 
+* 
+* @param {Object} cont 要导出的html元素内容的id,注意不要加双引号 
+* @param {Object} key 分页关键字 
+*/ 
+function AllAreaWord(cont,key) 
+{ 
+var oWD = new ActiveXObject("Word.Application"); 
+//默认为页面视图 
+var oDC = oWD.Documents.Add("", 0,0); 
+var oRange = oDC.Range(0, 1); 
+//var oRange1 = oDC.Range(0,2); 
+var sel = document.body.createTextRange(); 
+//参数为html元素id 
+sel.moveToElementText(cont); 
+sel.select(); 
+sel.execCommand("Copy"); 
+oRange.Paste(); 
+oWD.Application.Visible = true; 
+//得到打开后word的selection对象 
+var selection = oWD.Selection; 
+//设置字体大小 
+selection.Font.Size = 10; 
+//ctrl+A 全选操作 
+selection.WholeStory(); 
+//清除格式 
+selection.Find.ClearFormatting(); 
+//指定查找关键字 
+selection.Find.Text = key; 
+//^m为手动分页符标记 
+//向下查找 
+selection.Find.Forward = true; 
+selection.Find.Wrap = 1; 
+//不区分大小写 
+selection.Find.MatchCase = false; 
+//不匹配整个单词 
+selection.Find.MatchWholeWord = false; 
+//如果找到指定字符串返回真,否则返回false 
+while (selection.Find.Execute()) 
+{ 
+//插入分页符,分页符常量为7,具体可查word api 
+selection.InsertBreak(7); 
+} 
+
+window.close();
+} 
+</script>
+</head>
+
+<body lang=ZH-CN style='tab-interval:21.0pt'
+onload="javascript:AllAreaWord(test,'^');">
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal align=center style='margin-bottom:12.0pt;text-align:center'><b><span
+lang=EN-US style='font-size:21.0pt;font-family:楷体_GB2312;mso-hansi-font-family:
+宋体;mso-bidi-font-family:宋体'><br>
+<br>
+</span></b><b><span style='font-size:26.0pt;font-family:宋体;mso-bidi-font-family:
+宋体'>毕业论文（设计）开题报告</span></b><span lang=EN-US style='font-size:12.0pt;font-family:
+宋体;mso-bidi-font-family:宋体'><o:p></o:p></span></p>
+
+<div width=624>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:14.0pt'>&nbsp;</span><span lang=EN-US>&nbsp;</span><span
+lang=EN-US style='font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体'> <o:p></o:p></span></p>
+
+</div>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=624
+ style='width:467.8pt;border-collapse:collapse;mso-padding-alt:0cm 0cm 0cm 0cm'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:29.35pt'>
+  <td width="20%" valign=top style='width:20.0%;border:solid windowtext 1.0pt;
+  border-top:solid black 1.0pt;mso-border-alt:solid windowtext 1.0pt;
+  mso-border-top-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt;height:29.35pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  14.0pt;font-family:宋体;mso-bidi-font-family:宋体'>学生姓名：</span><span lang=EN-US
+  style='font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体'><o:p></o:p></span></p>
+  </td>
+  <td width="40%" valign=top style='width:40.0%;border-top:solid black 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext 1.0pt;mso-border-alt:solid windowtext 1.0pt;
+  mso-border-top-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt;height:29.35pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width="20%" valign=top style='width:20.0%;border-top:solid black 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext 1.0pt;mso-border-alt:solid windowtext 1.0pt;
+  mso-border-top-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt;height:29.35pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  14.0pt;font-family:宋体;mso-bidi-font-family:宋体'>学号：</span><span lang=EN-US
+  style='font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体'><o:p></o:p></span></p>
+  </td>
+  <td width="40%" valign=top style='width:40.0%;border-top:solid black 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-left-alt:solid windowtext 1.0pt;mso-border-alt:solid windowtext 1.0pt;
+  mso-border-top-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt;height:29.35pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:29.35pt'>
+  <td width="20%" valign=top style='width:20.0%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:29.35pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  14.0pt;font-family:宋体;mso-bidi-font-family:宋体'>指导教师：</span><span lang=EN-US
+  style='font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体'><o:p></o:p></span></p>
+  </td>
+  <td width="40%" valign=top style='width:40.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:29.35pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width="20%" valign=top style='width:20.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:29.35pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  14.0pt;font-family:宋体;mso-bidi-font-family:宋体'>职称：</span><span lang=EN-US
+  style='font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体'><o:p></o:p></span></p>
+  </td>
+  <td width="40%" valign=top style='width:40.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:29.35pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:29.35pt'>
+  <td width=657 colspan=4 valign=top style='width:492.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:29.35pt'>
+  <p class=MsoNormal style='margin-top:7.8pt;line-height:18.0pt'><span
+  style='font-size:14.0pt;font-family:宋体'>所选题目名称：</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:159.55pt'>
+  <td width=657 colspan=4 valign=top style='width:492.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:159.55pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体'>&nbsp; </span><span
+  style='font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体'>网上体育用品商城的设计与实现
+  <span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:29.35pt'>
+  <td width=657 colspan=4 valign=top style='width:492.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:29.35pt'>
+  <p class=MsoNormal style='margin-top:7.8pt;line-height:18.0pt'><span
+  style='font-size:14.0pt;font-family:宋体'>课题研究现状：</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;height:159.55pt'>
+  <td width=657 colspan=4 valign=top style='width:492.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:159.55pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体'>&nbsp; <o:p></o:p></span></p>
+  <p class=MsoNormal style='text-indent:24.0pt;mso-char-indent-count:2.0;
+  line-height:20.0pt;mso-line-height-rule:exactly'><span style='font-size:12.0pt;
+  mso-bidi-font-size:10.5pt;font-family:宋体'>随着社会高科技，商品经济化突飞猛进的发展，计算机的应用已经普及到经济和社会生活的各个领域。为了适应现代社会人们高度强烈的时间观念，电子商务网站为中小型企业、公司等的销售管理带来了极大的方便。电子商务网站能够为用户提供可靠的信息储存和快捷的信息处理手段。作为计算机应用的一部分，使用计算机对企业、公司的产品销售信息进行管理，具有手工管理所无法比拟的优点。因此，开发这样一套软件成为很有必要的事情，它能够具体化、合理化的管理单位的销售信息情况，用结构化的思维方式去了解计算机的工作原理。<span
+  lang=EN-US><o:p></o:p></span></span></p>
+  <p class=MsoNormal style='text-indent:24.0pt;mso-char-indent-count:2.0;
+  line-height:20.0pt;mso-line-height-rule:exactly'><span style='font-size:12.0pt;
+  mso-bidi-font-size:10.5pt;font-family:宋体'>计算机软硬件技术日新月异、突飞猛进，引领技术潮流，带来了巨大的社会改变，计算机已成为现代社会人们工作、生活、学习甚至娱乐不可或缺的工具。电子商务也随之日渐完善，其中网络购物也变成电子商务中重要的一部分。现在有很多网上购物形式的网站，著名的京东商城、当当网、卓越网就是其中的代表。这些网站给本系统的实现提供了很好的参考。<span
+  lang=EN-US><o:p></o:p></span></span></p>
+  <p class=MsoNormal style='text-indent:24.0pt;mso-char-indent-count:2.0;
+  line-height:20.0pt;mso-line-height-rule:exactly'><span style='font-size:12.0pt;
+  mso-bidi-font-size:10.5pt;font-family:宋体'>目前，电子商务中的网上购物已是日渐成熟的技术。电子商务网站中所涉及到网络技术及数据库技术也是日渐成熟，一套好的电子商务软件和公司网站相结合将会给公司带来新的利润增长点和更多的客户群。本系统的设计作为计算机应用的一部分，使用计算机对企业、公司的产品销售信息进行管理，具有手工管理所无法比拟的优点。例如：检索迅速、效率高、存储量大、安全性好、成本低廉等。这些优点能够极大的提高一个企业、公司销售管理的效率。本系统开发了基于<span
+  lang=EN-US>JSP</span>技术的电子商务网站，其开发主要包括后台数据库的建立和维护以及前台应用程序的开发两方面。前者要求建立起数据一致性和完整性、安全性的平台，而对于后者则要求应用程序功能完备、易操作易使用。项目开发的目的是可以满足购物者和管理员双方面的需求<span
+  lang=EN-US>,</span>也是特别为小型企业量身定做的一套电子商务管理系统，以期达到适合于小型企业运作及业务管理的目标。<span
+  lang=EN-US><o:p></o:p></span></span></p>
+  <p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:1.5'><span
+  lang=EN-US style='font-size:14.0pt;mso-fareast-font-family:楷体;mso-hansi-font-family:
+  楷体'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;height:40.2pt'>
+  <td width=657 colspan=4 valign=top style='width:492.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:40.2pt'>
+  <p class=MsoNormal style='margin-top:7.8pt;margin-right:0cm;margin-bottom:
+  0cm;margin-left:14.0pt;margin-bottom:.0001pt;text-indent:-14.0pt;line-height:
+  18.0pt'><span style='font-size:14.0pt;font-family:宋体'>课题研究目的：</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;height:159.05pt'>
+  <td width=657 colspan=4 valign=top style='width:492.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:159.05pt'>
+  <p class=MsoNormal style='text-indent:24.0pt;mso-char-indent-count:2.0;
+  line-height:20.0pt;mso-line-height-rule:exactly'><a name="OLE_LINK4"></a><a
+  name="OLE_LINK3"><span style='mso-bookmark:OLE_LINK4'><span style='font-size:
+  12.0pt;mso-bidi-font-size:10.5pt;font-family:宋体'>二十一世纪的今天，互联网已成为人类必不可少的生活必需品，与此同时，计算机技术也越发成熟。计算机技术广泛应用于互联网，例如电子商务则是其中发展最快的一项。电子商务实现了买卖双方在虚拟的环境中交易的方式，而实用最大的则是网站。<span
+  lang=EN-US><o:p></o:p></span></span></span></a></p>
+  <p class=MsoNormal style='text-indent:24.0pt;mso-char-indent-count:2.0;
+  line-height:20.0pt;mso-line-height-rule:exactly'><span style='mso-bookmark:
+  OLE_LINK3'><span style='mso-bookmark:OLE_LINK4'><span style='font-size:12.0pt;
+  mso-bidi-font-size:10.5pt;font-family:宋体'>网上体育用品销售系统便于用户能不受时间限制、不受地区限制的搜索以及购买自己想要的体育用品。本系统的前台主要功能包含：体育用品类别模块、体育用品查询模块、特价体育用品模块、购物车模块、订单模块、用户信息模块、系统公告模块等。后台主要功能包括：修改密码模块、用户管理模块、体育用品类别模块、体育用品管理模块、订单管理模块等。<span
+  lang=EN-US><o:p></o:p></span></span></span></span></p>
+  <p class=MsoNormal style='text-indent:24.0pt;mso-char-indent-count:2.0;
+  line-height:20.0pt;mso-line-height-rule:exactly'><span style='mso-bookmark:
+  OLE_LINK3'><span style='mso-bookmark:OLE_LINK4'><span style='font-size:12.0pt;
+  mso-bidi-font-size:10.5pt;font-family:宋体'>网上体育用品销售系统通用<span lang=EN-US>JSP</span>建立前台，并且连接<span
+  lang=EN-US>MySQL</span>数据库建立后台。利用<span lang=EN-US>MyEclipse</span>跟<span
+  lang=EN-US>Tomcat</span>建立一个<span lang=EN-US>MVC</span>框架的网上体育用品销售系统。</span></span></span><span
+  lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:10.5pt;font-family:
+  宋体'><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:-.2pt;mso-para-margin-right:-.02gd;
+  line-height:150%'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;height:29.35pt'>
+  <td width=657 colspan=4 valign=top style='width:492.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:29.35pt'>
+  <p class=MsoNormal style='margin-top:7.8pt;line-height:18.0pt'><span
+  style='font-size:14.0pt;font-family:宋体'>课题研究要点：</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;height:159.55pt'>
+  <td width=657 colspan=4 valign=top style='width:492.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:159.55pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-indent:30.0pt;
+  mso-char-indent-count:2.5;line-height:20.0pt;mso-line-height-rule:exactly'><span
+  lang=EN-US style='font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体'>&nbsp;</span><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>会员模块：</span><span style='font-family:宋体'>用户可以网上查看所有体育用品信息，查看公告信息，以及在网站论坛上留言，所有用户在注册了账号后，可以在网上将所需的体育用品放入购物车，然后下订单。</span></p>
+  <p class=MsoNormal align=left style='text-align:left;text-indent:26.25pt;
+  mso-char-indent-count:2.5;line-height:20.0pt;mso-line-height-rule:exactly'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>管理员模块：</span></p>
+  <p class=MsoNormal align=left style='text-align:left;text-indent:26.25pt;
+  mso-char-indent-count:2.5;line-height:20.0pt;mso-line-height-rule:exactly'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman"'>（</span><span
+  lang=EN-US>1</span><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman"'>）</span><span
+  style='font-family:宋体'>修改管理员密码：管理员能够在这里修改下次登录的密码。<span lang=EN-US><o:p></o:p></span></span></p>
+  <p class=MsoNormal align=left style='text-align:left;text-indent:26.25pt;
+  mso-char-indent-count:2.5;line-height:20.0pt;mso-line-height-rule:exactly'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman"'>（</span><span
+  lang=EN-US>2</span><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman"'>）</span><span
+  style='font-family:宋体'>用户信息管理：管理员能够查看会员资料，并有权限将其删除。<span lang=EN-US><o:p></o:p></span></span></p>
+  <p class=MsoNormal align=left style='text-align:left;text-indent:26.25pt;
+  mso-char-indent-count:2.5;line-height:20.0pt;mso-line-height-rule:exactly'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman"'>（</span><span
+  lang=EN-US>3</span><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman"'>）</span><span
+  style='font-family:宋体'>查看体育用品信息：管理员能够查看全部体育用品类别信息及其属性。还有类别的添加和删除<span
+  lang=EN-US><o:p></o:p></span></span></p>
+  <p class=MsoNormal align=left style='text-align:left;text-indent:26.25pt;
+  mso-char-indent-count:2.5;line-height:20.0pt;mso-line-height-rule:exactly'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman"'>（</span><span
+  lang=EN-US>4</span><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman"'>）</span><span
+  style='font-family:宋体'>体育用品信息管理：管理员能够查看体育用品信息，比如查看所有体育用品的属性，以及可以<span
+  class=GramE>帮体育</span>用品设置特价体育用品，还能对体育用品进行删除和添加操作。<span lang=EN-US><o:p></o:p></span></span></p>
+  <p class=MsoNormal align=left style='margin-left:15.85pt;mso-para-margin-left:
+  1.51gd;text-align:left;text-indent:10.5pt;mso-char-indent-count:1.0;
+  line-height:20.0pt;mso-line-height-rule:exactly'><span style='font-family:
+  宋体;mso-ascii-font-family:"Times New Roman"'>（</span><span lang=EN-US>5</span><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman"'>）</span><span
+  style='font-family:宋体'>订单信息管理：管理员能够查看订单的信息，并可以对其进行受理和删除操作。<span lang=EN-US><o:p></o:p></span></span></p>
+  <p class=MsoNormal align=left style='text-align:left;text-indent:26.25pt;
+  mso-char-indent-count:2.5;line-height:20.0pt;mso-line-height-rule:exactly'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>（</span><span lang=EN-US>6</span><span style='font-family:
+  宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>）网站论坛：管理员能查看所有用户在网站的留言，并且进行管理。</span></p>
+  <p class=MsoNormal align=left style='text-align:left;text-indent:26.25pt;
+  mso-char-indent-count:2.5;line-height:20.0pt;mso-line-height-rule:exactly'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>（</span><span lang=EN-US>7</span><span style='font-family:
+  宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>）公告管理：管理员查看网站所发布的所有公告，并且进行添加公告。</span><span
+  lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:10.5pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;height:40.2pt'>
+  <td width=657 colspan=4 valign=top style='width:492.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:40.2pt'>
+  <p class=MsoNormal style='margin-top:7.8pt;margin-right:0cm;margin-bottom:
+  0cm;margin-left:14.0pt;margin-bottom:.0001pt;text-indent:-14.0pt;line-height:
+  18.0pt'><span style='font-size:14.0pt;font-family:宋体'>课题进度安排：</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;height:159.05pt'>
+  <td width=657 colspan=4 valign=top style='width:492.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:159.05pt'>
+  <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+   style='margin-left:25.7pt;border-collapse:collapse;border:none;mso-border-alt:
+   solid windowtext .5pt;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+   .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+   <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+    <td width=165 valign=top style='width:123.7pt;border:solid windowtext 1.0pt;
+    mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:Arial;
+    color:black'>项目进程阶段<span lang=EN-US><o:p></o:p></span></span></p>
+    </td>
+    <td width=192 valign=top style='width:144.0pt;border:solid windowtext 1.0pt;
+    border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:Arial;
+    color:black'>起始日期<span lang=EN-US><o:p></o:p></span></span></p>
+    </td>
+    <td width=156 valign=top style='width:117.0pt;border:solid windowtext 1.0pt;
+    border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:Arial;
+    color:black'>终止日期<span lang=EN-US><o:p></o:p></span></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:1'>
+    <td width=165 valign=top style='width:123.7pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    class=GramE><span style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:
+    Arial;color:black'>确立毕设项目</span></span><span lang=EN-US style='font-size:
+    14.0pt;font-family:楷体;mso-bidi-font-family:Arial;color:black'><o:p></o:p></span></p>
+    </td>
+    <td width=192 valign=top style='width:144.0pt;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    lang=EN-US style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:
+    Arial;color:black'><o:p>&nbsp;</o:p></span></p>
+    </td>
+    <td width=156 valign=top style='width:117.0pt;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    lang=EN-US style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:
+    Arial;color:black'><o:p>&nbsp;</o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:2'>
+    <td width=165 valign=top style='width:123.7pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:Arial;
+    color:black'>需求分析<span lang=EN-US><o:p></o:p></span></span></p>
+    </td>
+    <td width=192 valign=top style='width:144.0pt;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    lang=EN-US style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:
+    Arial;color:black'><o:p>&nbsp;</o:p></span></p>
+    </td>
+    <td width=156 valign=top style='width:117.0pt;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    lang=EN-US style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:
+    Arial;color:black'><o:p>&nbsp;</o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:3'>
+    <td width=165 valign=top style='width:123.7pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:Arial;
+    color:black'>概要设计<span lang=EN-US><o:p></o:p></span></span></p>
+    </td>
+    <td width=192 valign=top style='width:144.0pt;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    lang=EN-US style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:
+    Arial;color:black'><o:p>&nbsp;</o:p></span></p>
+    </td>
+    <td width=156 valign=top style='width:117.0pt;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    lang=EN-US style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:
+    Arial;color:black'><o:p>&nbsp;</o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:4'>
+    <td width=165 valign=top style='width:123.7pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:Arial;
+    color:black'>详细设计<span lang=EN-US><o:p></o:p></span></span></p>
+    </td>
+    <td width=192 valign=top style='width:144.0pt;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    lang=EN-US style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:
+    Arial;color:black'><o:p>&nbsp;</o:p></span></p>
+    </td>
+    <td width=156 valign=top style='width:117.0pt;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    lang=EN-US style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:
+    Arial;color:black'><o:p>&nbsp;</o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:5'>
+    <td width=165 valign=top style='width:123.7pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:Arial;
+    color:black'>编码调试<span lang=EN-US><o:p></o:p></span></span></p>
+    </td>
+    <td width=192 valign=top style='width:144.0pt;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    lang=EN-US style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:
+    Arial;color:black'><o:p>&nbsp;</o:p></span></p>
+    </td>
+    <td width=156 valign=top style='width:117.0pt;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    lang=EN-US style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:
+    Arial;color:black'><o:p>&nbsp;</o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:6'>
+    <td width=165 valign=top style='width:123.7pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:Arial;
+    color:black'>书写毕业论文<span lang=EN-US><o:p></o:p></span></span></p>
+    </td>
+    <td width=192 valign=top style='width:144.0pt;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    lang=EN-US style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:
+    Arial;color:black'><o:p>&nbsp;</o:p></span></p>
+    </td>
+    <td width=156 valign=top style='width:117.0pt;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    lang=EN-US style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:
+    Arial;color:black'><o:p>&nbsp;</o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:7;mso-yfti-lastrow:yes'>
+    <td width=165 valign=top style='width:123.7pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:Arial;
+    color:black'>答辩<span lang=EN-US><o:p></o:p></span></span></p>
+    </td>
+    <td width=192 valign=top style='width:144.0pt;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    lang=EN-US style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:
+    Arial;color:black'><o:p>&nbsp;</o:p></span></p>
+    </td>
+    <td width=156 valign=top style='width:117.0pt;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='text-indent:28.0pt;mso-char-indent-count:2.0'><span
+    lang=EN-US style='font-size:14.0pt;font-family:楷体;mso-bidi-font-family:
+    Arial;color:black'><o:p>&nbsp;</o:p></span></p>
+    </td>
+   </tr>
+  </table>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;height:29.35pt'>
+  <td width=657 colspan=4 valign=top style='width:492.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:29.35pt'>
+  <p class=MsoNormal style='margin-top:7.8pt;line-height:18.0pt'><span
+  style='font-size:14.0pt;font-family:宋体'>主要参考文献：</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;height:159.55pt'>
+  <td width=657 colspan=4 valign=top style='width:492.7pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:159.55pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体'>&nbsp; <o:p></o:p></span></p>
+  <p class=MsoNormal style='line-height:150%'><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:12.0pt;line-height:150%;
+  mso-fareast-font-family:楷体'>[1]</span><span style='font-size:14.0pt;
+  mso-bidi-font-size:9.0pt;line-height:150%;font-family:楷体;mso-ascii-font-family:
+  "Times New Roman";mso-hansi-font-family:"Times New Roman"'>黄敏学</span><span
+  lang=EN-US style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;
+  mso-fareast-font-family:楷体'> . </span><span style='font-size:14.0pt;
+  mso-bidi-font-size:9.0pt;line-height:150%;font-family:楷体;mso-ascii-font-family:
+  "Times New Roman";mso-hansi-font-family:"Times New Roman"'>电子商务</span><span
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'> </span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>，高等教育出版社</span><span
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'> </span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>，</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>2001</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>年</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>6</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>月第</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>1</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>版</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'><o:p></o:p></span></p>
+  <p class=MsoNormal style='line-height:150%'><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>[2]</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>李源彬</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'> . </span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>电子商务概论</span><span style='font-size:
+  14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'> </span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>，人民邮电出版社</span><span
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'> </span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>，</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>2004</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>年</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>6</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>月第</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>1</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>版</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'><o:p></o:p></span></p>
+  <p class=MsoNormal style='line-height:150%'><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>[3]</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>薛华成</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'> . </span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>管理信息系统</span><span style='font-size:
+  14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'> </span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>，清华大学出版社</span><span
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'> </span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>，</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>2003</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>年</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>12</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>月第</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>4</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>版</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'><o:p></o:p></span></p>
+  <p class=MsoNormal style='line-height:150%'><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>[4]</span><span class=GramE><span style='font-size:14.0pt;mso-bidi-font-size:
+  9.0pt;line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>萨</span></span><span
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;font-family:
+  楷体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>师煊</span><span
+  lang=EN-US style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;
+  mso-fareast-font-family:楷体'>. </span><span style='font-size:14.0pt;
+  mso-bidi-font-size:9.0pt;line-height:150%;font-family:楷体;mso-ascii-font-family:
+  "Times New Roman";mso-hansi-font-family:"Times New Roman"'>数据库系统概论</span><span
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'> </span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>，高等教育出版社</span><span
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'> </span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>，</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>2000</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>年</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>2</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>月第</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>3</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>版</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'><o:p></o:p></span></p>
+  <p class=MsoNormal style='line-height:150%'><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>[5]</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>张海藩</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>. </span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>软件工程</span><span style='font-size:
+  14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'> </span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>，人民邮电出版社</span><span
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'> </span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>，</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>2002</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>年</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>3</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>月第</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>1</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>版</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'><o:p></o:p></span></p>
+  <p class=MsoNormal style='line-height:150%'><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>[6]</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>张登辉</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'> . ASP</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>编程基础及应用</span><span
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'> </span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>，机械工业出版社，</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>2003</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>年</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>3</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>月第</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>1</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>版</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'><o:p></o:p></span></p>
+  <p class=MsoNormal style='line-height:150%'><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>[7]</span><span lang=EN-US style='font-size:14.0pt;mso-bidi-font-size:
+  12.0pt;line-height:150%;mso-fareast-font-family:楷体'> </span><span
+  style='font-size:14.0pt;mso-bidi-font-size:12.0pt;line-height:150%;
+  font-family:楷体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>李源彬</span><span style='font-size:14.0pt;mso-bidi-font-size:
+  12.0pt;line-height:150%;mso-fareast-font-family:楷体'> </span><span
+  style='font-size:14.0pt;mso-bidi-font-size:12.0pt;line-height:150%;
+  font-family:楷体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>，电子商务概论</span><span style='font-size:14.0pt;mso-bidi-font-size:
+  12.0pt;line-height:150%;mso-fareast-font-family:楷体'> </span><span
+  style='font-size:14.0pt;mso-bidi-font-size:12.0pt;line-height:150%;
+  font-family:楷体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>，人民邮电出版社</span><span lang=EN-US style='font-size:14.0pt;
+  mso-bidi-font-size:12.0pt;line-height:150%;mso-fareast-font-family:楷体'> 2004</span><span
+  style='font-size:14.0pt;mso-bidi-font-size:12.0pt;line-height:150%;
+  font-family:楷体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>年</span><span lang=EN-US style='font-size:14.0pt;
+  mso-bidi-font-size:12.0pt;line-height:150%;mso-fareast-font-family:楷体'>6</span><span
+  style='font-size:14.0pt;mso-bidi-font-size:12.0pt;line-height:150%;
+  font-family:楷体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>月第</span><span lang=EN-US style='font-size:14.0pt;
+  mso-bidi-font-size:12.0pt;line-height:150%;mso-fareast-font-family:楷体'>1</span><span
+  style='font-size:14.0pt;mso-bidi-font-size:12.0pt;line-height:150%;
+  font-family:楷体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>版</span><span lang=EN-US style='font-size:14.0pt;
+  mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:楷体'><o:p></o:p></span></p>
+  <p class=MsoNormal style='line-height:150%'><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>[8]</span><span class=GramE><span style='font-size:14.0pt;mso-bidi-font-size:
+  9.0pt;line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>王君学</span></span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'> .<span style='mso-spacerun:yes'>&nbsp; </span></span><span
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;font-family:
+  楷体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>网页制作基础</span><span
+  lang=EN-US style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;
+  mso-fareast-font-family:楷体'>FrontPage2002 </span><span style='font-size:14.0pt;
+  mso-bidi-font-size:9.0pt;line-height:150%;font-family:楷体;mso-ascii-font-family:
+  "Times New Roman";mso-hansi-font-family:"Times New Roman"'>，人民邮电出版社</span><span
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'> </span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>，</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>2001</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>年</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>6</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>月第</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>1</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>版</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'><o:p></o:p></span></p>
+  <p class=MsoNormal style='line-height:150%'><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>[9]Dave <span class=GramE>Mercer<span style='mso-spacerun:yes'>&nbsp;
+  </span>.</span> ASP3.0</span><span style='font-size:14.0pt;mso-bidi-font-size:
+  9.0pt;line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>编程起步</span><span style='font-size:
+  14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'> </span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>，人民邮电出版社</span><span
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'> </span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>，</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>2001</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>年</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>4</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>月第</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>1</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>版</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:-.2pt;mso-para-margin-right:-.02gd;
+  line-height:150%'><span lang=EN-US style='font-size:14.0pt;mso-bidi-font-size:
+  9.0pt;line-height:150%;mso-fareast-font-family:楷体'>[10]Forrest <span
+  class=SpellE>Houlette.SQL</span></span><span style='font-size:14.0pt;
+  mso-bidi-font-size:9.0pt;line-height:150%;font-family:楷体;mso-ascii-font-family:
+  "Times New Roman";mso-hansi-font-family:"Times New Roman"'>编程起步</span><span
+  lang=EN-US style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;
+  mso-fareast-font-family:楷体'> .</span><span style='font-size:14.0pt;
+  mso-bidi-font-size:9.0pt;line-height:150%;font-family:楷体;mso-ascii-font-family:
+  "Times New Roman";mso-hansi-font-family:"Times New Roman"'>人民邮电出版社</span><span
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'> </span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>，</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>2002</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>年二月第</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'>1</span><span style='font-size:14.0pt;mso-bidi-font-size:9.0pt;
+  line-height:150%;font-family:楷体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>版</span><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:9.0pt;line-height:150%;mso-fareast-font-family:
+  楷体'><o:p></o:p></span></p>
+  <p class=MsoNormal style='line-height:125%'><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:12.0pt;line-height:125%;
+  mso-fareast-font-family:楷体'>[11]Data C <span class=SpellE>J.An</span> <span
+  class=SpellE>Introducetion</span> to Database System(Ed.6).Addision_Wesley,1995</span><span
+  lang=EN-US style='font-size:14.0pt;mso-bidi-font-size:15.0pt;line-height:
+  125%;mso-fareast-font-family:楷体'><o:p></o:p></span></p>
+  <p class=MsoBodyText style='margin-bottom:6.0pt'><span lang=EN-US
+  style='font-size:14.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  楷体'>[12]<span class=SpellE>Ullman</span><span style='mso-spacerun:yes'>&nbsp;
+  </span>J <span class=SpellE>D.Principles</span> of Database <span
+  class=SpellE>Systems.Computer</span> SciencePress,1980</span><span
+  lang=EN-US style='font-size:14.0pt;mso-bidi-font-size:15.0pt;mso-fareast-font-family:
+  楷体'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;height:170.2pt'>
+  <td width=832 colspan=4 valign=top style='width:624.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:170.2pt'>
+  <p class=MsoNormal style='margin-top:7.8pt'><span style='font-size:14.0pt;
+  font-family:宋体'>指导教师意见：</span></p>
+  <p class=MsoNormal style='margin-top:7.8pt'><span lang=EN-US
+  style='font-size:14.0pt'>&nbsp;</span><span lang=EN-US>&nbsp;</span></p>
+  <p class=MsoNormal align=right style='margin-top:7.8pt;text-align:right'><span
+  style='font-size:14.0pt;font-family:宋体'>签字：</span><u><span lang=EN-US
+  style='font-size:14.0pt'>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></u><span
+  lang=EN-US style='font-size:14.0pt'>&nbsp;&nbsp; &nbsp;&nbsp; </span><span
+  style='font-size:14.0pt;font-family:宋体'>年</span><span lang=EN-US
+  style='font-size:14.0pt'>&nbsp;&nbsp;&nbsp;</span><span style='font-size:
+  14.0pt;font-family:宋体'>月</span><span lang=EN-US style='font-size:14.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+  style='font-size:14.0pt;font-family:宋体'>日</span> </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15;height:170.2pt'>
+  <td width=832 colspan=4 valign=top style='width:624.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:170.2pt'>
+  <p class=MsoNormal style='margin-top:7.8pt'><span style='font-size:14.0pt;
+  font-family:宋体'>院<span lang=EN-US>(</span>系<span lang=EN-US>)</span>毕业论文（设计）工作领导小组意见：</span></p>
+  <p class=MsoNormal style='margin-top:7.8pt'><span lang=EN-US
+  style='font-size:14.0pt'>&nbsp;</span><span lang=EN-US>&nbsp;</span></p>
+  <p class=MsoNormal align=right style='margin-top:7.8pt;text-align:right'><span
+  style='font-size:14.0pt;font-family:宋体'>签字：</span><u><span lang=EN-US
+  style='font-size:14.0pt'>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></u><span
+  lang=EN-US style='font-size:14.0pt'>&nbsp;&nbsp; &nbsp;&nbsp; </span><span
+  style='font-size:14.0pt;font-family:宋体'>年</span><span lang=EN-US
+  style='font-size:14.0pt'>&nbsp;&nbsp;&nbsp; &nbsp;</span><span
+  style='font-size:14.0pt;font-family:宋体'>月</span><span lang=EN-US
+  style='font-size:14.0pt'>&nbsp;&nbsp;&nbsp; &nbsp;</span><span
+  style='font-size:14.0pt;font-family:宋体'>日</span> </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16;mso-yfti-lastrow:yes;height:70.2pt'>
+  <td width=832 colspan=4 valign=top style='width:624.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:70.2pt'>
+  <p class=MsoNormal style='margin-top:7.8pt'><span style='font-size:14.0pt;
+  font-family:宋体'>备注：</span></p>
+  <p class=MsoNormal style='margin-top:7.8pt'><span lang=EN-US
+  style='font-size:14.0pt'>&nbsp;</span><span lang=EN-US>&nbsp;</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<b><span lang=EN-US style='font-size:22.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:宋体;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;
+mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span></b>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

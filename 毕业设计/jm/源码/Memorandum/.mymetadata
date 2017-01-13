@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Memorandum"
+  id="myeclipse.1210554636338"
+  context-root="/Memorandum"
+  j2ee-spec="5.0"
+  archive="Memorandum.war">
+  <attributes>
+    <attribute name="webrootdir" value="/WebRoot" />
+  </attributes>
+</project-module>
+

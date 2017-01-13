@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee   http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>
+			org.apache.struts.action.ActionServlet
+		</servlet-class>
+		<!-- <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class> -->
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/struts-config.xml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<init-param>
+			<param-name>detail</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>/vindex.do?method=vhtml</welcome-file>
+	</welcome-file-list>
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+		</welcome-file-list>
+
+	<!--确定多个配置文件-->
+	<context-param>
+		<!-- 参数名为contextConfigLocation-->
+		<param-name>contextConfigLocation</param-name>
+		<!--多个配置文件之间以，隔开-->
+		<param-value>
+			/WEB-INF/classes/applicationContext.xml,
+			/WEB-INF/classes/applicationContextFenYe.xml
+		</param-value>
+	</context-param>
+	<!-- 采用listener创建ApplicationContext 实例-->
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+</web-app>
+

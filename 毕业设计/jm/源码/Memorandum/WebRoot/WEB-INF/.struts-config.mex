@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/index.do" location="30,45" dimension="280,84" />
+  <StrutsActivity path="/login.do" location="375,45" dimension="292,84" />
+  <StrutsActivity path="/news.do" location="1250,250" dimension="292,84" />
+  <StrutsActivity path="/fenye.do" location="180,390" dimension="310,84" />
+  <StrutsActivity path="/olympicgamesfenye.do" location="650,850" dimension="322,84" />
+  <StrutsActivity path="/update.do" location="405,495" dimension="304,84" />
+  <StrutsActivity path="/selectolympicgames.do" location="1250,650" dimension="304,84" />
+  <StrutsActivity path="/select.do" location="45,825" dimension="304,84" />
+  <StrutsActivity path="/zhuxxiao.do" location="780,300" dimension="316,84" />
+  <StrutsActivity path="olympicgamesfenye;6" location="1250,850" dimension="358,72" />
+  <StrutsActivity path="fenye;6" location="1080,30" dimension="100,72" />
+  <StrutsActivity path="fenyecuowu;6" location="495,315" dimension="244,72" />
+  <StrutsActivity path="news;6" location="915,585" dimension="70,72" />
+  <StrutsActivity path="/tiles/titles-zhuanfa/index.jsp" location="615,225" dimension="226,48" />
+  <StrutsActivity path="/failed.jsp" location="360,225" dimension="106,48" />
+  <StrutsActivity path="/login.jsp" location="480,225" dimension="100,48" />
+  <StrutsActivity path="/tiles/titles-zhuanfa/updateok.jsp" location="390,630" dimension="244,48" />
+  <StrutsActivity path="/web/addemd.jsp" location="645,630" dimension="130,48" />
+  <StrutsActivity path="/tiles/titles-zhuanfa/select.jsp" location="45,945" dimension="232,48" />
+  <StrutsActivity path="/tiles/titles-zhuanfa/olympicgamesproductContent.jsp" location="990,525" dimension="352,48" />
+  <StrutsActivity path="/tiles/titles-zhuanfa/product.jsp" location="1005,150" dimension="238,48" />
+  <StrutsActivity path="/web/updateok.jsp" location="60,285" dimension="142,48" />
+  <StrutsActivity path="/updateok.jsp" location="60,210" dimension="118,48" />
+  <StrutsActivity path="/select.jsp" location="300,945" dimension="106,48" />
+  <StrutsActivity path="/web/select.jsp" location="60,150" dimension="130,48" />
+  <StrutsActivity path="login.jsp" location="650,750" dimension="94,48" />
+  <StrutsActivity path="" location="1065,600" dimension="40,48" />
+  <StrutsActivity path="/updateolympicgames.do" location="50,1050" dimension="376,84" />
+  <StrutsActivity path="/web/olympicgameaddemd.jsp" />
+  <StrutsTransition id="/updateolympicgames.do,success,/tiles/titles-zhuanfa/updateok.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="421,1050" />
+      <AbsolutePoint location="421,678" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/update.do,success,/tiles/titles-zhuanfa/updateok.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="557,579" />
+      <AbsolutePoint location="557,630" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,failed,/failed.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="451,129" />
+      <AbsolutePoint location="451,225" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/select.do,success,/tiles/titles-zhuanfa/select.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="197,909" />
+      <AbsolutePoint location="197,945" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/web/olympicgameaddemd.jsp,null,/updateolympicgames.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="238,1092" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/web/addemd.jsp,null,/updateolympicgames.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="710,678" />
+      <AbsolutePoint location="710,723" />
+      <AbsolutePoint location="541,723" />
+      <AbsolutePoint location="541,1092" />
+      <AbsolutePoint location="426,1092" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,index,/tiles/titles-zhuanfa/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,258" />
+      <AbsolutePoint location="841,258" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/web/addemd.jsp,null,/update.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="694,630" />
+      <AbsolutePoint location="694,579" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zhuxxiao.do,success,/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="938,300" />
+      <AbsolutePoint location="938,165" />
+      <AbsolutePoint location="560,165" />
+      <AbsolutePoint location="560,225" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/selectolympicgames.do,success,/tiles/titles-zhuanfa/select.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,693" />
+      <AbsolutePoint location="-45,693" />
+      <AbsolutePoint location="-45,969" />
+      <AbsolutePoint location="45,969" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="olympicgamesfenye;6,null,/tiles/titles-zhuanfa/olympicgamesproductContent.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,886" />
+      <AbsolutePoint location="1166,886" />
+      <AbsolutePoint location="1166,573" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,index,/tiles/titles-zhuanfa/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="630,129" />
+      <AbsolutePoint location="630,225" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="fenye;6,null,/tiles/titles-zhuanfa/product.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1130,102" />
+      <AbsolutePoint location="1130,150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="fenyecuowu;6,null,/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="565,315" />
+      <AbsolutePoint location="565,273" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.jsp,null,/login.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="530,225" />
+      <AbsolutePoint location="530,129" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="news;6,null,/news.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,585" />
+      <AbsolutePoint location="950,435" />
+      <AbsolutePoint location="1396,435" />
+      <AbsolutePoint location="1396,334" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

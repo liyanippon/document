@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<data-sources />
+	<form-beans>
+
+		<form-bean name="zhuceForm"
+			type="com.xinxi_Action.struts.form.ZhuceForm" />
+		<form-bean name="loginForm"
+			type="com.xinxi_Action.struts.form.LoginForm" />
+		<form-bean name="fenyelistForm"
+			type="com.xinxi_Action.struts.form.FenyelistForm" />
+		<form-bean name="updateeForm"
+			type="com.xinxi_Action.struts.form.UpdateForm" />
+		<form-bean name="newsForm"
+			type="com.xinxi_Action.struts.form.NewsForm" />
+		<form-bean name="olympicgamesFenyelistForm"
+			type="com.xinxi_Action.struts.form.OlympicgamesFenyelistForm" />
+		<form-bean name="productUpdateDeleteForm"
+			type="com.xinxi_Action.struts.form.ProductUpdateDeleteForm" />
+		<form-bean name="olympicgamesproductContentUpdateDeleteForm"
+			type="com.xinxi_Action.struts.form.OlympicgamesproductContentUpdateDeleteForm" />
+
+		<form-bean name="articleselectForm"
+			type="com.xinxi_Action.struts.form.ArticleselectForm" />
+		<form-bean name="ltglForm"
+			type="com.xinxi_Action.struts.form.LtglForm" />
+		<form-bean name="articleForm"
+			type="com.xinxi_Action.struts.form.ArticleForm" />
+
+
+		<!-- 前台主页form -->
+		<form-bean name="vindexForm"
+			type="com.xinxi_Action.struts.form.view.VindexForm" />
+		<form-bean name="bbsForm" 
+			type="com.xinxi_Action.struts.form.bbs.BbsForm" />
+		<!-- 后台 -->
+		<form-bean name="backgroundForm" 
+			type="com.xinxi_Action.struts.form.hou.BackgroundForm" />
+		
+
+	</form-beans>
+
+	<global-exceptions />
+	<global-forwards>
+
+		<forward name="fenyecuowu" path="/login.jsp" />
+		<forward name="news" path="/news.do" />
+		<forward name="index" path="/tiles/titles-zhuanfa/index.jsp" />
+		<forward name="zhuxxiao" path="/zhuxxiao.do" />
+		<forward name="ind.do" path="/vindex.do?method=vhtml"></forward>
+	</global-forwards>
+
+	<action-mappings>
+	
+		<!-- 前台论坛 -->
+		<action path="/bbs" scope="request" attribute="bbsForm"
+			name="bbsForm"
+			type="com.xinxi_Action.struts.action.bbs.BbsAction"
+			parameter="method">
+				<forward name="bbsindex" path="/views/bbs.jsp" />	
+				<forward name="editionbbsselect" path="/views/editionbbsselect.jsp" />	
+				<forward name="vbbsedition" path="/views/vbbsedition.jsp" />
+				<forward name="editionbbsselectbbsid" path="/views/editionbbsselectbbsid.jsp" />
+				<forward name="bbslogin" path="/views/bbslogin.jsp" />
+				
+			</action>
+
+		<!-- 前台主页 -->
+		<action path="/vindex" scope="request" attribute="vindexForm"
+			name="articleForm"
+			type="com.xinxi_Action.struts.action.view.VindexAction"
+			parameter="method">
+			<forward name="viewsindex" path="/views/index.jsp" />
+			<forward name="viewsnews" path="/views/viewsnews.jsp" />
+			<forward name="viewsplacard" path="/views/viewsplacard.jsp" />
+
+			<forward name="viewsnewsselect"
+				path="/views/viewsnewsselect.jsp" />
+			<forward name="viewsplacardselect"
+				path="/views/viewsplacardselect.jsp" />
+			<forward name="viewsacademy" path="/views/viewsacademy.jsp" />
+			<forward name="viewsacademyselect" path="/views/viewsacademyselect.jsp" />
+			<forward name="viewslinks" path="/views/viewslinks.jsp" />
+
+		</action>
+		
+		<!-- 后台 -->
+		<action path="/background" scope="request"
+		attribute="backgroundForm" name="backgroundForm"
+		type="com.xinxi_Action.struts.action.hou.BackgroundAction"
+		parameter="method">
+		
+		<forward name="backgroundlink" path="/tiles/titles-zhuanfa/backgroundlink.jsp" />
+		<forward name="backgroundaffiche" path="/tiles/titles-zhuanfa/backgroundaffiche.jsp" />
+		<forward name="backgroundcourses" path="/tiles/titles-zhuanfa/backgroundcourses.jsp" />
+		<forward name="backgroundnews" path="/tiles/titles-zhuanfa/backgroundnews.jsp" />
+		<forward name="backgrounddelete" path="/background.do?method=courses&amp;sum=1" />
+		
+		</action>
+
+		<!-- 论坛帖子管理 -->
+		<action path="/article" scope="request" attribute="articleForm"
+			name="articleForm"
+			type="com.xinxi_Action.struts.action.ArticleAction"
+			parameter="method">
+			<forward name="articleselect"
+				path="/tiles/titles-zhuanfa/articleselect.jsp" />
+			<forward name="articleissuetiezi"
+				path="/tiles/titles-zhuanfa/articleissuetiezi.jsp" />
+		</action>
+
+		<!-- 论坛板块管理 -->
+		<action path="/ltgl" scope="request" attribute="ltglForm"
+			name="ltglForm" type="com.xinxi_Action.struts.action.LtglAction"
+			parameter="method">
+			<forward name="ltglforward"
+				path="/tiles/titles-zhuanfa/ltglforward.jsp" />
+			<forward name="ltglinsert"
+				path="/tiles/titles-zhuanfa/ltglinsert.jsp" />
+			<forward name="ltgllanmu"
+				path="/tiles/titles-zhuanfa/ltgllanmu.jsp" />
+			<forward name="luntantianjiaviOK"
+				path="/tiles/titles-zhuanfa/luntantianjiavi.jsp" />
+		</action>
+
+		<action path="/index"
+			type="org.apache.struts.actions.ForwardAction"
+			parameter="index-definition">
+		</action>
+
+		<action path="/login" attribute="loginForm" input="/login.jsp"
+			name="loginForm" scope="request"
+			type="com.xinxi_Action.struts.action.LoginAction" validate="false">
+			<forward name="index"
+				path="/tiles/titles-zhuanfa/index.jsp" />
+			<forward name="failed" path="/failed.jsp" />
+		</action>
+
+		<action path="/news" scope="request"
+			type="com.xinxi_Action.struts.action.NewsAction">
+			<forward name="index"
+				path="/tiles/titles-zhuanfa/index.jsp" />
+		</action>
+
+		<action path="/fenye" attribute="fenyelistForm"
+			name="fenyelistForm" scope="request"
+			type="com.xinxi_Action.struts.action.FenyelistAction"
+			parameter="method">
+			<forward name="fenyeok"
+				path="/tiles/titles-zhuanfa/product.jsp" />
+			<forward name="fenyeud"
+				path="/tiles/titles-zhuanfa/product_update_delete.jsp" />
+		</action>
+
+		<action path="/olympicgamesfenye"
+			attribute="olympicgamesFenyelistForm"
+			name="olympicgamesFenyelistForm" scope="request"
+			type="com.xinxi_Action.struts.action.OlympicgamesFenyelistAction"
+			parameter="method">
+			<forward name="olympicgamesfenyeok"
+				path="/tiles/titles-zhuanfa/olympicgamesproductContent.jsp" />
+			<forward name="olympicgamesfenyeud"
+				path="/tiles/titles-zhuanfa/olympicgamesproductContent_update_delete.jsp" />
+		</action>
+
+		<action path="/update" attribute="updateeForm"
+			name="updateeForm" input="/web/addemd.jsp" scope="request"
+			type="com.xinxi_Action.struts.action.UpdateAction">
+			<forward name="success"
+				path="/tiles/titles-zhuanfa/updateok.jsp" />
+		</action>
+
+		<!-- guo ji xin wen update delete -->
+		<action path="/productupdatedelete"
+			attribute="productUpdateDeleteForm" name="productUpdateDeleteForm"
+			scope="request"
+			type="com.xinxi_Action.struts.action.ProductUpdateDeleteAction"
+			parameter="method">
+			<forward name="guojiupdate"
+				path="/tiles/titles-zhuanfa/productupdate.jsp" />
+			<forward name="ok"
+				path="/fenye.do?method=select&amp;id=sdf456464s6df4wefs" />
+		</action>
+
+		<!-- ao yun xin wen update delete -->
+		<action path="/olympicgamesproductContentupdatedelete"
+			attribute="olympicgamesproductContentUpdateDeleteForm"
+			name="olympicgamesproductContentUpdateDeleteForm" scope="request"
+			type="com.xinxi_Action.struts.action.OlympicgamesproductContentUpdateDeleteAction"
+			parameter="method">
+			<forward name="aoyunupdate"
+				path="/tiles/titles-zhuanfa/olympicgamesproductContentupdate.jsp" />
+			<forward name="olympicgamesok"
+				path="/olympicgamesfenye.do?method=olympicgamesselect&amp;id=nfe487risl64g446drn" />
+		</action>
+
+		<action path="/updateolympicgames" attribute="updateeForm"
+			name="updateeForm" input="/web/olympicgameaddemd.jsp" scope="request"
+			type="com.xinxi_Action.struts.action.OlympicgamesUpdateAction">
+			<forward name="success"
+				path="/tiles/titles-zhuanfa/updateok.jsp" />
+		</action>
+
+		<action path="/selectolympicgames"
+			type="com.xinxi_Action.struts.action.OlympicgamesSelectAction">
+			<forward name="success"
+				path="/tiles/titles-zhuanfa/select.jsp" />
+		</action>
+
+
+		<action path="/select"
+			type="com.xinxi_Action.struts.action.SelectAction">
+			<forward name="success"
+				path="/tiles/titles-zhuanfa/select.jsp" />
+		</action>
+
+		<action path="/zhuxxiao"
+			type="com.xinxi_Action.struts.action.ZhuxxiaoAction">
+			<forward name="success" path="/login.jsp" />
+		</action>
+
+		<action path="/zhuce" attribute="zhuceForm" name="zhuceForm"
+			input="/zhuce.jsp" scope="request"
+			type="com.xinxi_Action.struts.action.ZhuceAction">
+			<forward name="zhuceok" path="/login.jsp" />
+		</action>
+
+
+		<action path="/articleselect" attribute="articleselectForm"
+			name="articleselectForm" scope="request" parameter="method"
+			type="com.xinxi_Action.struts.action.ArticleselectAction">
+			<forward name="users"
+				path="/tiles/titles-zhuanfa/blur-select.jsp" />
+		</action>
+		<!-- DMM -->
+		<action path="/votewenzhang" scope="request" parameter="method"
+			type="com.xinxi_Action.struts.action.VoteWenzhangAction">
+			<forward name="report"
+				path="/tiles/titles-zhuanfa/report-Stat.jsp" />
+		</action>
+
+		<action path="/voteguojiwenzhang" scope="request"
+			parameter="method"
+			type="com.xinxi_Action.struts.action.VoteGuoJiWenzhangAction">
+			<forward name="report"
+				path="/tiles/titles-zhuanfa/report-Stat.jsp" />
+		</action>
+		<!-- DMM -->
+
+	</action-mappings>
+
+	<message-resources
+		parameter="com.xinxi_Action.struts.ApplicationResources" />
+
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config"
+			value="/WEB-INF/tiles-defs.xml" />
+		<set-property property="definitions-parser-validate"
+			value="true" />
+	</plug-in>
+</struts-config>
+
