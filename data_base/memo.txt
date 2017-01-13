@@ -1,0 +1,3054 @@
+Linux 文件基本属性
+Linux系统是一种典型的多用户系统，不同的用户处于不同的地位，拥有不同的权限。为了保护系统的安全性，Linux系统对不同的用户访问同一文件（包括目录文件）的权限做了不同的规定。
+在Linux中我们可以使用ll或者ls –l命令来显示一个文件的属性以及文件所属的用户和组，如：
+[root@www /]# ls -l
+total 64
+dr-xr-xr-x   2 root root 4096 Dec 14  2012 bin
+dr-xr-xr-x   4 root root 4096 Apr 19  2012 boot
+……
+实例中，bin文件的第一个属性用"d"表示。"d"在Linux中代表该文件是一个目录文件。
+在Linux中第一个字符代表这个文件是目录、文件或链接文件等等。
+当为[ d ]则是目录
+当为[ - ]则是文件；
+若是[ l ]则表示为链接文档(link file)；
+若是[ b ]则表示为装置文件里面的可供储存的接口设备(可随机存取装置)；
+若是[ c ]则表示为装置文件里面的串行端口设备，例如键盘、鼠标(一次性读取装置)。
+接下来的字符中，以三个为一组，且均为『rwx』 的三个参数的组合。其中，[ r ]代表可读(read)、[ w ]代表可写(write)、[ x ]代表可执行(execute)。 要注意的是，这三个权限的位置不会改变，如果没有权限，就会出现减号[ - ]而已。
+每个文件的属性由左边第一部分的10个字符来确定（如下图）。
+363003_1227493859FdXT
+从左至右用0-9这些数字来表示。
+第0位确定文件类型，第1-3位确定属主（该文件的所有者）拥有该文件的权限。
+第4-6位确定属组（所有者的同组用户）拥有该文件的权限，第7-9位确定其他用户拥有该文件的权限。
+其中，第1、4、7位表示读权限，如果用"r"字符表示，则有读权限，如果用"-"字符表示，则没有读权限；
+第2、5、8位表示写权限，如果用"w"字符表示，则有写权限，如果用"-"字符表示没有写权限；第3、6、9位表示可执行权限，如果用"x"字符表示，则有执行权限，如果用"-"字符表示，则没有执行权限。
+Linux文件属主和属组
+[root@www /]# ls -l
+total 64
+dr-xr-xr-x   2 root root 4096 Dec 14  2012 bin
+dr-xr-xr-x   4 root root 4096 Apr 19  2012 boot
+……
+对于文件来说，它都有一个特定的所有者，也就是对该文件具有所有权的用户。
+同时，在Linux系统中，用户是按组分类的，一个用户属于一个或多个组。
+文件所有者以外的用户又可以分为文件所有者的同组用户和其他用户。
+因此，Linux系统按文件所有者、文件所有者同组用户和其他用户来规定了不同的文件访问权限。
+在以上实例中，bin文件是一个目录文件，属主和属组都为root，属主有可读、可写、可执行的权限；与属主同组的其他用户有可读和可执行的权限；其他用户也有可读和可执行的权限。
+更改文件属性
+1、chgrp：更改文件属组
+语法：
+chgrp [-R] 属组名文件名
+参数选项
+-R：递归更改文件属组，就是在更改某个目录文件的属组时，如果加上-R的参数，那么该目录下的所有文件的属组都会更改。
+2、chown：更改文件属主，也可以同时更改文件属组
+语法：
+chown [–R] 属主名 文件名
+chown [-R] 属主名：属组名 文件名
+进入 /root 目录（~）将install.log的拥有者改为bin这个账号：
+[root@www ~] cd ~
+[root@www ~]# chown bin install.log
+[root@www ~]# ls -l
+-rw-r--r--  1 bin  users 68495 Jun 25 08:53 install.log
+将install.log的拥有者与群组改回为root：
+[root@www ~]# chown root:root install.log
+[root@www ~]# ls -l
+-rw-r--r--  1 root root 68495 Jun 25 08:53 install.log
+3、chmod：更改文件9个属性
+Linux文件属性有两种设置方法，一种是数字，一种是符号。
+Linux文件的基本权限就有九个，分别是owner/group/others三种身份各有自己的read/write/execute权限。
+先复习一下刚刚上面提到的数据：文件的权限字符为：『-rwxrwxrwx』， 这九个权限是三个三个一组的！其中，我们可以使用数字来代表各个权限，各权限的分数对照表如下：
+r:4
+w:2
+x:1
+每种身份(owner/group/others)各自的三个权限(r/w/x)分数是需要累加的，例如当权限为： [-rwxrwx---] 分数则是：
+owner = rwx = 4+2+1 = 7
+group = rwx = 4+2+1 = 7
+others= --- = 0+0+0 = 0
+所以等一下我们设定权限的变更时，该文件的权限数字就是770啦！变更权限的指令chmod的语法是这样的：
+ chmod [-R] xyz 文件或目录
+选项与参数：
+xyz : 就是刚刚提到的数字类型的权限属性，为 rwx 属性数值的相加。
+-R : 进行递归(recursive)的持续变更，亦即连同次目录下的所有文件都会变更
+举例来说，如果要将.bashrc这个文件所有的权限都设定启用，那么命令如下：
+[root@www ~]# ls -al .bashrc
+-rw-r--r--  1 root root 395 Jul  4 11:45 .bashrc
+[root@www ~]# chmod 777 .bashrc
+[root@www ~]# ls -al .bashrc
+-rwxrwxrwx  1 root root 395 Jul  4 11:45 .bashrc
+那如果要将权限变成 -rwxr-xr-- 呢？那么权限的分数就成为 [4+2+1][4+0+1][4+0+0]=754。
+符号类型改变文件权限
+还有一个改变权限的方法呦！从之前的介绍中我们可以发现，基本上就九个权限分别是(1)user (2)group (3)others三种身份啦！ 那么我们就可以藉由u, g, o来代表三种身份的权限！
+此外， a 则代表 all 亦即全部的身份！那么读写的权限就可以写成r, w, x！也就是可以使用底下的方式来看：
+chmod	u
+g
+o
+a	+(加入)
+-(除去)
+=(设定)	r
+w
+x	文件或目录
+如果我们需要将文件权限设置为 -rwxr-xr-- ，可以使用 chmod u=rwx,g=rx,o=r 文件名 来设定:
+[root@www ~]# ls -al .bashrc
+-rwxr-xr-x  1 root root 395 Jul  4 11:45 .bashrc
+[root@www ~]# chmod  a+w  .bashrc
+[root@www ~]# ls -al .bashrc
+-rwxrwxrwx  1 root root 395 Jul  4 11:45 .bashrc
+而如果是要将权限去掉而不改变其他已存在的权限呢？例如要拿掉全部人的可执行权限，则：
+[root@www ~]# chmod  a-x  .bashrc
+[root@www ~]# ls -al .bashrc
+-rw-rw-rw-  1 root root 395 Jul  4 11:45 .bashrc
+
+Linux 文件与目录管理
+我们知道Linux的目录结构为树状结构，最顶级的目录为根目录 /。
+其他目录通过挂载可以将它们添加到树中，通过解除挂载可以移除它们。
+在开始本教程前我们需要先知道什么是绝对路径与相对路径。
+绝对路径：
+路径的写法，由根目录 / 写起，例如： /usr/share/doc 这个目录。
+相对路径：
+路径的写法，不是由 / 写起，例如由 /usr/share/doc 要到 /usr/share/man 底下时，可以写成： cd ../man 这就是相对路径的写法啦！
+处理目录的常用命令
+接下来我们就来看几个常见的处理目录的命令吧：
+ls: 列出目录
+cd：切换目录
+pwd：显示目前的目录
+mkdir：创建一个新的目录
+rmdir：删除一个空的目录
+cp: 复制文件或目录
+rm: 移除文件或目录
+你可以使用 man [命令] 来查看各个命令的使用文档，如 ：man cp。
+ls (列出目录)
+在Linux系统当中， ls 命令可能是最常被运行的。
+语法：
+[root@www ~]# ls [-aAdfFhilnrRSt] 目录名称
+[root@www ~]# ls [--color={never,auto,always}] 目录名称
+[root@www ~]# ls [--full-time] 目录名称
+选项与参数：
+-a ：全部的文件，连同隐藏档( 开头为 . 的文件) 一起列出来(常用)
+-d ：仅列出目录本身，而不是列出目录内的文件数据(常用)
+-l ：长数据串列出，包含文件的属性与权限等等数据；(常用)
+将家目录下的所有文件列出来(含属性与隐藏档)
+[root@www ~]# ls -al ~
+cd (切换目录)
+cd是Change Directory的缩写，这是用来变换工作目录的命令。
+语法：
+ cd [相对路径或绝对路径]
+#使用 mkdir 命令创建w3cschool.cc目录
+[root@www ~]# mkdir w3cschool.cc
+
+#使用绝对路径切换到w3cschool.cc目录
+[root@www ~]# cd /root/w3cschool.cc/
+
+#使用相对路径切换到w3cschool.cc目录
+[root@www ~]# cd ./w3cschool.cc/
+
+# 表示回到自己的家目录，亦即是 /root 这个目录
+[root@www w3cschool.cc]# cd ~
+
+# 表示去到目前的上一级目录，亦即是 /root 的上一级目录的意思；
+[root@www ~]# cd ..
+接下来大家多操作几次应该就可以很好的理解 cd 命令的。
+pwd (显示目前所在的目录)
+pwd是Print Working Directory的缩写，也就是显示目前所在目录的命令。
+[root@www ~]# pwd [-P]
+选项与参数：
+-P  ：显示出确实的路径，而非使用连结 (link) 路径。
+
+范例：单纯显示出目前的工作目录：
+[root@www ~]# pwd
+/root   <== 显示出目录啦～
+
+范例：显示出实际的工作目录，而非连结档本身的目录名而已
+[root@www ~]# cd /var/mail   <==注意，/var/mail是一个连结档
+[root@www mail]# pwd
+/var/mail         <==列出目前的工作目录
+[root@www mail]# pwd -P
+/var/spool/mail   <==怎么回事？有没有加 -P 差很多～
+[root@www mail]# ls -ld /var/mail
+lrwxrwxrwx 1 root root 10 Sep  4 17:54 /var/mail -> spool/mail
+# 看到这里应该知道为啥了吧？因为 /var/mail 是连结档，连结到 /var/spool/mail 
+# 所以，加上 pwd -P 的选项后，会不以连结档的数据显示，而是显示正确的完整路径啊！
+mkdir (创建新目录)
+如果想要创建新的目录的话，那么就使用mkdir (make directory)吧。
+语法：
+mkdir [-mp] 目录名称
+选项与参数：
+-m ：配置文件的权限喔！直接配置，不需要看默认权限 (umask) 的脸色～
+-p ：帮助你直接将所需要的目录(包含上一级目录)递回创建起来！
+范例：请到/tmp底下尝试创建数个新目录看看：
+[root@www ~]# cd /tmp
+[root@www tmp]# mkdir test    <==创建一名为 test 的新目录
+[root@www tmp]# mkdir test1/test2/test3/test4
+mkdir: cannot create directory `test1/test2/test3/test4': 
+No such file or directory       <== 没办法直接创建此目录啊！
+[root@www tmp]# mkdir -p test1/test2/test3/test4
+加了这个 -p 的选项，可以自行帮你创建多层目录！
+范例：创建权限为rwx--x--x的目录
+[root@www tmp]# mkdir -m 711 test2
+[root@www tmp]# ls -l
+drwxr-xr-x  3 root  root 4096 Jul 18 12:50 test
+drwxr-xr-x  3 root  root 4096 Jul 18 12:53 test1
+drwx--x--x  2 root  root 4096 Jul 18 12:54 test2
+上面的权限部分，如果没有加上 -m 来强制配置属性，系统会使用默认属性。
+如果我们使用 -m ，如上例我们给予 -m 711 来给予新的目录 drwx--x--x 的权限。
+rmdir (删除空的目录)
+语法：
+ rmdir [-p] 目录名称
+选项与参数：
+-p ：连同上一级『空的』目录也一起删除
+删除 w3cschool.cc 目录
+[root@www tmp]# rmdir w3cschool.cc/
+范例：将於mkdir范例中创建的目录(/tmp底下)删除掉！
+[root@www tmp]# ls -l   <==看看有多少目录存在？
+drwxr-xr-x  3 root  root 4096 Jul 18 12:50 test
+drwxr-xr-x  3 root  root 4096 Jul 18 12:53 test1
+drwx--x--x  2 root  root 4096 Jul 18 12:54 test2
+[root@www tmp]# rmdir test   <==可直接删除掉，没问题
+[root@www tmp]# rmdir test1  <==因为尚有内容，所以无法删除！
+rmdir: `test1': Directory not empty
+[root@www tmp]# rmdir -p test1/test2/test3/test4
+[root@www tmp]# ls -l        <==您看看，底下的输出中test与test1不见了！
+drwx--x--x  2 root  root 4096 Jul 18 12:54 test2
+利用 -p 这个选项，立刻就可以将 test1/test2/test3/test4 一次删除。
+不过要注意的是，这个 rmdir 仅能删除空的目录，你可以使用 rm 命令来删除非空目录。
+cp (复制文件或目录)
+cp 即拷贝文件和目录。
+语法:
+[root@www ~]# cp [-adfilprsu] 来源档(source) 目标档(destination)
+[root@www ~]# cp [options] source1 source2 source3 .... directory
+选项与参数：
+-a：相当於 -pdr 的意思，至於 pdr 请参考下列说明；(常用)
+-d：若来源档为连结档的属性(link file)，则复制连结档属性而非文件本身；
+-f：为强制(force)的意思，若目标文件已经存在且无法开启，则移除后再尝试一次；
+-i：若目标档(destination)已经存在时，在覆盖时会先询问动作的进行(常用)
+-l：进行硬式连结(hard link)的连结档创建，而非复制文件本身；
+-p：连同文件的属性一起复制过去，而非使用默认属性(备份常用)；
+-r：递回持续复制，用於目录的复制行为；(常用)
+-s：复制成为符号连结档 (symbolic link)，亦即『捷径』文件；
+-u：若 destination 比 source 旧才升级 destination ！
+用 root 身份，将 root 目录下的 .bashrc 复制到 /tmp 下，并命名为 bashrc
+[root@www ~]# cp ~/.bashrc /tmp/bashrc
+[root@www ~]# cp -i ~/.bashrc /tmp/bashrc
+cp: overwrite `/tmp/bashrc'? n  <==n不覆盖，y为覆盖
+rm (移除文件或目录)
+语法：
+ rm [-fir] 文件或目录
+选项与参数：
+-f ：就是 force 的意思，忽略不存在的文件，不会出现警告信息；
+-i ：互动模式，在删除前会询问使用者是否动作
+-r ：递回删除啊！最常用在目录的删除了！这是非常危险的选项！！！
+将刚刚在 cp 的范例中创建的 bashrc 删除掉！
+[root@www tmp]# rm -i bashrc
+rm: remove regular file `bashrc'? y
+如果加上 -i 的选项就会主动询问喔，避免你删除到错误的档名！
+mv (移动文件与目录，或修改名称)
+语法：
+[root@www ~]# mv [-fiu] source destination
+[root@www ~]# mv [options] source1 source2 source3 .... directory
+选项与参数：
+-f ：force 强制的意思，如果目标文件已经存在，不会询问而直接覆盖；
+-i ：若目标文件 (destination) 已经存在时，就会询问是否覆盖！
+-u ：若目标文件已经存在，且 source 比较新，才会升级 (update)
+复制一文件，创建一目录，将文件移动到目录中
+[root@www ~]# cd /tmp
+[root@www tmp]# cp ~/.bashrc bashrc
+[root@www tmp]# mkdir mvtest
+[root@www tmp]# mv bashrc mvtest
+将某个文件移动到某个目录去，就是这样做！
+将刚刚的目录名称更名为 mvtest2
+[root@www tmp]# mv mvtest mvtest2
+Linux 文件内容查看
+Linux系统中使用以下命令来查看文件的内容：
+cat  由第一行开始显示文件内容
+tac  从最后一行开始显示，可以看出 tac 是 cat 的倒著写！
+nl   显示的时候，顺道输出行号！
+more 一页一页的显示文件内容
+less 与 more 类似，但是比 more 更好的是，他可以往前翻页！
+head 只看头几行
+tail 只看尾巴几行
+你可以使用 man [命令]来查看各个命令的使用文档，如 ：man cp。
+cat
+由第一行开始显示文件内容
+语法：
+cat [-AbEnTv]
+选项与参数：
+-A ：相当於 -vET 的整合选项，可列出一些特殊字符而不是空白而已；
+-b ：列出行号，仅针对非空白行做行号显示，空白行不标行号！
+-E ：将结尾的断行字节 $ 显示出来；
+-n ：列印出行号，连同空白行也会有行号，与 -b 的选项不同；
+-T ：将 [tab] 按键以 ^I 显示出来；
+-v ：列出一些看不出来的特殊字符
+检看 /etc/issue 这个文件的内容：
+[root@www ~]# cat /etc/issue
+CentOS release 6.4 (Final)
+Kernel \r on an \m
+tac
+tac与cat命令刚好相反，文件内容从最后一行开始显示，可以看出 tac 是 cat 的倒着写！如：
+
+[root@www ~]# tac /etc/issue
+
+Kernel \r on an \m
+CentOS release 6.4 (Final)
+nl
+显示行号
+语法：
+nl [-bnw] 文件
+选项与参数：
+-b ：指定行号指定的方式，主要有两种：
+-b a ：表示不论是否为空行，也同样列出行号(类似 cat -n)；
+-b t ：如果有空行，空的那一行不要列出行号(默认值)；
+-n ：列出行号表示的方法，主要有三种：
+-n ln ：行号在萤幕的最左方显示；
+-n rn ：行号在自己栏位的最右方显示，且不加 0 ；
+-n rz ：行号在自己栏位的最右方显示，且加 0 ；
+-w ：行号栏位的占用的位数。
+范例一：用 nl 列出 /etc/issue 的内容
+[root@www ~]# nl /etc/issue
+     1  CentOS release 6.4 (Final)
+     2  Kernel \r on an \m
+more
+一页一页翻动
+[root@www ~]# more /etc/man.config
+#
+# Generated automatically from man.conf.in by the
+# configure script.
+#
+# man.conf from man-1.6d
+....(中间省略)....
+--More--(28%)  <== 重点在这一行喔！你的光标也会在这里等待你的命令
+在 more 这个程序的运行过程中，你有几个按键可以按的：
+空白键 (space)：代表向下翻一页；
+Enter         ：代表向下翻『一行』；
+/字串         ：代表在这个显示的内容当中，向下搜寻『字串』这个关键字；
+:f            ：立刻显示出档名以及目前显示的行数；
+q             ：代表立刻离开 more ，不再显示该文件内容。
+b 或 [ctrl]-b ：代表往回翻页，不过这动作只对文件有用，对管线无用。
+less
+一页一页翻动，以下实例输出/etc/man.config文件的内容：
+[root@www ~]# less /etc/man.config
+#
+# Generated automatically from man.conf.in by the
+# configure script.
+#
+# man.conf from man-1.6d
+....(中间省略)....
+:   <== 这里可以等待你输入命令！
+less运行时可以输入的命令有：
+空白键    ：向下翻动一页；
+[pagedown]：向下翻动一页；
+[pageup]  ：向上翻动一页；
+/字串     ：向下搜寻『字串』的功能；
+?字串     ：向上搜寻『字串』的功能；
+n         ：重复前一个搜寻 (与 / 或 ? 有关！)
+N         ：反向的重复前一个搜寻 (与 / 或 ? 有关！)
+q         ：离开 less 这个程序；
+head
+取出文件前面几行
+语法：
+head [-n number] 文件 
+选项与参数：
+-n ：后面接数字，代表显示几行的意思
+[root@www ~]# head /etc/man.config
+默认的情况中，显示前面 10 行！若要显示前 20 行，就得要这样：
+[root@www ~]# head -n 20 /etc/man.config
+tail
+取出文件后面几行
+语法：
+tail [-n number] 文件 
+选项与参数：
+-n ：后面接数字，代表显示几行的意思
+-f ：表示持续侦测后面所接的档名，要等到按下[ctrl]-c才会结束tail的侦测
+[root@www ~]# tail /etc/man.config
+# 默认的情况中，显示最后的十行！若要显示最后的 20 行，就得要这样：
+[root@www ~]# tail -n 20 /etc/man.config
+
+Linux 磁盘管理
+Linux磁盘管理好坏管理直接关系到整个系统的性能问题。
+Linux磁盘管理常用三个命令为df、du和fdisk。
+df：列出文件系统的整体磁盘使用量
+du：检查磁盘空间使用量
+fdisk：用于磁盘分区
+df
+df命令参数功能：检查文件系统的磁盘空间占用情况。可以利用该命令来获取硬盘被占用了多少空间，目前还剩下多少空间等信息。
+语法：
+df [-ahikHTm] [目录或文件名]
+选项与参数：
+-a ：列出所有的文件系统，包括系统特有的 /proc 等文件系统；
+-k ：以 KBytes 的容量显示各文件系统；
+-m ：以 MBytes 的容量显示各文件系统；
+-h ：以人们较易阅读的 GBytes, MBytes, KBytes 等格式自行显示；
+-H ：以 M=1000K 取代 M=1024K 的进位方式；
+-T ：显示文件系统类型, 连同该 partition 的 filesystem 名称 (例如 ext3) 也列出；
+-i ：不用硬盘容量，而以 inode 的数量来显示
+实例 1
+将系统内所有的文件系统列出来！
+[root@www ~]# df
+Filesystem      1K-blocks      Used Available Use% Mounted on
+/dev/hdc2         9920624   3823112   5585444  41% /
+/dev/hdc3         4956316    141376   4559108   4% /home
+/dev/hdc1          101086     11126     84741  12% /boot
+tmpfs              371332         0    371332   0% /dev/shm
+在 Linux 底下如果 df 没有加任何选项，那么默认会将系统内所有的 (不含特殊内存内的文件系统与 swap) 都以 1 Kbytes 的容量来列出来！
+实例 2
+将容量结果以易读的容量格式显示出来
+[root@www ~]# df -h
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/hdc2             9.5G  3.7G  5.4G  41% /
+/dev/hdc3             4.8G  139M  4.4G   4% /home
+/dev/hdc1              99M   11M   83M  12% /boot
+tmpfs                 363M     0  363M   0% /dev/shm
+实例 3
+将系统内的所有特殊文件格式及名称都列出来
+[root@www ~]# df -aT
+Filesystem    Type 1K-blocks    Used Available Use% Mounted on
+/dev/hdc2     ext3   9920624 3823112   5585444  41% /
+proc          proc         0       0         0   -  /proc
+sysfs        sysfs         0       0         0   -  /sys
+devpts      devpts         0       0         0   -  /dev/pts
+/dev/hdc3     ext3   4956316  141376   4559108   4% /home
+/dev/hdc1     ext3    101086   11126     84741  12% /boot
+tmpfs        tmpfs    371332       0    371332   0% /dev/shm
+none   binfmt_misc         0       0         0   -  /proc/sys/fs/binfmt_misc
+sunrpc  rpc_pipefs         0       0         0   -  /var/lib/nfs/rpc_pipefs
+实例 4
+将 /etc 底下的可用的磁盘容量以易读的容量格式显示
+[root@www ~]# df -h /etc
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/hdc2             9.5G  3.7G  5.4G  41% /
+du
+Linux du命令也是查看使用空间的，但是与df命令不同的是Linux du命令是对文件和目录磁盘使用的空间的查看，还是和df命令有一些区别的，这里介绍Linux du命令。
+语法：
+du [-ahskm] 文件或目录名称
+选项与参数：
+-a ：列出所有的文件与目录容量，因为默认仅统计目录底下的文件量而已。
+-h ：以人们较易读的容量格式 (G/M) 显示；
+-s ：列出总量而已，而不列出每个各别的目录占用容量；
+-S ：不包括子目录下的总计，与 -s 有点差别。
+-k ：以 KBytes 列出容量显示；
+-m ：以 MBytes 列出容量显示；
+实例 1
+列出目前目录下的所有文件容量
+[root@www ~]# du
+8       ./test4     <==每个目录都会列出来
+8       ./test2
+....中间省略....
+12      ./.gconfd   <==包括隐藏文件的目录
+220     .           <==这个目录(.)所占用的总量
+直接输入 du 没有加任何选项时，则 du 会分析当前所在目录的文件与目录所占用的硬盘空间。
+实例 2
+将文件的容量也列出来
+[root@www ~]# du -a
+12      ./install.log.syslog   <==有文件的列表了
+8       ./.bash_logout
+8       ./test4
+8       ./test2
+....中间省略....
+12      ./.gconfd
+220     .
+实例 3
+检查根目录底下每个目录所占用的容量
+[root@www ~]# du -sm /*
+7       /bin
+6       /boot
+.....中间省略....
+0       /proc
+.....中间省略....
+1       /tmp
+3859    /usr     <==系统初期最大就是他了啦！
+77      /var
+通配符 * 来代表每个目录。
+与 df 不一样的是，du 这个命令其实会直接到文件系统内去搜寻所有的文件数据。
+fdisk
+fdisk 是 Linux 的磁盘分区表操作工具。
+语法：
+fdisk [-l] 装置名称
+选项与参数：
+-l ：输出后面接的装置所有的分区内容。若仅有 fdisk -l 时， 则系统将会把整个系统内能够搜寻到的装置的分区均列出来。
+实例 1
+列出所有分区信息
+[root@AY120919111755c246621 tmp]# fdisk -l
+
+Disk /dev/xvda: 21.5 GB, 21474836480 bytes
+255 heads, 63 sectors/track, 2610 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000
+
+    Device Boot      Start         End      Blocks   Id  System
+/dev/xvda1   *           1        2550    20480000   83  Linux
+/dev/xvda2            2550        2611      490496   82  Linux swap / Solaris
+
+Disk /dev/xvdb: 21.5 GB, 21474836480 bytes
+255 heads, 63 sectors/track, 2610 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x56f40944
+
+    Device Boot      Start         End      Blocks   Id  System
+/dev/xvdb2               1        2610    20964793+  83  Linux
+实例 2
+找出你系统中的根目录所在磁盘，并查阅该硬盘内的相关信息
+[root@www ~]# df /            <==注意：重点在找出磁盘文件名而已
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/hdc2              9920624   3823168   5585388  41% /
+
+[root@www ~]# fdisk /dev/hdc  <==仔细看，不要加上数字喔！
+The number of cylinders for this disk is set to 5005.
+There is nothing wrong with that, but this is larger than 1024,
+and could in certain setups cause problems with:
+1) software that runs at boot time (e.g., old versions of LILO)
+2) booting and partitioning software from other OSs
+   (e.g., DOS FDISK, OS/2 FDISK)
+
+Command (m for help):     <==等待你的输入！
+输入 m 后，就会看到底下这些命令介绍
+Command (m for help): m   <== 输入 m 后，就会看到底下这些命令介绍
+Command action
+   a   toggle a bootable flag
+   b   edit bsd disklabel
+   c   toggle the dos compatibility flag
+   d   delete a partition            <==删除一个partition
+   l   list known partition types
+   m   print this menu
+   n   add a new partition           <==新增一个partition
+   o   create a new empty DOS partition table
+   p   print the partition table     <==在屏幕上显示分割表
+   q   quit without saving changes   <==不储存离开fdisk程序
+   s   create a new empty Sun disklabel
+   t   change a partition's system id
+   u   change display/entry units
+   v   verify the partition table
+   w   write table to disk and exit  <==将刚刚的动作写入分割表
+   x   extra functionality (experts only)
+离开 fdisk 时按下 q，那么所有的动作都不会生效！相反的， 按下w就是动作生效的意思。
+Command (m for help): p  <== 这里可以输出目前磁盘的状态
+
+Disk /dev/hdc: 41.1 GB, 41174138880 bytes        <==这个磁盘的文件名与容量
+255 heads, 63 sectors/track, 5005 cylinders      <==磁头、扇区与磁柱大小
+Units = cylinders of 16065 * 512 = 8225280 bytes <==每个磁柱的大小
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/hdc1   *           1          13      104391   83  Linux
+/dev/hdc2              14        1288    10241437+  83  Linux
+/dev/hdc3            1289        1925     5116702+  83  Linux
+/dev/hdc4            1926        5005    24740100    5  Extended
+/dev/hdc5            1926        2052     1020096   82  Linux swap / Solaris
+# 装置文件名 启动区否 开始磁柱    结束磁柱  1K大小容量 磁盘分区槽内的系统
+
+Command (m for help): q
+想要不储存离开吗？按下 q 就对了！不要随便按 w 啊！
+使用 p 可以列出目前这颗磁盘的分割表信息，这个信息的上半部在显示整体磁盘的状态。
+磁盘格式化
+磁盘分割完毕后自然就是要进行文件系统的格式化，格式化的命令非常的简单，使用 mkfs（make filesystem） 命令。
+语法：
+mkfs [-t 文件系统格式] 装置文件名
+选项与参数：
+-t ：可以接文件系统格式，例如 ext3, ext2, vfat 等(系统有支持才会生效)
+实例 1
+查看 mkfs 支持的文件格式
+[root@www ~]# mkfs[tab][tab]
+mkfs         mkfs.cramfs  mkfs.ext2    mkfs.ext3    mkfs.msdos   mkfs.vfat
+按下两个[tab]，会发现 mkfs 支持的文件格式如上所示。
+实例 2
+将分区 /dev/hdc6（可指定你自己的分区） 格式化为 ext3 文件系统：
+[root@www ~]# mkfs -t ext3 /dev/hdc6
+mke2fs 1.39 (29-May-2006)
+Filesystem label=                <==这里指的是分割槽的名称(label)
+OS type: Linux
+Block size=4096 (log=2)          <==block 的大小配置为 4K 
+Fragment size=4096 (log=2)
+251392 inodes, 502023 blocks     <==由此配置决定的inode/block数量
+25101 blocks (5.00%) reserved for the super user
+First data block=0
+Maximum filesystem blocks=515899392
+16 block groups
+32768 blocks per group, 32768 fragments per group
+15712 inodes per group
+Superblock backups stored on blocks:
+        32768, 98304, 163840, 229376, 294912
+
+Writing inode tables: done
+Creating journal (8192 blocks): done <==有日志记录
+Writing superblocks and filesystem accounting information: done
+
+This filesystem will be automatically checked every 34 mounts or
+180 days, whichever comes first.  Use tune2fs -c or -i to override.
+# 这样就创建起来我们所需要的 Ext3 文件系统了！简单明了！
+磁盘检验
+fsck（file system check）用来检查和维护不一致的文件系统。
+若系统掉电或磁盘发生问题，可利用fsck命令对文件系统进行检查。
+语法：
+fsck [-t 文件系统] [-ACay] 装置名称
+选项与参数：
+-t : 给定档案系统的型式，若在 /etc/fstab 中已有定义或 kernel 本身已支援的则不需加上此参数
+-s : 依序一个一个地执行 fsck 的指令来检查
+-A : 对/etc/fstab 中所有列出来的 分区（partition）做检查
+-C : 显示完整的检查进度
+-d : 打印出 e2fsck 的 debug 结果
+-p : 同时有 -A 条件时，同时有多个 fsck 的检查一起执行
+-R : 同时有 -A 条件时，省略 / 不检查
+-V : 详细显示模式
+-a : 如果检查有错则自动修复
+-r : 如果检查有错则由使用者回答是否修复
+-y : 选项指定检测每个文件是自动输入yes，在不确定那些是不正常的时候，可以执行 # fsck -y 全部检查修复。
+实例 1
+查看系统有多少文件系统支持的 fsck 命令：
+[root@www ~]# fsck[tab][tab]
+fsck         fsck.cramfs  fsck.ext2    fsck.ext3    fsck.msdos   fsck.vfat
+实例 2
+强制检测 /dev/hdc6 分区:
+[root@www ~]# fsck -C -f -t ext3 /dev/hdc6 
+fsck 1.39 (29-May-2006)
+e2fsck 1.39 (29-May-2006)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+vbird_logical: 11/251968 files (9.1% non-contiguous), 36926/1004046 blocks
+如果没有加上 -f 的选项，则由于这个文件系统不曾出现问题，检查的经过非常快速！若加上 -f 强制检查，才会一项一项的显示过程。
+磁盘挂载与卸除
+Linux 的磁盘挂载使用 mount 命令，卸载使用 umount 命令。
+磁盘挂载语法：
+mount [-t 文件系统] [-L Label名] [-o 额外选项] [-n]  装置文件名  挂载点
+实例 1
+用默认的方式，将刚刚创建的 /dev/hdc6 挂载到 /mnt/hdc6 上面！
+[root@www ~]# mkdir /mnt/hdc6
+[root@www ~]# mount /dev/hdc6 /mnt/hdc6
+[root@www ~]# df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+.....中间省略.....
+/dev/hdc6              1976312     42072   1833836   3% /mnt/hdc6
+磁盘卸载命令 umount 语法：
+umount [-fn] 装置文件名或挂载点
+选项与参数：
+-f ：强制卸除！可用在类似网络文件系统 (NFS) 无法读取到的情况下；
+-n ：不升级 /etc/mtab 情况下卸除。
+卸载/dev/hdc6
+[root@www ~]# umount /dev/hdc6     
+
+Linux vi/vim
+所有的 Unix Like 系统都会内建 vi 文书编辑器，其他的文书编辑器则不一定会存在。
+但是目前我们使用比较多的是 vim 编辑器。
+vim 具有程序编辑的能力，可以主动的以字体颜色辨别语法的正确性，方便程序设计。
+相关文章：史上最全Vim快捷键键位图 — 入门到进阶
+什么是 vim？
+Vim是从 vi 发展出来的一个文本编辑器。代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用。
+简单的来说， vi 是老式的字处理器，不过功能已经很齐全了，但是还是有可以进步的地方。 vim 则可以说是程序开发者的一项很好用的工具。 连 vim 的官方网站 (http://www.vim.org) 自己也说 vim 是一个程序开发工具而不是文字处理软件。
+vim 键盘图：
+
+vi/vim 的使用
+基本上 vi/vim 共分为三种模式，分别是一般模式、编辑模式与指令列命令模式。 这三种模式的作用分别是：
+一般模式：
+以 vi 打开一个档案就直接进入一般模式了(这是默认的模式)。在这个模式中， 你可以使用『上下左右』按键来移动光标，你可以使用『删除字符』或『删除整行』来处理档案内容， 也可以使用『复制、贴上』来处理你的文件数据。
+编辑模式：
+在一般模式中可以进行删除、复制、贴上等等的动作，但是却无法编辑文件内容的！ 要等到你按下『i, I, o, O, a, A, r, R』等任何一个字母之后才会进入编辑模式。注意了！通常在 Linux 中，按下这些按键时，在画面的左下方会出现『INSERT 或 REPLACE 』的字样，此时才可以进行编辑。而如果要回到一般模式时， 则必须要按下『Esc』这个按键即可退出编辑模式。
+指令列命令模式：
+在一般模式当中，输入『 : / ? 』三个中的任何一个按钮，就可以将光标移动到最底下那一行。在这个模式当中， 可以提供你『搜寻资料』的动作，而读取、存盘、大量取代字符、离开 vi 、显示行号等等的动作则是在此模式中达成的！
+简单的说，我们可以将这三个模式想成底下的图标来表示：
+
+vi/vim 使用实例
+使用 vi/vim 进入一般模式
+如果你想要使用 vi 来建立一个名为 test.txt 的文件时，你可以这样做：
+[root@www ~]# vi test.txt
+直接输入 vi 文件名 就能够进入 vi 的一般模式了。请注意，记得 vi 后面一定要加文件名，不管该文件存在与否！
+
+按下 i 进入编辑模式，开始编辑文字
+在一般模式之中，只要按下 i, o, a 等字符就可以进入编辑模式了！
+在编辑模式当中，你可以发现在左下角状态栏中会出现 –INSERT- 的字样，那就是可以输入任意字符的提示。
+这个时候，键盘上除了 [Esc] 这个按键之外，其他的按键都可以视作为一般的输入按钮了，所以你可以进行任何的编辑。
+
+按下 [ESC] 按钮回到一般模式
+好了，假设我已经按照上面的样式给他编辑完毕了，那么应该要如何退出呢？是的！没错！就是给他按下 [Esc] 这个按钮即可！马上你就会发现画面左下角的 – INSERT – 不见了！
+在一般模式中按下 :wq 储存后离开 vi
+OK，我们要存档了，存盘并离开的指令很简单，输入『:wq』即可保存离开！
+
+OK! 这样我们就成功创建了一个 test.txt 的文件。是不是很简单。
+vi/vim 按键说明
+除了上面简易范例的 i, [Esc], :wq 之外，其实 vim 还有非常多的按键可以使用。
+第一部份：一般模式可用的按钮说明，光标移动、复制贴上、搜寻取代等
+移动光标的方法
+h 或 向左箭头键(←)	光标向左移动一个字符
+j 或 向下箭头键(↓)	光标向下移动一个字符
+k 或 向上箭头键(↑)	光标向上移动一个字符
+l 或 向右箭头键(→)	光标向右移动一个字符
+如果你将右手放在键盘上的话，你会发现 hjkl 是排列在一起的，因此可以使用这四个按钮来移动光标。 如果想要进行多次移动的话，例如向下移动 30 行，可以使用 "30j" 或 "30↓" 的组合按键， 亦即加上想要进行的次数(数字)后，按下动作即可！
+[Ctrl] + [f]	屏幕『向下』移动一页，相当于 [Page Down]按键 (常用)
+[Ctrl] + [b]	屏幕『向上』移动一页，相当于 [Page Up] 按键 (常用)
+[Ctrl] + [d]	屏幕『向下』移动半页
+[Ctrl] + [u]	屏幕『向上』移动半页
++	光标移动到非空格符的下一列
+-	光标移动到非空格符的上一列
+n<space>	那个 n 表示『数字』，例如 20 。按下数字后再按空格键，光标会向右移动这一行的 n 个字符。例如 20<space> 则光标会向后面移动 20 个字符距离。
+0 或功能键[Home]	这是数字『 0 』：移动到这一行的最前面字符处 (常用)
+$ 或功能键[End]	移动到这一行的最后面字符处(常用)
+H	光标移动到这个屏幕的最上方那一行的第一个字符
+M	光标移动到这个屏幕的中央那一行的第一个字符
+L	光标移动到这个屏幕的最下方那一行的第一个字符
+G	移动到这个档案的最后一行(常用)
+nG	n 为数字。移动到这个档案的第 n 行。例如 20G 则会移动到这个档案的第 20 行(可配合 :set nu)
+gg	移动到这个档案的第一行，相当于 1G 啊！ (常用)
+n<Enter>	n 为数字。光标向下移动 n 行(常用)
+搜寻与取代
+/word	向光标之下寻找一个名称为 word 的字符串。例如要在档案内搜寻 vbird 这个字符串，就输入 /vbird 即可！ (常用)
+?word	向光标之上寻找一个字符串名称为 word 的字符串。
+n	这个 n 是英文按键。代表重复前一个搜寻的动作。举例来说， 如果刚刚我们执行 /vbird 去向下搜寻 vbird 这个字符串，则按下 n 后，会向下继续搜寻下一个名称为 vbird 的字符串。如果是执行 ?vbird 的话，那么按下 n 则会向上继续搜寻名称为 vbird 的字符串！
+N	这个 N 是英文按键。与 n 刚好相反，为『反向』进行前一个搜寻动作。 例如 /vbird 后，按下 N 则表示『向上』搜寻 vbird 。
+使用 /word 配合 n 及 N 是非常有帮助的！可以让你重复的找到一些你搜寻的关键词！
+:n1,n2s/word1/word2/g	n1 与 n2 为数字。在第 n1 与 n2 行之间寻找 word1 这个字符串，并将该字符串取代为 word2 ！举例来说，在 100 到 200 行之间搜寻 vbird 并取代为 VBIRD 则：
+『:100,200s/vbird/VBIRD/g』。(常用)
+:1,$s/word1/word2/g	从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2 ！(常用)
+:1,$s/word1/word2/gc	从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2 ！且在取代前显示提示字符给用户确认 (confirm) 是否需要取代！(常用)
+删除、复制与贴上
+x, X	在一行字当中，x 为向后删除一个字符 (相当于 [del] 按键)， X 为向前删除一个字符(相当于 [backspace] 亦即是退格键) (常用)
+nx	n 为数字，连续向后删除 n 个字符。举例来说，我要连续删除 10 个字符， 『10x』。
+dd	删除游标所在的那一整行(常用)
+ndd	n 为数字。删除光标所在的向下 n 列，例如 20dd 则是删除 20 列 (常用)
+d1G	删除光标所在到第一行的所有数据
+dG	删除光标所在到最后一行的所有数据
+d$	删除游标所在处，到该行的最后一个字符
+d0	那个是数字的 0 ，删除游标所在处，到该行的最前面一个字符
+yy	复制游标所在的那一行(常用)
+nyy	n 为数字。复制光标所在的向下 n 列，例如 20yy 则是复制 20 列(常用)
+y1G	复制游标所在列到第一列的所有数据
+yG	复制游标所在列到最后一列的所有数据
+y0	复制光标所在的那个字符到该行行首的所有数据
+y$	复制光标所在的那个字符到该行行尾的所有数据
+p, P	p 为将已复制的数据在光标下一行贴上，P 则为贴在游标上一行！ 举例来说，我目前光标在第 20 行，且已经复制了 10 行数据。则按下 p 后， 那 10 行数据会贴在原本的 20 行之后，亦即由 21 行开始贴。但如果是按下 P 呢？ 那么原本的第 20 行会被推到变成 30 行。 (常用)
+J	将光标所在列与下一列的数据结合成同一列
+c	重复删除多个数据，例如向下删除 10 行，[ 10cj ]
+u	复原前一个动作。(常用)
+[Ctrl]+r	重做上一个动作。(常用)
+这个 u 与 [Ctrl]+r 是很常用的指令！一个是复原，另一个则是重做一次～ 利用这两个功能按键，你的编辑，嘿嘿！很快乐的啦！
+.	不要怀疑！这就是小数点！意思是重复前一个动作的意思。 如果你想要重复删除、重复贴上等等动作，按下小数点『.』就好了！ (常用)
+第二部份：一般模式切换到编辑模式的可用的按钮说明
+进入插入或取代的编辑模式
+i, I	进入插入模式(Insert mode)：
+i 为『从目前光标所在处插入』， I 为『在目前所在行的第一个非空格符处开始插入』。 (常用)
+a, A	进入插入模式(Insert mode)：
+a 为『从目前光标所在的下一个字符处开始插入』， A 为『从光标所在行的最后一个字符处开始插入』。(常用)
+o, O	进入插入模式(Insert mode)：
+这是英文字母 o 的大小写。o 为『在目前光标所在的下一行处插入新的一行』； O 为在目前光标所在处的上一行插入新的一行！(常用)
+r, R	进入取代模式(Replace mode)：
+r 只会取代光标所在的那一个字符一次；R会一直取代光标所在的文字，直到按下 ESC 为止；(常用)
+上面这些按键中，在 vi 画面的左下角处会出现『--INSERT--』或『--REPLACE--』的字样。 由名称就知道该动作了吧！！特别注意的是，我们上面也提过了，你想要在档案里面输入字符时， 一定要在左下角处看到 INSERT 或 REPLACE 才能输入喔！
+[Esc]	退出编辑模式，回到一般模式中(常用)
+第三部份：一般模式切换到指令列模式的可用的按钮说明
+指令列的储存、离开等指令
+:w	将编辑的数据写入硬盘档案中(常用)
+:w!	若文件属性为『只读』时，强制写入该档案。不过，到底能不能写入， 还是跟你对该档案的档案权限有关啊！
+:q	离开 vi (常用)
+:q!	若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。
+注意一下啊，那个惊叹号 (!) 在 vi 当中，常常具有『强制』的意思～
+:wq	储存后离开，若为 :wq! 则为强制储存后离开 (常用)
+ZZ	这是大写的 Z 喔！若档案没有更动，则不储存离开，若档案已经被更动过，则储存后离开！
+:w [filename]	将编辑的数据储存成另一个档案（类似另存新档）
+:r [filename]	在编辑的数据中，读入另一个档案的数据。亦即将 『filename』 这个档案内容加到游标所在行后面
+:n1,n2 w [filename]	将 n1 到 n2 的内容储存成 filename 这个档案。
+:! command	暂时离开 vi 到指令列模式下执行 command 的显示结果！例如
+『:! ls /home』即可在 vi 当中察看 /home 底下以 ls 输出的档案信息！
+vim 环境的变更
+:set nu	显示行号，设定之后，会在每一行的前缀显示该行的行号
+:set nonu	与 set nu 相反，为取消行号！
+特别注意，在 vi/vim 中，数字是很有意义的！数字通常代表重复做几次的意思！ 也有可能是代表去到第几个什么什么的意思。
+举例来说，要删除 50 行，则是用 『50dd』 对吧！ 数字加在动作之前，如我要向下移动 20 行呢？那就是『20j』或者是『20↓』即可。
+
+linux yum 命令
+yum（ Yellow dog Updater, Modified）是一个在Fedora和RedHat以及SUSE中的Shell前端软件包管理器。
+基於RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软体包，无须繁琐地一次次下载、安装。
+yum提供了查找、安装、删除某一个、一组甚至全部软件包的命令，而且命令简洁而又好记。
+yum 语法
+yum [options] [command] [package ...]
+options：可选，选项包括-h（帮助），-y（当安装过程提示选择全部为"yes"），-q（不显示安装的过程）等等。
+command：要进行的操作。
+package操作的对象。
+yum常用命令
+1.列出所有可更新的软件清单命令：yum check-update
+2.更新所有软件命令：yum update
+3.仅安装指定的软件命令：yum install <package_name>
+4.仅更新指定的软件命令：yum update <package_name>
+5.列出所有可安裝的软件清单命令：yum list
+6.删除软件包命令：yum remove <package_name>
+7.查找软件包 命令：yum search <keyword>
+8.清除缓存命令:
+yum clean packages: 清除缓存目录下的软件包
+yum clean headers: 清除缓存目录下的 headers
+yum clean oldheaders: 清除缓存目录下旧的 headers
+yum clean, yum clean all (= yum clean packages; yum clean oldheaders) :清除缓存目录下的软件包及旧的headers
+实例 1
+安装 pam-devel
+[root@www ~]# yum install pam-devel
+Setting up Install Process
+Parsing package install arguments
+Resolving Dependencies  <==先检查软件的属性相依问题
+--> Running transaction check
+---> Package pam-devel.i386 0:0.99.6.2-4.el5 set to be updated
+--> Processing Dependency: pam = 0.99.6.2-4.el5 for package: pam-devel
+--> Running transaction check
+---> Package pam.i386 0:0.99.6.2-4.el5 set to be updated
+filelists.xml.gz          100% |=========================| 1.6 MB    00:05
+filelists.xml.gz          100% |=========================| 138 kB    00:00
+-> Finished Dependency Resolution
+……(省略)
+实例 2
+移除 pam-devel
+[root@www ~]# yum remove pam-devel
+Setting up Remove Process
+Resolving Dependencies  <==同样的，先解决属性相依的问题
+--> Running transaction check
+---> Package pam-devel.i386 0:0.99.6.2-4.el5 set to be erased
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================
+ Package                 Arch       Version          Repository        Size
+=============================================================================
+Removing:
+ pam-devel               i386       0.99.6.2-4.el5   installed         495 k
+
+Transaction Summary
+=============================================================================
+Install      0 Package(s)
+Update       0 Package(s)
+Remove       1 Package(s)  <==还好，并没有属性相依的问题，单纯移除一个软件
+
+Is this ok [y/N]: y
+Downloading Packages:
+Running rpm_check_debug
+Running Transaction Test
+Finished Transaction Test
+Transaction Test Succeeded
+Running Transaction
+  Erasing   : pam-devel                    ######################### [1/1]
+
+Removed: pam-devel.i386 0:0.99.6.2-4.el5
+Complete!
+实例 3
+利用 yum 的功能，找出以 pam 为开头的软件名称有哪些？
+[root@www ~]# yum list pam*
+Installed Packages
+pam.i386                  0.99.6.2-3.27.el5      installed
+pam_ccreds.i386           3-5                    installed
+pam_krb5.i386             2.2.14-1               installed
+pam_passwdqc.i386         1.0.2-1.2.2            installed
+pam_pkcs11.i386           0.5.3-23               installed
+pam_smb.i386              1.1.7-7.2.1            installed
+Available Packages <==底下则是『可升级』的或『未安装』的
+pam.i386                  0.99.6.2-4.el5         base
+pam-devel.i386            0.99.6.2-4.el5         base
+pam_krb5.i386             2.2.14-10              base
+国内 yum 源
+网易（163）yum源是国内最好的yum源之一 ，无论是速度还是软件版本，都非常的不错。
+将yum源设置为163 yum，可以提升软件包安装和更新的速度，同时避免一些常见软件版本无法找到。
+安装步骤
+首先备份/etc/yum.repos.d/CentOS-Base.repo
+mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
+下载对应版本repo文件, 放入/etc/yum.repos.d/(操作前请做好相应备份)
+CentOS5 ：http://mirrors.163.com/.help/CentOS5-Base-163.repo
+CentOS6 ：http://mirrors.163.com/.help/CentOS6-Base-163.repo
+运行以下命令生成缓存
+yum clean all
+yum makecache
+除了网易之外，国内还有其他不错的yum源，比如中科大和搜狐。
+中科大的yum源，安装方法查看：https://lug.ustc.edu.cn/wiki/mirrors/help/centos
+sohu的yum源安装方法查看: http://mirrors.sohu.com/help/centos.html
+
+Shell 教程
+Shell 是一个用C语言编写的程序，它是用户使用Linux的桥梁。Shell既是一种命令语言，又是一种程序设计语言。
+Shell 是指一种应用程序，这个应用程序提供了一个界面，用户通过这个界面访问操作系统内核的服务。
+Ken Thompson的sh是第一种Unix Shell，Windows Explorer是一个典型的图形界面Shell。
+Shell 在线工具
+Shell 脚本
+Shell 脚本（shell script），是一种为shell编写的脚本程序。
+业界所说的shell通常都是指shell脚本，但读者朋友要知道，shell和shell script是两个不同的概念。
+由于习惯的原因，简洁起见，本文出现的"shell编程"都是指shell脚本编程，不是指开发shell自身。
+Shell 环境
+Shell 编程跟java、php编程一样，只要有一个能编写代码的文本编辑器和一个能解释执行的脚本解释器就可以了。
+Linux的Shell种类众多，常见的有：
+Bourne Shell（/usr/bin/sh或/bin/sh）
+Bourne Again Shell（/bin/bash）
+C Shell（/usr/bin/csh）
+K Shell（/usr/bin/ksh）
+Shell for Root（/sbin/sh）
+……
+本教程关注的是 Bash，也就是 Bourne Again Shell，由于易用和免费，Bash在日常工作中被广泛使用。同时，Bash也是大多数Linux系统默认的Shell。
+在一般情况下，人们并不区分 Bourne Shell 和 Bourne Again Shell，所以，像 #!/bin/sh，它同样也可以改为#!/bin/bash。
+#!告诉系统其后路径所指定的程序即是解释此脚本文件的Shell程序。
+第一个shell脚本
+打开文本编辑器(可以使用vi/vim命令来创建文件)，新建一个文件test.sh，扩展名为sh（sh代表shell），扩展名并不影响脚本执行，见名知意就好，如果你用php写shell 脚本，扩展名就用php好了。
+输入一些代码，第一行一般是这样：
+实例
+#!/bin/bash
+echo "Hello World !"
+
+运行实例 »
+"#!" 是一个约定的标记，它告诉系统这个脚本需要什么解释器来执行，即使用哪一种Shell。
+echo命令用于向窗口输出文本。
+运行Shell脚本有两种方法：
+1、作为可执行程序
+将上面的代码保存为test.sh，并cd到相应目录：
+chmod +x ./test.sh  #使脚本具有执行权限
+./test.sh  #执行脚本
+注意，一定要写成./test.sh，而不是test.sh，运行其它二进制的程序也一样，直接写test.sh，linux系统会去PATH里寻找有没有叫test.sh的，而只有/bin, /sbin, /usr/bin，/usr/sbin等在PATH里，你的当前目录通常不在PATH里，所以写成test.sh是会找不到命令的，要用./test.sh告诉系统说，就在当前目录找。
+2、作为解释器参数
+这种运行方式是，直接运行解释器，其参数就是shell脚本的文件名，如：
+/bin/sh test.sh
+/bin/php test.php
+这种方式运行的脚本，不需要在第一行指定解释器信息，写了也没用。
+
+Shell 变量
+定义变量时，变量名不加美元符号（$，PHP语言中变量需要），如：
+your_name="runoob.com"
+注意，变量名和等号之间不能有空格，这可能和你熟悉的所有编程语言都不一样。同时，变量名的命名须遵循如下规则：
+首个字符必须为字母（a-z，A-Z）。
+中间不能有空格，可以使用下划线（_）。
+不能使用标点符号。
+不能使用bash里的关键字（可用help命令查看保留关键字）。
+除了显式地直接赋值，还可以用语句给变量赋值，如：
+for file in `ls /etc`
+以上语句将 /etc 下目录的文件名循环出来。
+使用变量
+使用一个定义过的变量，只要在变量名前面加美元符号即可，如：
+your_name="qinjx"
+echo $your_name
+echo ${your_name}
+变量名外面的花括号是可选的，加不加都行，加花括号是为了帮助解释器识别变量的边界，比如下面这种情况：
+for skill in Ada Coffe Action Java; do
+    echo "I am good at ${skill}Script"
+done
+如果不给skill变量加花括号，写成echo "I am good at $skillScript"，解释器就会把$skillScript当成一个变量（其值为空），代码执行结果就不是我们期望的样子了。
+推荐给所有变量加上花括号，这是个好的编程习惯。
+已定义的变量，可以被重新定义，如：
+your_name="tom"
+echo $your_name
+your_name="alibaba"
+echo $your_name
+这样写是合法的，但注意，第二次赋值的时候不能写$your_name="alibaba"，使用变量的时候才加美元符（$）。
+只读变量
+使用 readonly 命令可以将变量定义为只读变量，只读变量的值不能被改变。
+下面的例子尝试更改只读变量，结果报错：
+#!/bin/bash
+myUrl="http://www.w3cschool.cc"
+readonly myUrl
+myUrl="http://www.runoob.com"
+运行脚本，结果如下：
+/bin/sh: NAME: This variable is read only.
+删除变量
+使用 unset 命令可以删除变量。语法：
+unset variable_name
+变量被删除后不能再次使用。unset 命令不能删除只读变量。
+实例
+#!/bin/sh
+myUrl="http://www.runoob.com"
+unset myUrl
+echo $myUrl
+以上实例执行将没有任何输出。
+变量类型
+运行shell时，会同时存在三种变量：
+1) 局部变量 局部变量在脚本或命令中定义，仅在当前shell实例中有效，其他shell启动的程序不能访问局部变量。
+2) 环境变量 所有的程序，包括shell启动的程序，都能访问环境变量，有些程序需要环境变量来保证其正常运行。必要的时候shell脚本也可以定义环境变量。
+3) shell变量 shell变量是由shell程序设置的特殊变量。shell变量中有一部分是环境变量，有一部分是局部变量，这些变量保证了shell的正常运行
+Shell 字符串
+字符串是shell编程中最常用最有用的数据类型（除了数字和字符串，也没啥其它类型好用了），字符串可以用单引号，也可以用双引号，也可以不用引号。单双引号的区别跟PHP类似。
+单引号
+str='this is a string'
+单引号字符串的限制：
+单引号里的任何字符都会原样输出，单引号字符串中的变量是无效的；
+单引号字串中不能出现单引号（对单引号使用转义符后也不行）。
+双引号
+your_name='qinjx'
+str="Hello, I know your are \"$your_name\"! \n"
+双引号的优点：
+双引号里可以有变量
+双引号里可以出现转义字符
+拼接字符串
+your_name="qinjx"
+greeting="hello, "$your_name" !"
+greeting_1="hello, ${your_name} !"
+echo $greeting $greeting_1
+获取字符串长度
+string="abcd"
+echo ${#string} #输出 4
+提取子字符串
+以下实例从字符串第 2 个字符开始截取 4 个字符：
+string="runoob is a great site"
+echo ${string:1:4} # 输出 unoo
+查找子字符串
+查找字符 "i 或 s" 的位置：
+string="runoob is a great company"
+echo `expr index "$string" is`  # 输出 8
+注意： 以上脚本中 "`" 是反引号，而不是单引号 "'"，不要看错了哦。
+Shell 数组
+bash支持一维数组（不支持多维数组），并且没有限定数组的大小。
+类似与C语言，数组元素的下标由0开始编号。获取数组中的元素要利用下标，下标可以是整数或算术表达式，其值应大于或等于0。
+定义数组
+在Shell中，用括号来表示数组，数组元素用"空格"符号分割开。定义数组的一般形式为：
+数组名=(值1 值2 ... 值n)
+例如：
+array_name=(value0 value1 value2 value3)
+或者
+array_name=(
+value0
+value1
+value2
+value3
+)
+还可以单独定义数组的各个分量：
+array_name[0]=value0
+array_name[1]=value1
+array_name[n]=valuen
+可以不使用连续的下标，而且下标的范围没有限制。
+读取数组
+读取数组元素值的一般格式是：
+${数组名[下标]}
+例如：
+valuen=${array_name[n]}
+使用@符号可以获取数组中的所有元素，例如：
+echo ${array_name[@]}
+获取数组的长度
+获取数组长度的方法与获取字符串长度的方法相同，例如：
+# 取得数组元素的个数
+length=${#array_name[@]}
+# 或者
+length=${#array_name[*]}
+# 取得数组单个元素的长度
+lengthn=${#array_name[n]}
+Shell 注释
+以"#"开头的行就是注释，会被解释器忽略。
+sh里没有多行注释，只能每一行加一个#号。只能像这样：
+#--------------------------------------------
+# 这是一个注释
+# author：菜鸟教程
+# site：www.runoob.com
+# slogan：学的不仅是技术，更是梦想！
+#--------------------------------------------
+##### 用户配置区 开始 #####
+#
+#
+# 这里可以添加脚本描述信息
+# 
+#
+##### 用户配置区 结束  #####
+如果在开发过程中，遇到大段的代码需要临时注释起来，过一会儿又取消注释，怎么办呢？
+每一行加个#符号太费力了，可以把这一段要注释的代码用一对花括号括起来，定义成一个函数，没有地方调用这个函数，这块代码就不会执行，达到了和注释一样的效果。
+
+Shell 传递参数
+我们可以在执行 Shell 脚本时，向脚本传递参数，脚本内获取参数的格式为：$n。n 代表一个数字，1 为执行脚本的第一个参数，2 为执行脚本的第二个参数，以此类推……
+实例
+以下实例我们向脚本传递三个参数，并分别输出，其中 $0 为执行的文件名：
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+
+echo "Shell 传递参数实例！";
+echo "执行的文件名：$0";
+echo "第一个参数为：$1";
+echo "第二个参数为：$2";
+echo "第三个参数为：$3";
+为脚本设置可执行权限，并执行脚本，输出结果如下所示：
+$ chmod +x test.sh 
+$ ./test.sh 1 2 3
+Shell 传递参数实例！
+执行的文件名：./test.sh
+第一个参数为：1
+第二个参数为：2
+第三个参数为：3
+另外，还有几个特殊字符用来处理参数：
+参数处理	说明
+$#	传递到脚本的参数个数
+$*	以一个单字符串显示所有向脚本传递的参数。
+如"$*"用「"」括起来的情况、以"$1 $2 … $n"的形式输出所有参数。
+$$	脚本运行的当前进程ID号
+$!	后台运行的最后一个进程的ID号
+$@	与$*相同，但是使用时加引号，并在引号中返回每个参数。
+如"$@"用「"」括起来的情况、以"$1" "$2" … "$n" 的形式输出所有参数。
+$-	显示Shell使用的当前选项，与set命令功能相同。
+$?	显示最后命令的退出状态。0表示没有错误，其他任何值表明有错误。
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+
+echo "Shell 传递参数实例！";
+echo "第一个参数为：$1";
+
+echo "参数个数为：$#";
+echo "传递的参数作为一个字符串显示：$*";
+执行脚本，输出结果如下所示：
+$ chmod +x test.sh 
+$ ./test.sh 1 2 3
+Shell 传递参数实例！
+第一个参数为：1
+参数个数为：3
+传递的参数作为一个字符串显示：1 2 3
+$* 与 $@ 区别：
+相同点：都是引用所有参数。
+不同点：只有在双引号中体现出来。假设在脚本运行时写了三个参数 1、2、3，，则 " * " 等价于 "1 2 3"（传递了一个参数），而 "@" 等价于 "1" "2" "3"（传递了三个参数）。
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+
+echo "-- \$* 演示 ---"
+for i in "$*"; do
+    echo $i
+done
+
+echo "-- \$@ 演示 ---"
+for i in "$@"; do
+    echo $i
+done
+执行脚本，输出结果如下所示：
+$ chmod +x test.sh 
+$ ./test.sh 1 2 3
+-- $* 演示 ---
+1 2 3
+-- $@ 演示 ---
+1
+2
+3
+
+Shell 数组
+数组中可以存放多个值。Bash Shell 只支持一维数组（不支持多维数组），初始化时不需要定义数组大小（与 PHP 类似）。
+与大部分编程语言类似，数组元素的下标由0开始。
+Shell 数组用括号来表示，元素用"空格"符号分割开，语法格式如下：
+array_name=(value1 ... valuen)
+实例
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+
+my_array=(A B "C" D)
+我们也可以使用下标来定义数组:
+array_name[0]=value0
+array_name[1]=value1
+array_name[2]=value2
+读取数组
+读取数组元素值的一般格式是：
+${array_name[index]}
+实例
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+
+my_array=(A B "C" D)
+
+echo "第一个元素为: ${my_array[0]}"
+echo "第二个元素为: ${my_array[1]}"
+echo "第三个元素为: ${my_array[2]}"
+echo "第四个元素为: ${my_array[3]}"
+执行脚本，输出结果如下所示：
+$ chmod +x test.sh 
+$ ./test.sh
+第一个元素为: A
+第二个元素为: B
+第三个元素为: C
+第四个元素为: D
+获取数组中的所有元素
+使用@ 或 * 可以获取数组中的所有元素，例如：
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+
+my_array[0]=A
+my_array[1]=B
+my_array[2]=C
+my_array[3]=D
+
+echo "数组的元素为: ${my_array[*]}"
+echo "数组的元素为: ${my_array[@]}"
+执行脚本，输出结果如下所示：
+$ chmod +x test.sh 
+$ ./test.sh
+数组的元素为: A B C D
+数组的元素为: A B C D
+获取数组的长度
+获取数组长度的方法与获取字符串长度的方法相同，例如：
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+
+my_array[0]=A
+my_array[1]=B
+my_array[2]=C
+my_array[3]=D
+
+echo "数组元素个数为: ${#my_array[*]}"
+echo "数组元素个数为: ${#my_array[@]}"
+执行脚本，输出结果如下所示：
+$ chmod +x test.sh 
+$ ./test.sh
+数组元素个数为: 4
+数组元素个数为: 4
+
+Shell 基本运算符
+Shell 和其他编程语言一样，支持多种运算符，包括：
+算数运算符
+关系运算符
+布尔运算符
+字符串运算符
+文件测试运算符
+原生bash不支持简单的数学运算，但是可以通过其他命令来实现，例如 awk 和 expr，expr 最常用。
+expr 是一款表达式计算工具，使用它能完成表达式的求值操作。
+例如，两个数相加(注意使用的是反引号 ` 而不是单引号 ')：
+#!/bin/bash
+
+val=`expr 2 + 2`
+echo "两数之和为 : $val"
+运行实例 »
+执行脚本，输出结果如下所示：
+两数之和为 : 4
+两点注意：
+表达式和运算符之间要有空格，例如 2+2 是不对的，必须写成 2 + 2，这与我们熟悉的大多数编程语言不一样。
+完整的表达式要被 ` ` 包含，注意这个字符不是常用的单引号，在 Esc 键下边。
+算术运算符
+下表列出了常用的算术运算符，假定变量 a 为 10，变量 b 为 20：
+运算符	说明	举例
++	加法	`expr $a + $b` 结果为 30。
+-	减法	`expr $a - $b` 结果为 -10。
+*	乘法	`expr $a \* $b` 结果为  200。
+/	除法	`expr $b / $a` 结果为 2。
+%	取余	`expr $b % $a` 结果为 0。
+=	赋值	a=$b 将把变量 b 的值赋给 a。
+==	相等。用于比较两个数字，相同则返回 true。	[ $a == $b ] 返回 false。
+!=	不相等。用于比较两个数字，不相同则返回 true。	[ $a != $b ] 返回 true。
+注意：条件表达式要放在方括号之间，并且要有空格，例如: [$a==$b] 是错误的，必须写成 [ $a == $b ]。
+实例
+算术运算符实例如下：
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+
+a=10
+b=20
+
+val=`expr $a + $b`
+echo "a + b : $val"
+
+val=`expr $a - $b`
+echo "a - b : $val"
+
+val=`expr $a \* $b`
+echo "a * b : $val"
+
+val=`expr $b / $a`
+echo "b / a : $val"
+
+val=`expr $b % $a`
+echo "b % a : $val"
+
+if [ $a == $b ]
+then
+   echo "a 等于 b"
+fi
+if [ $a != $b ]
+then
+   echo "a 不等于 b"
+fi
+执行脚本，输出结果如下所示：
+a + b : 30
+a - b : -10
+a * b : 200
+b / a : 2
+b % a : 0
+a 不等于 b
+注意：
+乘号(*)前边必须加反斜杠(\)才能实现乘法运算；
+if...then...fi 是条件语句，后续将会讲解。
+在 MAC 中 shell 的 expr 语法是：$((表达式))，此处表达式中的 "*" 不需要转义符号 "\" 。
+关系运算符
+关系运算符只支持数字，不支持字符串，除非字符串的值是数字。
+下表列出了常用的关系运算符，假定变量 a 为 10，变量 b 为 20：
+运算符	说明	举例
+-eq	检测两个数是否相等，相等返回 true。	[ $a -eq $b ] 返回 false。
+-ne	检测两个数是否相等，不相等返回 true。	[ $a -ne $b ] 返回 true。
+-gt	检测左边的数是否大于右边的，如果是，则返回 true。	[ $a -gt $b ] 返回 false。
+-lt	检测左边的数是否小于右边的，如果是，则返回 true。	[ $a -lt $b ] 返回 true。
+-ge	检测左边的数是否大于等于右边的，如果是，则返回 true。	[ $a -ge $b ] 返回 false。
+-le	检测左边的数是否小于等于右边的，如果是，则返回 true。	[ $a -le $b ] 返回 true。
+实例
+关系运算符实例如下：
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+
+a=10
+b=20
+
+if [ $a -eq $b ]
+then
+   echo "$a -eq $b : a 等于 b"
+else
+   echo "$a -eq $b: a 不等于 b"
+fi
+if [ $a -ne $b ]
+then
+   echo "$a -ne $b: a 不等于 b"
+else
+   echo "$a -ne $b : a 等于 b"
+fi
+if [ $a -gt $b ]
+then
+   echo "$a -gt $b: a 大于 b"
+else
+   echo "$a -gt $b: a 不大于 b"
+fi
+if [ $a -lt $b ]
+then
+   echo "$a -lt $b: a 小于 b"
+else
+   echo "$a -lt $b: a 不小于 b"
+fi
+if [ $a -ge $b ]
+then
+   echo "$a -ge $b: a 大于或等于 b"
+else
+   echo "$a -ge $b: a 小于 b"
+fi
+if [ $a -le $b ]
+then
+   echo "$a -le $b: a 小于或等于 b"
+else
+   echo "$a -le $b: a 大于 b"
+fi
+执行脚本，输出结果如下所示：
+10 -eq 20: a 不等于 b
+10 -ne 20: a 不等于 b
+10 -gt 20: a 不大于 b
+10 -lt 20: a 小于 b
+10 -ge 20: a 小于 b
+10 -le 20: a 小于或等于 b
+布尔运算符
+下表列出了常用的布尔运算符，假定变量 a 为 10，变量 b 为 20：
+运算符	说明	举例
+!	非运算，表达式为 true 则返回 false，否则返回 true。	[ ! false ] 返回 true。
+-o	或运算，有一个表达式为 true 则返回 true。	[ $a -lt 20 -o $b -gt 100 ] 返回 true。
+-a	与运算，两个表达式都为 true 才返回 true。	[ $a -lt 20 -a $b -gt 100 ] 返回 false。
+实例
+布尔运算符实例如下：
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+
+a=10
+b=20
+
+if [ $a != $b ]
+then
+   echo "$a != $b : a 不等于 b"
+else
+   echo "$a != $b: a 等于 b"
+fi
+if [ $a -lt 100 -a $b -gt 15 ]
+then
+   echo "$a -lt 100 -a $b -gt 15 : 返回 true"
+else
+   echo "$a -lt 100 -a $b -gt 15 : 返回 false"
+fi
+if [ $a -lt 100 -o $b -gt 100 ]
+then
+   echo "$a -lt 100 -o $b -gt 100 : 返回 true"
+else
+   echo "$a -lt 100 -o $b -gt 100 : 返回 false"
+fi
+if [ $a -lt 5 -o $b -gt 100 ]
+then
+   echo "$a -lt 100 -o $b -gt 100 : 返回 true"
+else
+   echo "$a -lt 100 -o $b -gt 100 : 返回 false"
+fi
+执行脚本，输出结果如下所示：
+10 != 20 : a 不等于 b
+10 -lt 100 -a 20 -gt 15 : 返回 true
+10 -lt 100 -o 20 -gt 100 : 返回 true
+10 -lt 100 -o 20 -gt 100 : 返回 false
+逻辑运算符
+以下介绍 Shell 的逻辑运算符，假定变量 a 为 10，变量 b 为 20:
+运算符	说明	举例
+&&	逻辑的 AND	[[ $a -lt 100 && $b -gt 100 ]] 返回 false
+||	逻辑的 OR	[[ $a -lt 100 || $b -gt 100 ]] 返回 true
+实例
+逻辑运算符实例如下：
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+
+a=10
+b=20
+
+if [[ $a -lt 100 && $b -gt 100 ]]
+then
+   echo "返回 true"
+else
+   echo "返回 false"
+fi
+
+if [[ $a -lt 100 || $b -gt 100 ]]
+then
+   echo "返回 true"
+else
+   echo "返回 false"
+fi
+执行脚本，输出结果如下所示：
+返回 false
+返回 true
+字符串运算符
+下表列出了常用的字符串运算符，假定变量 a 为 "abc"，变量 b 为 "efg"：
+运算符	说明	举例
+=	检测两个字符串是否相等，相等返回 true。	[ $a = $b ] 返回 false。
+!=	检测两个字符串是否相等，不相等返回 true。	[ $a != $b ] 返回 true。
+-z	检测字符串长度是否为0，为0返回 true。	[ -z $a ] 返回 false。
+-n	检测字符串长度是否为0，不为0返回 true。	[ -n $a ] 返回 true。
+str	检测字符串是否为空，不为空返回 true。	[ $a ] 返回 true。
+实例
+字符串运算符实例如下：
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+
+a="abc"
+b="efg"
+
+if [ $a = $b ]
+then
+   echo "$a = $b : a 等于 b"
+else
+   echo "$a = $b: a 不等于 b"
+fi
+if [ $a != $b ]
+then
+   echo "$a != $b : a 不等于 b"
+else
+   echo "$a != $b: a 等于 b"
+fi
+if [ -z $a ]
+then
+   echo "-z $a : 字符串长度为 0"
+else
+   echo "-z $a : 字符串长度不为 0"
+fi
+if [ -n $a ]
+then
+   echo "-n $a : 字符串长度不为 0"
+else
+   echo "-n $a : 字符串长度为 0"
+fi
+if [ $a ]
+then
+   echo "$a : 字符串不为空"
+else
+   echo "$a : 字符串为空"
+fi
+执行脚本，输出结果如下所示：
+abc = efg: a 不等于 b
+abc != efg : a 不等于 b
+-z abc : 字符串长度不为 0
+-n abc : 字符串长度不为 0
+abc : 字符串不为空
+文件测试运算符
+文件测试运算符用于检测 Unix 文件的各种属性。
+属性检测描述如下：
+操作符	说明	举例
+-b file	检测文件是否是块设备文件，如果是，则返回 true。	[ -b $file ] 返回 false。
+-c file	检测文件是否是字符设备文件，如果是，则返回 true。	[ -c $file ] 返回 false。
+-d file	检测文件是否是目录，如果是，则返回 true。	[ -d $file ] 返回 false。
+-f file	检测文件是否是普通文件（既不是目录，也不是设备文件），如果是，则返回 true。	[ -f $file ] 返回 true。
+-g file	检测文件是否设置了 SGID 位，如果是，则返回 true。	[ -g $file ] 返回 false。
+-k file	检测文件是否设置了粘着位(Sticky Bit)，如果是，则返回 true。	[ -k $file ] 返回 false。
+-p file	检测文件是否是有名管道，如果是，则返回 true。	[ -p $file ] 返回 false。
+-u file	检测文件是否设置了 SUID 位，如果是，则返回 true。	[ -u $file ] 返回 false。
+-r file	检测文件是否可读，如果是，则返回 true。	[ -r $file ] 返回 true。
+-w file	检测文件是否可写，如果是，则返回 true。	[ -w $file ] 返回 true。
+-x file	检测文件是否可执行，如果是，则返回 true。	[ -x $file ] 返回 true。
+-s file	检测文件是否为空（文件大小是否大于0），不为空返回 true。	[ -s $file ] 返回 true。
+-e file	检测文件（包括目录）是否存在，如果是，则返回 true。	[ -e $file ] 返回 true。
+实例
+变量 file 表示文件"/var/www/runoob/test.sh"，它的大小为100字节，具有 rwx 权限。下面的代码，将检测该文件的各种属性：
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+
+file="/var/www/runoob/test.sh"
+if [ -r $file ]
+then
+   echo "文件可读"
+else
+   echo "文件不可读"
+fi
+if [ -w $file ]
+then
+   echo "文件可写"
+else
+   echo "文件不可写"
+fi
+if [ -x $file ]
+then
+   echo "文件可执行"
+else
+   echo "文件不可执行"
+fi
+if [ -f $file ]
+then
+   echo "文件为普通文件"
+else
+   echo "文件为特殊文件"
+fi
+if [ -d $file ]
+then
+   echo "文件是个目录"
+else
+   echo "文件不是个目录"
+fi
+if [ -s $file ]
+then
+   echo "文件不为空"
+else
+   echo "文件为空"
+fi
+if [ -e $file ]
+then
+   echo "文件存在"
+else
+   echo "文件不存在"
+fi
+执行脚本，输出结果如下所示：
+文件可读
+文件可写
+文件可执行
+文件为普通文件
+文件不是个目录
+文件不为空
+文件存在
+
+Shell echo命令
+Shell 的 echo 指令与 PHP 的 echo 指令类似，都是用于字符串的输出。命令格式：
+echo string
+您可以使用echo实现更复杂的输出格式控制。
+1.显示普通字符串:
+echo "It is a test"
+这里的双引号完全可以省略，以下命令与上面实例效果一致：
+echo It is a test
+2.显示转义字符
+echo "\"It is a test\""
+结果将是:
+"It is a test"
+同样，双引号也可以省略
+3.显示变量
+read 命令从标准输入中读取一行,并把输入行的每个字段的值指定给 shell 变量
+#!/bin/sh
+read name 
+echo "$name It is a test"
+以上代码保存为 test.sh，name 接收标准输入的变量，结果将是:
+[root@www ~]# sh test.sh
+OK                     #标准输入
+OK It is a test        #输出
+4.显示换行
+echo -e "OK! \n" # -e 开启转义
+echo "It it a test"
+输出结果：
+OK!
+
+It it a test
+5.显示不换行
+#!/bin/sh
+echo -e "OK! \c" # -e 开启转义 \c 不换行
+echo "It is a test"
+输出结果：
+OK! It is a test
+6.显示结果定向至文件
+echo "It is a test" > myfile
+7.原样输出字符串，不进行转义或取变量(用单引号)
+echo '$name\"'
+输出结果：
+$name\"
+8.显示命令执行结果
+  echo `date`
+结果将显示当前日期
+Thu Jul 24 10:08:46 CST 2014
+
+Shell printf 命令
+上一章节我们学习了 Shell 的 echo 命令，本章节我们来学习 Shell 的另一个输出命令 printf。
+printf 命令模仿 C 程序库（library）里的 printf() 程序。
+标准所定义，因此使用printf的脚本比使用echo移植性好。
+printf 使用引用文本或空格分隔的参数，外面可以在printf中使用格式化字符串，还可以制定字符串的宽度、左右对齐方式等。默认printf不会像 echo 自动添加换行符，我们可以手动添加 \n。
+printf 命令的语法：
+printf  format-string  [arguments...]
+参数说明：
+format-string: 为格式控制字符串
+arguments: 为参数列表。
+实例如下：
+$ echo "Hello, Shell"
+Hello, Shell
+$ printf "Hello, Shell\n"
+Hello, Shell
+$
+接下来,我来用一个脚本来体现printf的强大功能：
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+ 
+printf "%-10s %-8s %-4s\n" 姓名 性别 体重kg  
+printf "%-10s %-8s %-4.2f\n" 郭靖 男 66.1234 
+printf "%-10s %-8s %-4.2f\n" 杨过 男 48.6543 
+printf "%-10s %-8s %-4.2f\n" 郭芙 女 47.9876 
+执行脚本，输出结果如下所示：
+姓名     性别   体重kg
+郭靖     男      66.12
+杨过     男      48.65
+郭芙     女      47.99
+%s %c %d %f都是格式替代符
+%-10s 指一个宽度为10个字符（-表示左对齐，没有则表示右对齐），任何字符都会被显示在10个字符宽的字符内，如果不足则自动以空格填充，超过也会将内容全部显示出来。
+%-4.2f 指格式化为小数，其中.2指保留2位小数。
+更多实例：
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+ 
+# format-string为双引号
+printf "%d %s\n" 1 "abc"
+
+# 单引号与双引号效果一样 
+printf '%d %s\n' 1 "abc" 
+
+# 没有引号也可以输出
+printf %s abcdef
+
+# 格式只指定了一个参数，但多出的参数仍然会按照该格式输出，format-string 被重用
+printf %s abc def
+
+printf "%s\n" abc def
+
+printf "%s %s %s\n" a b c d e f g h i j
+
+# 如果没有 arguments，那么 %s 用NULL代替，%d 用 0 代替
+printf "%s and %d \n" 
+执行脚本，输出结果如下所示：
+1 abc
+1 abc
+abcdefabcdefabc
+def
+a b c
+d e f
+g h i
+j  
+ and 0
+printf的转义序列
+序列	说明
+\a	警告字符，通常为ASCII的BEL字符
+\b	后退
+\c	抑制（不显示）输出结果中任何结尾的换行字符（只在%b格式指示符控制下的参数字符串中有效），而且，任何留在参数里的字符、任何接下来的参数以及任何留在格式字符串中的字符，都被忽略
+\f	换页（formfeed）
+\n	换行
+\r	回车（Carriage return）
+\t	水平制表符
+\v	垂直制表符
+\\	一个字面上的反斜杠字符
+\ddd	表示1到3位数八进制值的字符。仅在格式字符串中有效
+\0ddd	表示1到3位的八进制值字符
+实例
+$ printf "a string, no processing:<%s>\n" "A\nB"
+a string, no processing:<A\nB>
+
+$ printf "a string, no processing:<%b>\n" "A\nB"
+a string, no processing:<A
+B>
+
+$ printf "www.runoob.com \a"
+www.runoob.com $                  #不换行
+
+Shell test 命令
+Shell中的 test 命令用于检查某个条件是否成立，它可以进行数值、字符和文件三个方面的测试。
+数值测试
+参数	说明
+-eq	等于则为真
+-ne	不等于则为真
+-gt	大于则为真
+-ge	大于等于则为真
+-lt	小于则为真
+-le	小于等于则为真
+实例演示：
+num1=100
+num2=100
+if test $[num1] -eq $[num2]
+then
+    echo '两个数相等！'
+else
+    echo '两个数不相等！'
+fi
+输出结果：
+两个数相等！
+字符串测试
+参数	说明
+=	等于则为真
+!=	不相等则为真
+-z 字符串	字符串的长度为零则为真
+-n 字符串	字符串的长度不为零则为真
+实例演示：
+num1="ru1noob"
+num2="runoob"
+if test $num1 = $num2
+then
+    echo '两个字符串相等!'
+else
+    echo '两个字符串不相等!'
+fi
+输出结果：
+两个字符串不相等!
+文件测试
+参数	说明
+-e 文件名	如果文件存在则为真
+-r 文件名	如果文件存在且可读则为真
+-w 文件名	如果文件存在且可写则为真
+-x 文件名	如果文件存在且可执行则为真
+-s 文件名	如果文件存在且至少有一个字符则为真
+-d 文件名	如果文件存在且为目录则为真
+-f 文件名	如果文件存在且为普通文件则为真
+-c 文件名	如果文件存在且为字符型特殊文件则为真
+-b 文件名	如果文件存在且为块特殊文件则为真
+实例演示：
+cd /bin
+if test -e ./bash
+then
+    echo '文件已存在!'
+else
+    echo '文件不存在!'
+fi
+输出结果：
+文件已存在!
+另外，Shell还提供了与( -a )、或( -o )、非( ! )三个逻辑操作符用于将测试条件连接起来，其优先级为："!"最高，"-a"次之，"-o"最低。例如：
+cd /bin
+if test -e ./notFile -o -e ./bash
+then
+    echo '有一个文件存在!'
+else
+    echo '两个文件都不存在'
+fi
+输出结果：
+有一个文件存在!
+
+Shell 流程控制
+和Java、PHP等语言不一样，sh的流程控制不可为空，如(以下为PHP流程控制写法)：
+<?php
+if (isset($_GET["q"])) {
+    search(q);
+}
+else {
+    // 不做任何事情
+}
+在sh/bash里可不能这么写，如果else分支没有语句执行，就不要写这个else。
+if else
+if
+if 语句语法格式：
+if condition
+then
+    command1 
+    command2
+    ...
+    commandN 
+fi
+写成一行（适用于终端命令提示符）：
+if [ $(ps -ef | grep -c "ssh") -gt 1 ]; then echo "true"; fi
+末尾的fi就是if倒过来拼写，后面还会遇到类似的。
+if else
+if else 语法格式：
+if condition
+then
+    command1 
+    command2
+    ...
+    commandN
+else
+    command
+fi
+if else-if else
+if else-if else 语法格式：
+if condition1
+then
+    command1
+elif condition2 
+then 
+    command2
+else
+    commandN
+fi
+以下实例判断两个变量是否相等：
+a=10
+b=20
+if [ $a == $b ]
+then
+   echo "a 等于 b"
+elif [ $a -gt $b ]
+then
+   echo "a 大于 b"
+elif [ $a -lt $b ]
+then
+   echo "a 小于 b"
+else
+   echo "没有符合的条件"
+fi
+输出结果：
+a 小于 b
+if else语句经常与test命令结合使用，如下所示：
+num1=$[2*3]
+num2=$[1+5]
+if test $[num1] -eq $[num2]
+then
+    echo '两个数字相等!'
+else
+    echo '两个数字不相等!'
+fi
+输出结果：
+两个数字相等!
+for 循环
+与其他编程语言类似，Shell支持for循环。
+for循环一般格式为：
+for var in item1 item2 ... itemN
+do
+    command1
+    command2
+    ...
+    commandN
+done
+写成一行：
+for var in item1 item2 ... itemN; do command1; command2… done;
+当变量值在列表里，for循环即执行一次所有命令，使用变量名获取列表中的当前取值。命令可为任何有效的shell命令和语句。in列表可以包含替换、字符串和文件名。
+in列表是可选的，如果不用它，for循环使用命令行的位置参数。
+例如，顺序输出当前列表中的数字：
+for loop in 1 2 3 4 5
+do
+    echo "The value is: $loop"
+done
+输出结果：
+The value is: 1
+The value is: 2
+The value is: 3
+The value is: 4
+The value is: 5
+顺序输出字符串中的字符：
+for str in 'This is a string'
+do
+    echo $str
+done
+输出结果：
+This is a string
+while 语句
+while循环用于不断执行一系列命令，也用于从输入文件中读取数据；命令通常为测试条件。其格式为：
+while condition
+do
+    command
+done
+以下是一个基本的while循环，测试条件是：如果int小于等于5，那么条件返回真。int从0开始，每次循环处理时，int加1。运行上述脚本，返回数字1到5，然后终止。
+#!/bin/sh
+int=1
+while(( $int<=5 ))
+do
+        echo $int
+        let "int++"
+done
+运行脚本，输出：
+1
+2
+3
+4
+5
+使用中使用了 Bash let 命令，它用于执行一个或多个表达式，变量计算中不需要加上 $ 来表示变量，具体可查阅：Bash let 命令
+。
+while循环可用于读取键盘信息。下面的例子中，输入信息被设置为变量FILM，按<Ctrl-D>结束循环。
+echo '按下 <CTRL-D> 退出'
+echo -n '输入你最喜欢的电影名: '
+while read FILM
+do
+    echo "是的！$FILM 是一部好电影"
+done
+运行脚本，输出类似下面：
+按下 <CTRL-D> 退出
+输入你最喜欢的电影名: w3cschool菜鸟教程
+是的！w3cschool菜鸟教程 是一部好电影
+无限循环
+无限循环语法格式：
+while :
+do
+    command
+done
+或者
+while true
+do
+    command
+done
+或者
+for (( ; ; ))
+until 循环
+until循环执行一系列命令直至条件为真时停止。
+until循环与while循环在处理方式上刚好相反。
+一般while循环优于until循环，但在某些时候—也只是极少数情况下，until循环更加有用。
+until 语法格式:
+until condition
+do
+    command
+done
+条件可为任意测试条件，测试发生在循环末尾，因此循环至少执行一次—请注意这一点。
+case
+Shell case语句为多选择语句。可以用case语句匹配一个值与一个模式，如果匹配成功，执行相匹配的命令。case语句格式如下：
+case 值 in
+模式1)
+    command1
+    command2
+    ...
+    commandN
+    ;;
+模式2）
+    command1
+    command2
+    ...
+    commandN
+    ;;
+esac
+case工作方式如上所示。取值后面必须为单词in，每一模式必须以右括号结束。取值可以为变量或常数。匹配发现取值符合某一模式后，其间所有命令开始执行直至 ;;。
+取值将检测匹配的每一个模式。一旦模式匹配，则执行完匹配模式相应命令后不再继续其他模式。如果无一匹配模式，使用星号 * 捕获该值，再执行后面的命令。
+下面的脚本提示输入1到4，与每一种模式进行匹配：
+echo '输入 1 到 4 之间的数字:'
+echo '你输入的数字为:'
+read aNum
+case $aNum in
+    1)  echo '你选择了 1'
+    ;;
+    2)  echo '你选择了 2'
+    ;;
+    3)  echo '你选择了 3'
+    ;;
+    4)  echo '你选择了 4'
+    ;;
+    *)  echo '你没有输入 1 到 4 之间的数字'
+    ;;
+esac
+输入不同的内容，会有不同的结果，例如：
+输入 1 到 4 之间的数字:
+你输入的数字为:
+3
+你选择了 3
+跳出循环
+在循环过程中，有时候需要在未达到循环结束条件时强制跳出循环，Shell使用两个命令来实现该功能：break和continue。
+break命令
+break命令允许跳出所有循环（终止执行后面的所有循环）。
+下面的例子中，脚本进入死循环直至用户输入数字大于5。要跳出这个循环，返回到shell提示符下，需要使用break命令。
+#!/bin/bash
+while :
+do
+    echo -n "输入 1 到 5 之间的数字:"
+    read aNum
+    case $aNum in
+        1|2|3|4|5) echo "你输入的数字为 $aNum!"
+        ;;
+        *) echo "你输入的数字不是 1 到 5 之间的! 游戏结束"
+            break
+        ;;
+    esac
+done
+执行以上代码，输出结果为：
+输入 1 到 5 之间的数字:3
+你输入的数字为 3!
+输入 1 到 5 之间的数字:7
+你输入的数字不是 1 到 5 之间的! 游戏结束
+continue
+continue命令与break命令类似，只有一点差别，它不会跳出所有循环，仅仅跳出当前循环。
+对上面的例子进行修改：
+#!/bin/bash
+while :
+do
+    echo -n "输入 1 到 5 之间的数字: "
+    read aNum
+    case $aNum in
+        1|2|3|4|5) echo "你输入的数字为 $aNum!"
+        ;;
+        *) echo "你输入的数字不是 1 到 5 之间的!"
+            continue
+            echo "游戏结束"
+        ;;
+    esac
+done
+运行代码发现，当输入大于5的数字时，该例中的循环不会结束，语句 echo "Game is over!" 永远不会被执行。
+esac
+case的语法和C family语言差别很大，它需要一个esac（就是case反过来）作为结束标记，每个case分支用右圆括号，用两个分号表示break。
+
+Shell 函数
+linux shell 可以用户定义函数，然后在shell脚本中可以随便调用。
+shell中函数的定义格式如下：
+[ function ] funname [()]
+
+{
+
+    action;
+
+    [return int;]
+
+}
+说明：
+1、可以带function fun() 定义，也可以直接fun() 定义,不带任何参数。
+2、参数返回，可以显示加：return 返回，如果不加，将以最后一条命令运行结果，作为返回值。 return后跟数值n(0-255
+下面的例子定义了一个函数并进行调用：
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+
+demoFun(){
+    echo "这是我的第一个 shell 函数!"
+}
+echo "-----函数开始执行-----"
+demoFun
+echo "-----函数执行完毕-----"
+输出结果：
+-----函数开始执行-----
+这是我的第一个 shell 函数!
+-----函数执行完毕-----
+下面定义一个带有return语句的函数：
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+
+funWithReturn(){
+    echo "这个函数会对输入的两个数字进行相加运算..."
+    echo "输入第一个数字: "
+    read aNum
+    echo "输入第二个数字: "
+    read anotherNum
+    echo "两个数字分别为 $aNum 和 $anotherNum !"
+    return $(($aNum+$anotherNum))
+}
+funWithReturn
+echo "输入的两个数字之和为 $? !"
+输出类似下面：
+这个函数会对输入的两个数字进行相加运算...
+输入第一个数字: 
+1
+输入第二个数字: 
+2
+两个数字分别为 1 和 2 !
+输入的两个数字之和为 3 !
+函数返回值在调用该函数后通过 $? 来获得。
+注意：所有函数在使用前必须定义。这意味着必须将函数放在脚本开始部分，直至shell解释器首次发现它时，才可以使用。调用函数仅使用其函数名即可。
+函数参数
+在Shell中，调用函数时可以向其传递参数。在函数体内部，通过 $n 的形式来获取参数的值，例如，$1表示第一个参数，$2表示第二个参数...
+带参数的函数示例：
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+
+funWithParam(){
+    echo "第一个参数为 $1 !"
+    echo "第二个参数为 $2 !"
+    echo "第十个参数为 $10 !"
+    echo "第十个参数为 ${10} !"
+    echo "第十一个参数为 ${11} !"
+    echo "参数总数有 $# 个!"
+    echo "作为一个字符串输出所有参数 $* !"
+}
+funWithParam 1 2 3 4 5 6 7 8 9 34 73
+输出结果：
+第一个参数为 1 !
+第二个参数为 2 !
+第十个参数为 10 !
+第十个参数为 34 !
+第十一个参数为 73 !
+参数总数有 11 个!
+作为一个字符串输出所有参数 1 2 3 4 5 6 7 8 9 34 73 !
+注意，$10 不能获取第十个参数，获取第十个参数需要${10}。当n>=10时，需要使用${n}来获取参数。
+另外，还有几个特殊字符用来处理参数：
+参数处理	说明
+$#	传递到脚本的参数个数
+$*	以一个单字符串显示所有向脚本传递的参数
+$$	脚本运行的当前进程ID号
+$!	后台运行的最后一个进程的ID号
+$@	与$*相同，但是使用时加引号，并在引号中返回每个参数。
+$-	显示Shell使用的当前选项，与set命令功能相同。
+$?	显示最后命令的退出状态。0表示没有错误，其他任何值表明有错误。
+
+Shell 输入/输出重定向
+大多数 UNIX 系统命令从你的终端接受输入并将所产生的输出发送回​​到您的终端。一个命令通常从一个叫标准输入的地方读取输入，默认情况下，这恰好是你的终端。同样，一个命令通常将其输出写入到标准输出，默认情况下，这也是你的终端。
+重定向命令列表如下：
+命令	说明
+command > file	将输出重定向到 file。
+command < file	将输入重定向到 file。
+command >> file	将输出以追加的方式重定向到 file。
+n > file	将文件描述符为 n 的文件重定向到 file。
+n >> file	将文件描述符为 n 的文件以追加的方式重定向到 file。
+n >& m	将输出文件 m 和 n 合并。
+n <& m	将输入文件 m 和 n 合并。
+<< tag	将开始标记 tag 和结束标记 tag 之间的内容作为输入。
+需要注意的是文件描述符 0 通常是标准输入（STDIN），1 是标准输出（STDOUT），2 是标准错误输出（STDERR）。
+输出重定向
+重定向一般通过在命令间插入特定的符号来实现。特别的，这些符号的语法如下所示:
+command1 > file1
+上面这个命令执行command1然后将输出的内容存入file1。
+注意任何file1内的已经存在的内容将被新内容替代。如果要将新内容添加在文件末尾，请使用>>操作符。
+实例
+执行下面的 who 命令，它将命令的完整的输出重定向在用户文件中(users):
+$ who > users
+执行后，并没有在终端输出信息，这是因为输出已被从默认的标准输出设备（终端）重定向到指定的文件。
+你可以使用 cat 命令查看文件内容：
+$ cat users
+_mbsetupuser console  Oct 31 17:35 
+tianqixin    console  Oct 31 17:35 
+tianqixin    ttys000  Dec  1 11:33 
+输出重定向会覆盖文件内容，请看下面的例子：
+$ echo "菜鸟教程：www.runoob.com" > users
+$ cat users
+菜鸟教程：www.runoob.com
+$
+如果不希望文件内容被覆盖，可以使用 >> 追加到文件末尾，例如：
+$ echo "菜鸟教程：www.runoob.com" >> users
+$ cat users
+菜鸟教程：www.runoob.com
+菜鸟教程：www.runoob.com
+$
+输入重定向
+和输出重定向一样，Unix 命令也可以从文件获取输入，语法为：
+command1 < file1
+这样，本来需要从键盘获取输入的命令会转移到文件读取内容。
+注意：输出重定向是大于号(>)，输入重定向是小于号(<)。
+实例
+接着以上实例，我们需要统计 users 文件的行数,执行以下命令：
+$ wc -l users
+       2 users
+也可以将输入重定向到 users 文件：
+$  wc -l < users
+       2 
+注意：上面两个例子的结果不同：第一个例子，会输出文件名；第二个不会，因为它仅仅知道从标准输入读取内容。
+command1 < infile > outfile
+同时替换输入和输出，执行command1，从文件infile读取内容，然后将输出写入到outfile中。
+重定向深入讲解
+一般情况下，每个 Unix/Linux 命令运行时都会打开三个文件：
+标准输入文件(stdin)：stdin的文件描述符为0，Unix程序默认从stdin读取数据。
+标准输出文件(stdout)：stdout 的文件描述符为1，Unix程序默认向stdout输出数据。
+标准错误文件(stderr)：stderr的文件描述符为2，Unix程序会向stderr流中写入错误信息。
+默认情况下，command > file 将 stdout 重定向到 file，command < file 将stdin 重定向到 file。
+如果希望 stderr 重定向到 file，可以这样写：
+$ command 2 > file
+如果希望 stderr 追加到 file 文件末尾，可以这样写：
+$ command 2 >> file
+2 表示标准错误文件(stderr)。
+如果希望将 stdout 和 stderr 合并后重定向到 file，可以这样写：
+$ command > file 2>&1
+
+或者
+
+$ command >> file 2>&1
+如果希望对 stdin 和 stdout 都重定向，可以这样写：
+$ command < file1 >file2
+command 命令将 stdin 重定向到 file1，将 stdout 重定向到 file2。
+Here Document
+Here Document 是 Shell 中的一种特殊的重定向方式，用来将输入重定向到一个交互式 Shell 脚本或程序。
+它的基本的形式如下：
+command << delimiter
+    document
+delimiter
+它的作用是将两个 delimiter 之间的内容(document) 作为输入传递给 command。
+注意：
+结尾的delimiter 一定要顶格写，前面不能有任何字符，后面也不能有任何字符，包括空格和 tab 缩进。
+开始的delimiter前后的空格会被忽略掉。
+实例
+在命令行中通过 wc -l 命令计算 Here Document 的行数：
+$ wc -l << EOF
+    欢迎来到
+    菜鸟教程
+    www.runoob.com
+EOF
+3          # 输出结果为 3 行
+$
+我们也可以将 Here Document 用在脚本中，例如：
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+
+cat << EOF
+欢迎来到
+菜鸟教程
+www.runoob.com
+EOF
+执行以上脚本，输出结果：
+欢迎来到
+菜鸟教程
+www.runoob.com
+/dev/null 文件
+如果希望执行某个命令，但又不希望在屏幕上显示输出结果，那么可以将输出重定向到 /dev/null：
+$ command > /dev/null
+/dev/null 是一个特殊的文件，写入到它的内容都会被丢弃；如果尝试从该文件读取内容，那么什么也读不到。但是 /dev/null 文件非常有用，将命令的输出重定向到它，会起到"禁止输出"的效果。
+如果希望屏蔽 stdout 和 stderr，可以这样写：
+$ command > /dev/null 2>&1
+注意：0 是标准输入（STDIN），1 是标准输出（STDOUT），2 是标准错误输出（STDERR）。
+
+Shell 文件包含
+和其他语言一样，Shell 也可以包含外部脚本。这样可以很方便的封装一些公用的代码作为一个独立的文件。
+Shell 文件包含的语法格式如下：
+. filename   # 注意点号(.)和文件名中间有一空格
+
+或
+
+source filename
+实例
+创建两个 shell 脚本文件。
+test1.sh 代码如下：
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+
+url="http://www.runoob.com"
+test2.sh 代码如下：
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+
+#使用 . 号来引用test1.sh 文件
+. ./test1.sh
+
+# 或者使用以下包含文件代码
+# source ./test1.sh
+
+echo "菜鸟教程官网地址：$url"
+接下来，我们为 test2.sh 添加可执行权限并执行：
+$ chmod +x test2.sh 
+$ ./test2.sh 
+菜鸟教程官网地址：http://www.runoob.com
+注：被包含的文件 test1.sh 不需要可执行权限。
+
+
+网易云笔记
+
+[来自手机]
+----------------------------------------------------------------------------------------------------------------------------------
+在吗
+微时尚668 (23:45:29):
+通知：2016.6.1公众号更新后所有账号都有改名时间限制；客户购买前请咨询旺旺！购买后请在规定时间内完成账号名称修改！！！谢谢合作！ 任意个性定制主体名称：150 企业订阅号、25 元 【可改名不支持后续认证】 服务号： 新客户首个购买15元【限一个】 超过25一个【可改名不提供认证服务】 个人订阅号：首个4元。超过按6元直销 全部正规对公帐号，需要什么帐号拍下即可！ 即拍即发！改名即用 注： 公众号属于个人定制品，名称微信号一经确定设置无法修改！所以客户在购买后存在不确定因素的情况下可暂时不予修改此两项操作，一经修改其中任何一项后本店拒绝退换！谢谢合作！！
+在的
+祈愿求福 (23:46:58):
+做微商城的话需要服务号还是订阅号还是企业号
+微时尚668 (23:47:15):
+这个我不懂
+什么是订阅号？ 订阅号： 为用户提供一种新的信息传播方式，主要功能是在微信侧给用户传达资讯；（功能类似报纸杂志，提供新闻信息或娱乐趣事。适合企业个人推广） 适用人群： 个人、媒体、企业、政府或其他组织。 群发次数： 订阅号（认证用户、非认证用户）1天内只能群发1条消息（每天0点更新，次数不会累加）。
+什么是服务号？ 服务号：给用户提供更强大的业务服务与用户管理能力，主要偏向服务类交互（功能类似微商城，微餐厅，社区服务，提供绑定信息，服务交互的）； 特点：服务号自定义菜单功能可对接第三方网站；1个月（按自然月）内可发送4条群发消息。需要有企业或组织的资料才可以注册。 【服务号自定义菜单可以外链第三方网站】
+祈愿求福 (23:48:28):
+订阅号可以自定义菜单吗
+微时尚668 (23:48:48):
+可以 不能外链
+祈愿求福 (23:49:09):
+服务号可以？
+微时尚668 (23:49:17):
+可以
+祈愿求福 (23:49:39):
+需要提供什么证件吗
+微时尚668 (23:49:51):
+现成账号
+祈愿求福 (23:50:41):
+可以改名吗
+微时尚668 (23:50:52):
+可以修改一次
+祈愿求福 (23:51:19):
+现在下单能发货吗
+微时尚668 (23:51:25):
+可以
+亲！需要的请去拍下哦 一： https://item.taobao.com/item.htm?id=525050969061
+微信公众平台 微信公众号订阅号 企业号主体名称定制公众号推广+v
+价格：￥1.00
+运费： 卖家承担运费 评价(38)
+宝贝预设价格为1元，拍对应账号价格数量即可！！！
+祈愿求福 (23:52:07):
+订阅号15元是吧
+服务号
+微时尚668 (23:52:25):
+企业订阅号 25
+服务号首个15
+祈愿求福 (23:53:26):
+我需要一个服务号
+微时尚668 (23:53:40):
+拍
+微时尚668 (23:55:24):
+fkyr2856@163.com 登录密码：aaaa6666 邮箱密码xxxxcccc 郭娟510704199204104923 原微信号h615931189
+公众号扫码登录修改操作步骤： 第一步：登录更换管理员。点击二维码下方更换微信号开始，按提示步骤完成修改！ 第二步：修改成功后返回登录页面登录，然后使用更换后的微信扫描登录二维码即可登录！
+2016-06-24
+祈愿求福 (00:01:54):
+已发送操作申请 请等待公众号管理员微信号（h61*****89）验证操作申请，验证通过后操作将立即进行。此申请在30分钟后过期，请尽快联系管理员验证。 这个是什么意思
+微时尚668 (00:02:37):
+祈愿求福 (00:03:35):
+扫描之后显示系统繁忙
+微时尚668 (00:03:42):
+截图
+祈愿求福 (00:07:11):
+发不了图，用我的微信账号扫描没问题吧
+微时尚668 (00:07:34):
+你得先更换微信号啊
+祈愿求福 (00:08:08):
+郭娟510704199204104923 原微信号h615931189
+微时尚668 (00:08:17):
+验证资料
+祈愿求福 (00:08:20):
+这个吗
+微时尚668 (00:08:43):
+然后登陆邮箱
+邮件打开来就有验证的 然后验证成功会有二维码 用你微信扫就绑定了
+这个步骤我觉得够清楚了啊
+祈愿求福 (00:12:26):
+还是不太懂，先在手机登录你给的账号是吧郭娟510704199204104923 原微信号h615931189
+微时尚668 (00:12:52):
+我直接给你弄二维码去绑定吧
+稍等
+扫
+用你微信
+微时尚668 (00:14:05):
+绑定上就可以到公众平台登陆扫码了
+祈愿求福 (00:15:02):
+已经绑定了
+微时尚668 (00:15:59): https://mp.weixin.qq.com/
+fkyr2856@163.com 登录密码：aaaa6666
+祈愿求福 (00:18:17):
+这往下我自己弄吧
+微时尚668 (00:18:26):
+好的
+祈愿求福 (00:28:03):
+修改一下手机，麻烦发一下验证码
+微时尚668 (00:30:18):
+你看到发送后会有一个重置的入口没有
+点击那个按步骤修改
+祈愿求福 (00:35:16):
+我过一段时间再修改吧
+太晚了
+微时尚668 (00:35:39):
+28号之前
+祈愿求福 (00:35:53):
+行
+微时尚668 (00:36:08):
+现在账号最长5天修改时间，超过腾讯就不让修改了
+祈愿求福 (00:37:26):
+多谢提醒，我这两天尽快都改完
+微时尚668 (00:37:41):
+fkyr2856@163.com
+登录密码：aaaa6666
+192.168.1.128
+255.255.255.0
+192.168.1.1
+fkyr2856@163.com
+登录密码：aaaa6666
+192.168.1.128
+255.255.255.0
+192.168.1.1
+----------------------------------------------------------------------------------------------------------------------------------
+
+房姐.中行621786 050000 1510710
+
+长江路728号 2905室 中国银行 6217 8505 0001 4892 115 社保号和公积金号 社保号： 公积金号：621700 078 002 5303885领导 班车 9778 辽B1787B 182.92.243.145
+
+若葉雨 小夜時雨 天城越え 火の車 汽車 自動車 自転車 間 函館 加賀友禅 アンコ椿は恋の花 三原 大原三千院 中島みゆき 石川さゆり 五木ひろし 岩手県 大分県 静岡放送 長野県 東海道新幹線 大連医科大学 繰り返す 瀋陽工程学院 嵐山 大覚寺 雪椿 埼玉県 徳島県 愛媛県 愛知県 高知県 検索 登録 更に ログイン 広島県 条件 情報 近畿地方 関東地方 九州地方 広東 北国の春 手紙 湯の花 薩摩 篤姫 鹿児島県 島津 江戸時代 徳川氏 和歌山県 株式会社 渋谷 神戸です 金沢の雨 散りたい 人生いろいろ 川中美幸 エラー 名古屋市 上手です 幸せ 夢追い酒 都はるみ 森山愛子 病院 看護士 苦手 女優 役者 別府 港町ブルス 秋刀魚 適当 漫画 演奏 首 札幌市 暦 焼酎天国 居酒屋 西郷隆盛 奄美大島 気仙沼市 人生めぐり愛 伍代夏子 島津悦子 花舞台 会津若松市 東北魂 ゴミ箱 定年 伊藤博文 花見 満月 秘密 つばめ 矢切の渡し めおと暦 浅野川春秋 為 響く ひとり酒 箱根 篤子 逢いたいよ 夕空一面 またたく星に 大連駅 関西料理 大月みやこ 関東武士 福岡県民謡 長い夜 おせち料理 紅白歌合戦 女の岬 　 じょうから姉妹 　楽しみ　今回から 月見　結構　浴衣　今年　照れ屋　茶碗 のど自慢 感謝 夕霧岬 関西国際空港 大和ホテル
+
+佳皇 电话：13248058389
+----------------------------------------------------------------------------------------------------------------------------------
+日本
+
+[演歌翻译]
+----------------------------------------------------------------------------------------------------------------------------------
+
+の れ ん 一 代
+作詞：三浦康照　　
+作曲　市川昭介
+演唱：美空ひばり
+昭和40年
+
+縞(しま)ののれんに　この意地かけて
+男まさりが　耐えて来た
+負けちゃならない　浪花の女　
+通天閣の　赤い灯よりも    
+胸を燃やした　土根性    
+
+口じゃいえない　幾年月の
+辛い苦労も　女ゆえ
+人に涙は　見せないけれど
+儚(はかな)く消えた　初恋抱いて
+泣いた涙を　誰が知ろ
+
+
+のれん一代　名代の店を
+築く明日の　夢がある
+度胸ひとすじ　やるぞときめて
+道頓堀の　水面に映す
+かけた女の　心意気
+----------------------------------------------------------------------------------------------------------------------------------
+
+憧れの住む町
+作詞・清水　みのる
+作曲・平川　浪竜
+唄・菅原都々子
+翻譯：七語
+
+丘を越え　山を越え　あこがれの　住む町に　夢をだいて　ゆくよ　はるばると　鐘が鳴ります　遠い　遠い空で
+旅ゆく身に　やさしく　しみじみと
+
+
+りんどうの花の道　白樺の　つづく道　影を慕い　ゆくよ　はるばると　鳥も呼びます　山の　山の彼方
+旅ゆく身に　やさしく　なつかしく
+
+
+愛の町　日昏れ町　ともしびの　見える町　峠こえて　ゆくよ　はるばると　乙女ごころに　降るは星のしずく
+旅ゆく身に　やさしく　はてしなく
+
+
+翻越丘陵翻過山，去往憧憬所居住的小城，還抱著夢想向前走，走向遠方，在遙遠的天邊溫柔的鳴響了晨鐘，那鐘聲讓途中的我感受如此深刻。
+
+林間小道百花盛開，白樺在道理兩旁綿延，我追隨著它們的影子向遠方走，在山的另一邊，鳥兒溫柔的鳴唱，那叫聲讓途中的我感覺那麽懷念。
+
+我要去往那愛的城市，日暮的小城，那座能看到燈火的小城，翻閲過山嶺向前走，奔向遠方走，墜落在少女心裏的是，那星辰的點滴，那溫柔的點滴，讓我感覺無邊無際。
+
+----------------------------------------------------------------------------------------------------------------------------------
+恋桜　　小林幸子
+
+
+春　乱れる　夜の桜坂 （在樱花飘落的春夜）
+あなたが好き　やっぱり好きだから （发现自己喜欢你，果真是喜欢你）
+はらはら　女　吹雪きます （担心你遇到暴风雪）
+今夜は嘘がつけません （今晚不是在骗你）
+隠しきれない帯の息 （無法割斷的思念）
+あなた　気づいてください　あぁ （请你明白，啊）
+はらはら　女　吹雪きます （担心你遇到暴风雪）
+人に言えない恋ですか （无法倾述的恋爱吗）
+二千年目の流星が降る （千年流星降落时）
+あなたに散りたい (想和你一起消失)
+
+抱いてください　添えぬ運命でも (请抱一下吧，哪怕不合命运）
+あなたがいい　死ぬほど好きだから （你若安好，就是死也愿意）
+しんしん　女　痛みます （静静的夜晚，我却感到悲伤）
+月もこぼれる石畳 （当月光洒在石凳上）
+ちぎれるような肌の音 （只听见撕心裂肺的声音）
+あなた　気づいてください　あぁ （请你明白我，啊）
+
+しんしん　女　痛みます （静静的夜晚，我却感到悲伤）
+闻き分けのない恋ですか （不知道是爱恋你的话吗）
+二千年目の流星が降る （看到千年的流星降落时）
+あなたに散りたい （想和你一起消失）
+
+はらはら　女　吹雪きます （担心你遇到暴风雪）
+爱しすぎてもいいですか （多一些爱不好吗)
+二千年目の流星が降る (看到千年的流星降落时）
+
+あなたに散りたい （想和你一起消失）
+あなたに散りたい （想和你一起消失）
+----------------------------------------------------------------------------------------------------------------------------------
+
+緑のふるさと （綠色的故鄉）
+演唱：石川さゆり （石川小百合）
+作詞：なかにし礼
+作曲：浜圭介
+
+
+我は海の子 大地の子 （我是海之子 大地之子）
+嵐に耐えて 凛と咲く （在嚴冬中綻放）
+緑のふるさと 水仙の花 （如故鄉水仙花般）
+奮い立つ （挺拔的身姿）
+若い我らの 夢はるか （是年輕時我們的夢想）
+​
+忘れられない 悲しみも （無法忘記心中的悲傷）
+忘れられない 面影も （也無法忘記）
+緑のふるさと あなたとともに （與你在故鄉時的面影）
+永遠に胸に （此時此景永遠）
+刻んで 抱きしめる （鎸刻在我的心中）
+
+夜の大地に 雨が降る （無論是夜暮降臨的春雨）
+夜明けの海に 雪が舞う （還是黎明海面冬雪的美景）
+緑のふるさと いつの日我に （同樣是在那樣的季節）
+悔しさを （後悔沒有）
+愛と勇気に 変えて行く （鼓起勇氣與你同行）
+
+若い仲間と 肩を組み （年輕的我們和夥伴比肩而行）
+明るい歌を 歌いつつ （唱著歡快的歌謠）
+緑のふるさと 帰りなんいざ （到底回不回故鄉）
+ふり仰ぐ （此刻也衹能是仰望）
+空に希望の 陽が昇る （天空升起的朝陽）
+----------------------------------------------------------------------------------------------------------------------------------
+浜唄
+歌：石川さゆり                                                                                                                                                                        
+作詞：なかにし礼                                                                                                                                                                    
+作曲：弦哲也   
+
+
+朝だ船出だ　錨を上げろ （清晨出海，拿起船錨）
+沖じゃ秋刀魚(さんま)が　待っている。 （隻爲海里的秋刀魚）
+陸(おか)で手をふる　恋女房に （與岸邊的妻子摆手遠去）
+照れて笑って　綱を巻く。（在陽光的照耀下，笑著捲起了大渝網）
+二千年　二万年 （兩千年，兩萬年）
+浜じゃこうして　浜じゃこうして　生きてきた。（都在這海邊，都在這海邊生活）
+​
+船は出て行く　朝日が昇る （船起航，太陽升）
+かもめ飛び立つ　にぎやかさ。（海鷗在天上飛，好不熱鬧）
+漁に出る日は　素肌と素肌 （出海的那天，薄衣随行）
+あたためあって　送り出す。 （溫情的你送我出了門）
+無精髭なの　私の亭主 （想那長著鬍鬚的丈夫）
+ちくりちくりと　痛かった。 （扎得我心痛）
+二千年　二万年 （兩千年，兩萬年）
+浜じゃこうして　浜じゃこうして　生きてきた。 （都在這海邊，都在這海邊生活）
+
+引けよ網引け　大漁網を  （不斷地收緊大渝網）
+月に秋刀魚の　群れ踊り。 （月光下的秋刀魚群起跳躍）
+船を飾った　五色の旗で （船上裝飾著五色的彩旗）
+海の風切る　心地よさ。 （海風吹來讓我心潮澎湃）
+二千年　二万年 （兩千年，兩萬年）
+浜じゃこうして　浜じゃこうして　生きてきた。（都在這海邊，都在這海邊生活）
+生きてきた。 （都在這海邊生活）
+
+----------------------------------------------------------------------------------------------------------------------------------
+おおつごもりの(大晦日)  <大年夜> 
+作词：喜多条忠   
+作曲：崎久保吉启   
+演唱：石川小百合
+
+
+おおつごもりの　年の瀬に  （每個年夜）  
+百と八つの　除夜の钟   （除夕的鐘聲）
+雪のお江戸に　响きます   （都會在雪國的江戶響起）
+今年も暮れたね　お前さん   （今年也是這樣度過，親愛的）
+こんな女房で　すまないけれど   （我這樣的妻子實在有些對不住你）
+ほれた同士で　暮らそうね   （多想與你廝守生活啊）
+
+おおつごもりに　积もるのは   （ 一年攢下來的）
+銭や宝の　山じゃない   （不是金山銀山）
+梦をかなえる　梦でいい  （而是滿足的好夢）
+ 割れ锅とじ盖　どっこいの   （懷念家裡的一切）
+ケンカばかりの　ふたりだけれど   （就算兩個人也不會覺得寂寞）
+妙に気が合う　味がある   （那久違的年味已然飄來）
+今年も明けたね　お前さん   （拂曉時分，親愛的）
+今の辛抱　七福神も   （我已在神福面前許下新願）
+きっと见ている　春が来る  （就盼望著春天到來）
+
+“七福神”相当于中国的“八仙”
+----------------------------------------------------------------------------------------------------------------------------------
+春夏秋秋
+作詞：阿久悠
+作曲：三木たかし
+演唱：石川小百合
+
+
+
+ああ 私 もう （啊 我也）
+冬に生きたくありません （不愿生活在這個没有生機的冬天）
+春夏秋秋 そんな一年 （隻想和你一同度過）
+あなたと過ごしたい （春夏秋秋的那一年）
+
+ここへ来て 泣けました （自從來到這里，也曾哭泣過）
+日の入りや 月の出に （日入，月出）
+素直さが 美しく （素顔的美麗）
+お化粧も 紅(べに)少し （連化妝也少些紅色）
+見る夢も 懐しく （就是在夢里總是）
+よく笑う あなただけ （浮現你的笑容）
+
+来ませんか 来ませんか （不過來嗎，不過來了嗎）
+しあわせになりに （爲了幸福）
+来ませんか （不過來了嗎）
+
+悲しみを 捨てました​ （不再悲傷）
+朝焼けに 夕立に （望著朝霞 暮雨）
+やさしさを 思い出し （想起你的溫柔）
+過ぎた日も ほのぼのと （逝去的日子 也變得模糊）
+よく濡れた 枕さえ （經常潤濕的枕頭）
+今はもう 乾いてる （如今也已經幹了）
+
+来ませんか 来ませんか （不過來嗎，不過來了嗎）
+しあわせになりに （爲了幸福）
+来ませんか （不過來了嗎）
+​
+来ませんか 来ませんか （不過來嗎，不過來了嗎）
+しあわせになりに （爲了幸福）
+来ませんか （不過來了嗎）
+​
+​ああ 私 もう （啊 我也）
+冬に生きたくありません （不愿生活在這個没有生機的冬天）
+春夏秋秋 そんな一年 （想和你一同度過）
+あなたと過ごしたい （春夏秋秋的那一年）
+----------------------------------------------------------------------------------------------------------------------------------
+夜空 五木宏
+
+あの娘 どこに居るのやら （那位姑娘，在哪裏居住來著）
+星空の続く あの町あたりか （是在繁星閃耀的那座城市嗎）
+细い风の口笛が （似細風般口哨聲）
+恋の伤あとにしみる （刺痛了我愛戀的傷痛）
+あー あきらめた恋だから （啊 雖是已經放棄的戀愛）
+なおさら 逢いたい 逢いたい (卻更想去見她，再見一次面)
+もう一度 (再見一次面)
+夜は いつも 独りぼっち (夜晚經常獨自孤單)
+
+あの娘 帰っておいでと (那個姑娘，回來吧)
+流れ星に乗せ そっと呼んでみた (對著流星暗自呼喚著你)
+谁も 答えはしないよ (卻沒有回應)
+白い花が散るばかり (衹有飄落的白花)
+あー とどかない梦だから (啊 家在哪裏 夢在何方)
+なおさら 淋しい 淋しい (我的心裏更加孤獨 孤獨寂寞)
+この胸よ 夜空 远く 果てしない (寄托遠方的夜空 也不會有結果)
+----------------------------------------------------------------------------------------------------------------------------------
+金毘羅一段
+作詞：さわだすずこ 
+作曲：武市昌久
+演唱：長山洋子​
+
+丸に赤色　金の字は （圆圆红色的那个‘金’字）
+金毘羅さんの　旗印 （是佛教圣地金刀比罗宫的标志）
+願い　心に　石段を （怀着祈愿的心）
+登れば見える　讃岐富士（登上了去往 赞岐富士的路）
+人生　一段　一段ごとに （人生就好比是一层层的阶石）
+思いを踏みしめ　歩いて行こう （心怀此意踏上了路途）
+長いようでも　人の世は （人活世间虽然漫长）
+あっという間の　紙芝居 （却也如戏剧般的短暂）
+金毘羅船々　追手に帆(ほ)掛(か)けて （与金比罗的船儿挥手告别）
+人情の木に　花が咲く （人情的这棵大树，在此开花）
+四国名物　阿波踊り （四国岛的特色是阿波舞）
+踊る阿呆に　見る阿呆 （看到艺人们跳舞）
+同じ阿呆なら　ソレソレと （置身其中）
+袖(そで)を引っ張る　温ったかさ （只需伸伸袖子，就已暖意融融）
+泣いて暮すも　一生ならば （一生中会遇到哭泣的时候）
+笑って暮そよ　いい事あるさ （也会遇到开怀大笑的好事）
+親の意見と　茄子(なす)の花 （想想父母的教诲与孩子的降生）
+先人(せんじん)たちの　心意気 （领略先人们的精神和气魄）
+金毘羅船々　三味線 片手に （只手弹起了三味缐）
+衿(えり)を正して　春を待つ （摆正衣襟来迎接春天）
+----------------------------------------------------------------------------------------------------------------------------------
+金沢の雨
+演唱者:川中美幸
+
+東京ことばと加賀なまり　（无论是东京话还是加贺话）
+愛するこころに  （只要心中有爱）
+違いはないわ （就不会有错）
+合縁奇縁のこの恋を （试看萍水相逢般的缘分）
+咲かせてみせます （绽放出来的花朵）
+​あなたと出会った片町あたり （与你相识在这座城市里）
+相々傘です金沢の雨  （同撑一把伞，是那金泽的雨）
+影笛きこえる茶屋街の （来自远方的笛声）
+​灯りがぼんやり滲んで揺れた （使得茶屋街的明灯挂着雨滴不住地摇曳）
+男の甲斐性と意地張らず （请把你的优秀和勇气）
+わたしにください （展示给我）
+石段坂道苦労を背負って （似背负石块般的劳苦）
+ふたりで濡れましょ （来让我们共同分担吧）
+金沢の雨 （是那金泽的雨）
+川なら犀川浅野川 （单单河流就有犀川和浅野川）
+春夏秋冬水面に写す （四季之景在此呈现）
+​友禅流しの緋の色は （加贺友禅的颜色）
+​絆の色です （是爱情之色）
+雨の日晴れの日 （无论晴天还是雨天）
+寄り添いあって （都能让我们共撑一把伞）
+相々傘です金沢の雨 （还是那金泽的雨）
+----------------------------------------------------------------------------------------------------------------------------------
+嵐嵐嵐がきても （戰勝暴風雨）　
+演唱 小林幸子
+
+ほーやれほー （呵 哎呀 呵）
+なにひとつ願い叶わぬさだめでも （一個願望實現不了也是命運的安排）
+願わずにいられない それが人の強さ （唯有希望讓我們變得堅强）
+生まれ泣いて甘え笑って （人生在世有苦也有甜）
+老いて空へ帰る （老去時空手而歸）
+だから月よ 照らして欲しい （但還是希望得到上天的眷顧）
+私たちの人生を （哪怕我們的人生）
+嵐嵐嵐がきても （充滿風浪）
+いまは泣きながら進め （伴著淚水繼續前行）
+目指せ心のままに （一心認準目標）
+ほーやれほー （呵 哎呀 呵）
+名まえも知らない星が落ちる夜は （就在不知道名字星星降落的夜晚）
+限りある人の命  （『我們』要趁著有限的生命）
+抱きしめたくなる （實現願望）
+いつかどこか生まれ変わって （無論何時何地，什麽出身）
+また会う日が来ると （都會等到改變的那天）
+きらりきらり 星が語るよ （如星星般閃爍的話語）
+それは希望の涙 （是希望的眼淚）
+嵐嵐嵐が去れば （暴風雨消褪時）
+ひかり求めて進め （就會看到前進的道路）
+明日も心のままに （此心永遠不變）
+嵐嵐嵐がきても （充滿風浪）
+いまは泣きながら進め （含淚也要前行）
+目指せ心のままに （一心認準目標）
+ああ嵐に ほーやれほー （啊 暴風雨 啊 呵 哎呀 呵）
+すべてこわされて ほーやれほー （再來得猛烈些吧 呵 哎呀 呵）
+ああ何度でも ほーやれほー （啊 再多也不怕 呵 哎呀 呵）
+やり直すだろう ほーやれほー （哪怕從頭再來 呵 哎呀 呵）
+----------------------------------------------------------------------------------------------------------------------------------
+まごころの花  （真心的花）
+作词∶三浦康照
+作曲∶小野彩
+歌手∶藤あや子
+
+あなた体を　大事にしてね  （你一定要保重身體啊）
+いつも元気で　ふたりでいたい  （希望我們永遠健康）
+荫であなたを　支えて生きる  （在你的庇佑下，讓我的人生充滿意義）
+爱はひとすじ　変りはしない  （愛就一個字，永遠不變心）
+これが私の　あなたに捧げる  （這隻是我送給你的）
+たった一つの　まごころの花  （一束真心的花）
+​
+仕事疲れを　笑颜でかくす　 （用微笑來掩飾工作的疲憊）
+そんなあなたの　やさしい気持  （這是你的溫柔的表現）
+胸にうれしさ　溢れてくるの  （心中充滿愉快和喜悅）
+苦労いとわず　つくしてゆくわ  （辛勞也從身上消去）
+これが私の　あなたに捧げる  （這隻是我送給你的）
+たった一つの　まごころの花 （一束真心的花）
+​
+あなた私の　手を离さずに  （既然你不能離我而去）
+生きて行きましょう  （那就一路同行吧）　
+ふたりの人生(みち)を  （有你在身旁鼓勵我）
+そばであなたを　励ましながら  （我也想）
+守りつづける　女でいたい  （守護這二人世界）
+これが私の　あなたに捧げる  （這隻是我送給你的）
+たった一つの　まごころの花  （一束真心的花）
+
+----------------------------------------------------------------------------------------------------------------------------------
+哀愁の宗谷岬
+作詞：西條みゆき
+作曲：吉幾三
+演唱：西尾夕紀 ​
+
+女ひとりで　出直す旅は  (又一次一個人出來旅行)
+哀しみまとって　北国まわり  （無限的哀愁在這北國的邊際）
+涙凍てつく　オホーツク  （含著清冷的淚水來到了鄂霍次克海峽）
+思い出揺れる　稚内  （不禁想起稚内城）
+灯もとめて　たどり着くのは  （伴著燈光終於來到了）
+北の　北の最果て　宗谷岬  （北端的 最北端的宗谷岬）
+
+霧の向こうの　サハリン見れば  （霧的對面，就可看到俄羅斯聯邦）
+翼をなくして　鳴く鳥悲し  （像失去翅膀鳥兒的哀鳴）
+みれん心も　何もかも  （整個留戀的心）
+宗谷の風よ　吹き払え （都被宗谷的風吹拂）
+紅い花びら　散らす恋にも （也留戀花瓣的消散）
+春は　春はまた来る　宗谷岬  （春天 春天還會來的  宗谷岬）
+----------------------------------------------------------------------------------------------------------------------------------
+私からあなたへ (因爲我來到你們身邊)       
+演唱：さくらまや （櫻真耶）  
+
+そばに居てくれる　ありがとう （能讓我生活在你們身邊，非常感謝）
+優しいまなざしが　愛という贈り物 （那溫情的眼神，是愛的禮物）
+おじいちゃん　おばあちゃん　元気でいてね （爺爺奶奶，你們要健康啊）
+真っ赤なバラ一輪　真っ赤なバラ一輪 （要像那紅色的玫瑰一樣）
+心を添えて　私からあなたへ （稱心如意，因爲我來到了你們身邊）
+​
+長い歳月の　ご苦労に （漫長的歲月，你們辛苦了）
+感謝で応えましょ　幸せが届くよう （用感恩的心來報答你們，一定讓你們幸福）
+おじいちゃん　おばあちゃん　長生きしてね （爺爺奶奶，你們要長壽啊）
+真っ赤なバラ一輪　真っ赤なバラ一輪 （要像那紅色的玫瑰一樣）
+思いを込めて　私からあなたへ （充滿愛意，是因爲我來到了你們身邊）
+----------------------------------------------------------------------------------------------------------------------------------
+[日语]
+[我的资源]
+[临时资源]
+----------------------------------------------------------------------------------------------------------------------------------
+作业
+
+shape ,几个属性熟练使用
+
+Android中常常使用shape来定义控件的一些显示属性，今天看了一些shape的使用，对shape有了大体的了解，稍作总结：
+
+先看下面的代码：
+        <shape>
+            <!-- 实心 -->
+            <solid android:color="#ff9d77"/>
+            <!-- 渐变 -->
+            <gradient
+                android:startColor="#ff8c00"
+                android:endColor="#FFFFFF"
+                android:angle="270" />
+            <!-- 描边 -->
+            <stroke
+                android:width="2dp"
+                android:color="#dcdcdc" />
+            <!-- 圆角 -->
+            <corners
+                android:radius="2dp" />
+            <padding
+                android:left="10dp"
+                android:top="10dp"
+                android:right="10dp"
+                android:bottom="10dp" />
+        </shape>
+solid：实心，就是填充的意思
+android:color指定填充的颜色
+,
+gradient：渐变
+android:startColor和android:endColor分别为起始和结束颜色，ndroid:angle是渐变角度，必须为45的整数倍。
+另外渐变默认的模式为android:type="linear"，即线性渐变，可以指定渐变为径向渐变，android:type="radial"，径向渐变需要指定半径android:gradientRadius="50"。
+
+stroke：描边
+android:width="2dp" 描边的宽度，android:color 描边的颜色。
+我们还可以把描边弄成虚线的形式，设置方式为：
+android:dashWidth="5dp" 
+android:dashGap="3dp"
+其中android:dashWidth表示'-'这样一个横线的宽度，android:dashGap表示之间隔开的距离。
+
+corners：圆角
+android:radius为角的弧度，值越大角越圆。
+我们还可以把四个角设定成不同的角度，方法为：
+<corners 
+        android:topRightRadius="20dp"    右上角
+        android:bottomLeftRadius="20dp"    右下角
+        android:topLeftRadius="1dp"    左上角
+        android:bottomRightRadius="0dp"    左下角
+ />
+这里有个地方需要注意，bottomLeftRadius是右下角，而不是左下角，这个有点郁闷，不过不影响使用，记得别搞错了就行。
+还有网上看到有人说设置成0dp无效，不过我在测试中发现是可以的，我用的是2.2，可能修复了这个问题吧，如果无效的话那就只能设成1dp了。
+
+padding：间隔
+这个就不用多说了，XML布局文件中经常用到。
+
+
+大体的就是这样，以下是一个使用的具体示例：用在Selector中作为Button的背景，分别定义了按钮的一般状态、获得焦点状态和按下时的状态，具体代码如下：
+
+main.xml:
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="TestShapeButton"
+    android:background="@drawable/button_selector"
+    />
+
+button_selector.xml:
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" >
+        <shape>
+            <!-- 渐变 -->
+            <gradient
+                android:startColor="#ff8c00"
+                android:endColor="#FFFFFF"
+                android:type="radial"
+                android:gradientRadius="50" />
+            <!-- 描边 -->
+            <stroke
+                android:width="2dp"
+                android:color="#dcdcdc"
+                android:dashWidth="5dp" 
+                android:dashGap="3dp" />
+            <!-- 圆角 -->
+            <corners
+                android:radius="2dp" />
+            <padding
+                android:left="10dp"
+                android:top="10dp"
+                android:right="10dp"
+                android:bottom="10dp" />
+        </shape>
+    </item>
+
+    <item android:state_focused="true" >
+        <shape>
+            <gradient
+                android:startColor="#ffc2b7"
+                android:endColor="#ffc2b7"
+                android:angle="270" />
+            <stroke
+                android:width="2dp"
+                android:color="#dcdcdc" />
+            <corners
+                android:radius="2dp" />
+            <padding
+                android:left="10dp"
+                android:top="10dp"
+                android:right="10dp"
+                android:bottom="10dp" />
+        </shape>
+    </item>
+
+    <item>       
+        <shape>
+            <solid android:color="#ff9d77"/>
+            <stroke
+                android:width="2dp"
+                android:color="#fad3cf" />
+            <corners 
+                android:topRightRadius="5dp"
+                android:bottomLeftRadius="5dp"
+                android:topLeftRadius="0dp"
+                android:bottomRightRadius="0dp"
+            />
+            <padding
+                android:left="10dp"
+                android:top="10dp"
+                android:right="10dp"
+                android:bottom="10dp" />
+        </shape>
+    </item>
+</selector>
+----------------------------------------------------------------------------------------------------------------------------------
+账号和密码
+心动日剧：账号 rien 
+http://www.devstore.cn/user/regPage.html：
+账号和密码 lianly_arsong
+http://www.javaapk.com/
+音悦台MV解析 http://www.170mv.com/tool/jiexi/
+
+李倩百度网盘
+18339937422
+123580256mm
+
+
+快捷键Alt + Enter 修复提示
+
+
+社保编号28142141,公积金账号113232506124
+
+http://www.1113765358.cccpan.com/
+
+http://liyanippon.ys168.com  个人网盘
+
+ts文件分割avidemux软件
+
+android    http://www.runoob.com/w3cnote/android-tutorial-textview.html
+
+android 开发网站：http://android.apkbus.com/
+ 
+----------------------------------------------------------------------------------------------------------------------------------
+個人資料
+
+兴业银行：622908 533451 563310
+中国银行 : 6217 8505 0001 4892 115
+
+
+YY昵称：神州メ李  延【神州ゝ会员】辽K3057 
+YY号： 1596459956   
+IS号：272465424            
+QQ号：1050678916   
+淘宝名：李德馨arsong     
+支付宝：18840803323  
+真实姓名：李延
+房东卡号：62178605 0000 1510710
+
+
+YY昵称：神州メ李  延【神州ゝ会员】辽K3057 
+YY号： 1596459956   
+IS号：272465424            
+QQ号：1050678916   
+淘宝名：祈愿求福
+支付宝： 1763013556@qq.com
+真实姓名：李延
+
+
+YY昵称：神州メ李  延【神州ゝ会员】辽K3057 
+YY号： 1596459956   
+IS号：272465424            
+QQ号：1050678916   
+淘宝名：平成理惠
+支付宝：arsongbao@qq.com
+真实姓名：李延
+
+YY昵称：神州メ李  延【神州ゝ会员】辽K3057 
+YY号： 1596459956   
+IS号：272465424            
+QQ号：1050678916   
+淘宝名：东瀛遗志
+支付宝：meitui1028@163.com
+真实姓名：李延
+
+
+YY昵称：神州メ李  延【神州ゝ会员】辽K3057 
+YY号： 1596459956   
+IS号：272465424            
+QQ号：1050678916   
+淘宝名：演歌春秋
+支付宝：lidexinfan@foxmail
+真实姓名：李延
+----------------------------------------------------------------------------------------------------------------------------------
+IMPORTANT HTTP
+
+lianly9arsong.simplesite.com
+http://www.keezmovies.com/video/pornstars-like-julia-ann-and-lisa-ann-6587361
+http://www.keezmovies.com/video/janessa-and-roxie-le-roux-1380450
+http://www.keezmovies.com/video/asian-cutie-experience-a-big-cock-asian-blowjob-cumshot-hardcore-interracia-1068988
+http://www.spankwire.com/milf-5292/video1732152/
+http://www.spankwire.com/milf-262/video1713285/
+http://www.spankwire.com/Huge-Tits-and-Ass-Latina-POV-Blowjob/video1944141/
+
+http://www.devstore.cn/code/info/1444.html  源码
+
+http://www.kefkk.com/a1.htm
+http://www.kefkk.com/
+http://www.jj67j.com/play.php?id=24629
+http://www.gepuwang.net/shudijianpu/
+竖笛曲谱
+http://open.itheima.com/open/down/id/3/p/2.html
+欢迎来到黑马程序员
+http://www.asahi-net.or.jp/~HB9T-KTD/music/Japan/Soft/ShakuhachiKun.html
+尺八/筱笛谱
+http://www.kkky8.com/play.php?id=12131
+http://www.nnnas.com/play.php?id=10341
+http://www.kkky8.com/play.php?id=14766
+http://www.qqqu8.com/play.php?id=6788
+http://dl.ndl.go.jp/info:ndljp/pid/2599261?tocOpened=1  国立图书馆
+http://www.6sfff.com/play.php?id=18851
+http://www.kkky8.com/play.php?id=21818
+http://www.kkky8.com/
+
+http://www.kkky8.com/play.php?id=9680
+http://www.kkky8.com/play.php?id=12332
+http://www.kkky8.com/play.php?id=13007
+http://www.kkky8.com/play.php?id=13428
+http://www.kkky8.com/play.php?id=9657
+http://www.kkky8.com/play.php?id=10341
+http://www.6jttt.com/play.php?id=9343
+http://www.kkky8.com/play.php?id=22639
+http://www.kkky8.com/play.php?id=21311
+http://www.kkky8.com/play.php?id=21120
+
+
+http://www.btfuli.net/list/%E7%99%BD%E9%B8%9F%E7%BE%8E%E9%93%83%E6%97%A0%E7%A0%81-s1d-1.html
+http://www.sobt5.com/q/%E7%99%BD%E9%B3%A5%E7%BE%8E%E9%88%B4_rel_3.html
+
+
+http://thzbt.tw/uc_server/data/avatar/000/19/41/80_avatar_middle.jpg
+
+http://www.nimasou.net/l/av-first-asc-5
+
+----------------------------------------------------------------------------------------------------------------------------------
+歴史資料室
+
+http://www.eonet.ne.jp/~libell/roomofdata.htm
+
+http://www.uraken.net/rekishi/reki.html
+
+http://www.geocities.jp/cato1963/singaku.html  明清乐资料库
+
+http://www.oschina.net/android/     android资料室
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+http://justcode.ikeepstudying.com/2015/12/100-%E4%B8%AA%E5%85%8D%E8%B4%B9%E7%BF%BB%E5%A2%99%E5%B7%A5%E5%85%B7/
+
+
+第67届红白歌会北京时间今晚6:15开始，附上直播地址：
+1、战旗：http://www.zhanqi.tv/ske48和http://www.zhanqi.tv/akb49
+切换高清和超清画质需要登录战旗账号
+2、Acfun：http://www.acfun.cn/sp/kouhaku2016
+3、bilibili：http://live.bilibili.com/2274496和http://live.bilibili.com/103279
+分享歌单：
+http://music.163.com/#/m/playlist?id=518774694&userid=57083770
+
+-----------------------------------------------------------------------------------------------------------------------
+
+使用 Axel
+
+axel [OPTIONS] url1 [url2] [url…]
+-n x  指定线程数（x 必须为大于 0 的数字）
+-o x  指定另存为目录（x 必须为本地目录）
+-s x  指定下载速度（x 必须为大于 0 的数字，单位是 bytes/s）
+-q    静默模式，无任何输出信息
+-V    软件版本
+
+-----------------------------------------------------------------------------------------------------------------------
+#!/bin/sh
+#读取TXT文件
+#
+i=1
+for lines in `cat /media/liyan/office/tmp.txt`
+do
+  case ${i} in
+  1) var1=${lines};;
+  2) var2=${lines};;
+  3) var3=${lines};;
+  4) var4=${lines};;
+  5) var5=${lines};;
+  6) var6=${lines};;
+  esac
+  i=`expr ${i} + 1`
+done
+
+echo "下载第一个视频"
+
+vardate = ${date -R}
+
+axel -o '/media/liyan/office/shell/down-enka' ${var1} 
+axel -o '/media/liyan/office/shell/down-enka' ${var2}
+
+echo ${vardare}
+
