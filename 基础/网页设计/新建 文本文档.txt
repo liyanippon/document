@@ -1,0 +1,189 @@
+学生:登录
+教师:SELECT ename,salary*12 AS "年薪" FROM emp 
+WHERE salary*12>=60000;
+教师:SELECT ename,deptno FROM emp WHERE deptno IN(2,4,5);
+
+教师:SELECT ename FROM emp WHERE ename LIKE '刘%';
+SELECT ename FROM emp WHERE ename LIKE '刘_';
+教师:SELECT ename,salary,comm FROM emp 
+WHERE salary>=5000  AND comm IS NOT NULL;
+教师:查询员工姓名以张开头的员工信息，要求工资超过2000元，
+奖金不为空，输出员工姓名、工资、奖金
+教师:SELECT ename,salary FROM emp
+WHERE deptno IN(1,4,5)
+ORDER BY salary DESC;
+教师:SELECT ename,salary*12 AS "年薪" 
+FROM emp ORDER BY salary*12;
+教师:SELECT ename,deptno,salary FROM emp 
+ORDER BY deptno ASC,salary DESC;
+教师:SELECT ename,CONCAT('字符个数：',CHAR_LENGTH(ename)) FROM emp;
+教师:SELECT INSTR('明天天气不错','气候');
+教师:SELECT INSERT('台湾三民主义拯救中国',3,4,'****');
+教师:SELECT ename,MID(ename,CHARACTER_LENGTH(ename),1) FROM emp WHERE deptno in(2,5);
+
+学生:登录
+教师:SELECT RPAD(MID(ename,1,1),CHAR_LENGTH(ename),'*') FROM emp;
+
+教师:SELECT LPAD(MID(ename,CHAR_LENGTH(ename),1),CHAR_LENGTH(ename),'*') FROM emp;
+
+教师:SELECT ename,FORMAT(salary*12,2) AS "年薪" FROM emp;
+
+教师:-- 员工入职不满一个月都是80%的工资，要求把上个月入职的员工工资恢复成100%，
+-- 显示这些员工的编号，名字，试用期工资，正式工资 
+教师:SELECT 
+	empno,ename,salary,FLOOR(salary/0.8)
+FROM emp
+WHERE DATE_FORMAT(hiredate,"%m")=DATE_FORMAT(NOW(),"%m")-1
+AND DATE_FORMAT(hiredate,"%Y")=DATE_FORMAT(NOW(),"%Y");
+
+教师:-- 查询工龄超过5年，并且是6月份入职的员工数据，
+-- 显示员工编号，名字，部门编号，入职日期，工龄年数
+
+教师:SELECT 
+	empno,ename,deptno,hiredate,FLOOR(DATEDIFF(NOW(),hiredate)/365) AS "工龄"
+FROM emp WHERE DATEDIFF(NOW(),hiredate)/365>=5 AND
+DATE_FORMAT(hiredate,'%m')=06;
+SELECT DATE_FORMAT(DATE_ADD(NOW(),INTERVAL -100 DAY),'%Y/%m/%d %W');
+教师:-- 计算当前日期之后的一个月零三天是几月几号
+SELECT DATE_ADD(DATE_ADD(NOW(),INTERVAL 1 MONTH),INTERVAL 3 DAY);
+
+教师:SELECT DAY(LAST_DAY('2014-10-1'));
+--计算八月九月十月一共是多少天
+
+教师:SELECT ename,salary+IFNULL(comm,0),IF(comm,'有奖金','无奖金') FROM emp;
+
+教师:SELECT 
+	ename,
+	salary,
+	deptno,
+	CASE	deptno
+		WHEN 1 THEN salary*1.1
+		WHEN 2 THEN salary*1.2
+		WHEN 3 THEN salary*1.05
+		WHEN 4 THEN salary*1.07
+		ELSE salary
+	END AS "工资结果"
+FROM emp;
+
+教师:SELECT ename,
+CASE
+	WHEN DATEDIFF(NOW(),hiredate)/365<1 THEN '新员工'
+	WHEN DATEDIFF(NOW(),hiredate)/365<3 THEN '普通员工'
+	ELSE '老员工'
+END
+FROM emp;
+
+教师:-- 起征点3500元		（工资-3500)*税率-扣除数
+-- 1. 不超过1500	3%	0
+-- 2. 不超过4500	10%	105
+-- 3. 不超过9000	20%	555
+-- 4. 不超过35000	25%	1005
+-- 5. 不超过55000	30%	2755
+-- 6. 不超过80000	35%	5505
+-- 7. 80000以上	45%	13505
+-- 假设美元汇率 1美元=6.1199人民币
+
+-- 显示员工编号，姓名，性别，部门编号，月收入（工资+奖金），个税
+-- 注意：个税精确到小数点后两位，强制进位，例如363.1111变成363.12
+教师:
+SELECT 
+	empno,ename,sex,deptno,(salary+IFNULL(comm,0))*6.1199 AS "月收入",
+	CEILING(CASE
+		WHEN (salary+IFNULL(comm,0))*6.1199-3500<0 THEN 0
+		WHEN (salary+IFNULL(comm,0))*6.1199-3500<=1500 
+			THEN ((salary+IFNULL(comm,0))*6.1199-3500)*0.03-0
+		WHEN (salary+IFNULL(comm,0))*6.1199-3500<=4500 
+			THEN ((salary+IFNULL(comm,0))*6.1199-3500)*0.10-105
+		WHEN (salary+IFNULL(comm,0))*6.1199-3500<=9000 
+			THEN ((salary+IFNULL(comm,0))*6.1199
+
+学生:登录
+教师:SELECT e.empno,e.ename,d.dname FROM emp e 
+LEFT JOIN dept d ON e.deptno=d.deptno ORDER BY e.empno;
+教师:salgrade 工资登记表
+grade	INT  主键 自动递增
+min_salary decimal 10 2 NOT NULL
+max_salary decimal 10 2 NOT NULL
+教师:SELECT e.empno,e.ename,e.salary,g.grade,d.dname FROM emp e 
+LEFT JOIN dept d ON e.deptno=d.deptno 
+LEFT JOIN grade g ON e.salary BETWEEN g.min_salary AND g.max_salary
+ORDER BY e.empno;
+
+SELECT MAX(salary),MIN(salary),SUM(salary) FROM emp;
+SELECT COUNT(*) FROM emp e JOIN dept d ON e.deptno=d.deptno
+WHERE d.dname="市场部";
+
+教师:SELECT sex,COUNT(*) FROM emp GROUP BY sex ORDER BY sex;
+
+SELECT 
+	deptno,AVG(salary),MAX(salary),MIN(salary)
+FROM emp WHERE deptno IN(1,4,5) GROUP BY deptno;
+教师:SELECT deptno,count(*) FROM emp GROUP BY deptno HAVING count(*)>=3  ;
+
+教师:SELECT d.dname,AVG(e.salary),count(*) FROM emp e JOIN dept d ON e.deptno=d.deptno
+WHERE salary>=3500 GROUP BY d.dname HAVING COUNT(*)>=3 ;
+教师:SELECT COUNT(*) FROM emp;
+SELECT COUNT(*)-COUNT(deptno) FROM emp;
+SELECT COUNT(*) FROM emp WHERE deptno IS NULL;
+SELECT dept.dname,AVG(salary),COUNT(*) FROM dept,emp
+WHERE dept.deptno=emp.deptno AND emp.salary>3500
+GROUP BY  dept.dname HAVING COUNT(*)>=2;
+SELECT COUNT(*) FROM emp WHERE salary>=(SELECT AVG(salary) FROM emp)
+学生:登录
+教师:SELECT * FROM emp WHERE salary>ANY(SELECT 
+	salary
+FROM emp e JOIN dept d ON e.deptno=d.deptno
+WHERE d.dname='保安部');
+学生:注销
+学生:登录
+教师:-- 多行子查询：把查询的结果当成数据表操作
+-- SELECT * FROM (SELECT A,B,C FROM 表) 别名
+-- 查询所有工资高于自己所在部门平均工资的
+-- 员工编号，姓名，部门名称，工资，部门平均工资
+SELECT e.empno,e.ename,d.dname,e.salary,t.g FROM emp e JOIN
+(SELECT deptno,avg(salary) AS "g" FROM emp GROUP BY deptno) t
+ON e.deptno=t.deptno JOIN dept d ON e.deptno=d.deptno 
+WHERE e.salary>t.g;
+
+教师:INSERT INTO emp(ename,sex,salary,comm,hiredate,deptno)
+VALUES('金毛狮王','男',4500,NULL,'2014-10-24',1);
+COMMIT;
+教师:UPDATE emp set salary=salary*1.03
+WHERE DATEDIFF(NOW(),hiredate)/365>2;
+COMMIT;
+学生:注销
+学生:登录
+教师:UPDATE emp set salary=salary*1.03
+WHERE DATEDIFF(NOW(),hiredate)/365>2;
+COMMIT;
+
+教师:START TRANSACTION;
+DELETE FROM emp 
+WHERE deptno=
+(SELECT deptno FROM dept WHERE dname='保安部');
+ROLLBACK;
+
+
+CREATE VIEW vw_emp_1 AS(
+SELECT e.empno,e.ename,e.salary,d.dname,g.grade
+FROM emp e JOIN dept d ON e.deptno=d.deptno
+JOIN grade g ON e.salary BETWEEN g.min_salary AND g.max_salary
+WHERE DATEDIFF(NOW(),hiredate)/365>=5);
+
+SELECT COUNT(*) FROM vw_emp_1;
+select *FROM vw_emp_1 WHERE ename LIKE='刘%' ORDER BY empno;
+
+教师:--查询每个部门里面工龄最多的员工信息，
+--打印员工编号，姓名，部门名称，入职日期，工龄年份
+教师:SELECT 
+e.EMPNO,e.ENAME,d.dname,
+TO_CHAR(e.HIREDATE,'yyyy/mm/dd'),
+FLOOR((SYSDATE-e.HIREDATE)/365)
+FROM emp e JOIN 
+(SELECT deptno,MIN(HIREDATE) AS "mn" FROM emp GROUP BY deptno) t
+on e.deptno=t.deptno AND e.HIREDATE=t."mn" 
+JOIN dept d ON e.deptno=d.deptno;
+
+
+SELECT TO_CHAR(NEXT_DAY(NEXT_DAY(LAST_DAY(TO_DATE('2015/4/1','yyyy/mm/dd')) ,'星期日'),'星期日'),'yyyy/mm/dd') 
+FROM dual;

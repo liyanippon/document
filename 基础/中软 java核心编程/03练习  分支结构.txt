@@ -1,0 +1,294 @@
+分支程序设计
+
+1）下列语句片段的结果为 D
+
+int result; 
+
+int a=17,b=6; 
+
+result=(a%b>4)? a%b:a/b ;
+
+System.out.println(result);  
+
+A. 0　　  B. 1      C. 2　 　 D. 5
+
+2）以下程序的运行结果为：b
+
+    1. public class Conditional {
+
+    2.    public static void main(String args [] )  {
+
+    3.      int x = 4;
+
+    4.      System.out.println( "value is " +((x >4) ? 99.99 : 9));
+
+    5.    }
+
+    6.  }
+
+   A. 输出：value is 99.99
+
+   B. 输出: value is 9
+
+   C. 输出: value is 9.0
+
+   D. 在第4行出现编译错误
+
+3）以下代码段的输出结果为d
+
+1. int x = 0, y = 4, z = 5;
+
+2. if (x > 2)  {
+
+3.   if (y < 5) {
+
+4.      System. out .println ( "message one" );
+
+5.    }
+
+6.   else {
+
+7.      System.out.println( "message two");
+
+8.   }
+
+9.  }
+
+10. else if (z > 5)  {
+
+11.    System.out.println("message three");
+
+12. }
+
+13. else {
+
+14.    System.out.println( "message four");
+
+15. }
+
+A. message one
+
+B. message two
+
+C. message three
+
+D. message four
+
+4） 以下程序的输出结果为：c
+
+public class test {
+
+  public static void main(String args[]) {
+
+   int x=1,y=1,z=1;
+
+   if  (x--==1&&y++==1||z++==1)
+
+      System.out.println("x="+x+",y="+y+",z="+z);
+
+   }
+
+}
+
+A． x=0,y=2,z=1
+
+B． x=1,y=2,z=1
+
+C． x=0,y=1,z=1
+
+D． x=0,y=2,z=2
+
+
+5） 编译和运行以下代码结果为：b
+
+1. public class EqualsTest{
+
+2.   public static void main(String args[]){
+
+3.     byte A=(byte)4096;
+
+4.     if(A==4096) System.out.println("Equal");
+
+5.     else System.out.println("Not Equal");
+
+6.   }
+
+7. }
+
+A．在第3行出现转换丢失精度的编译错误.
+
+B．输出 "Not Equal".
+
+C．输出 "Equal".
+
+6） 关于以下程序哪条叙述正确?d
+
+1. int  j = 2;
+
+2. switch ( j ) {
+
+3.    case 2:
+
+4.      System.out.println ("value is two");
+
+5.    case 2 + 1:
+
+6.      System.out.println ("value is three");
+
+7.      break;
+
+8.    default:
+
+9.      System.out.println("value is " + j);
+
+10.      break;
+
+11. }
+
+A. 第5行的表达式不合法；
+
+B. 变量j是可接受的，switch中表达式可以是byte, short, int,或long的任何类型；
+
+C. 输出为value is two
+
+D. 输出是value is two 后跟value is three
+
+E. 输出是value is two 后跟 value is 2
+
+7）以下程序的编译运行结果为：c
+
+1:    public class Q10
+
+2:    {
+
+3:      public static void main(String[] args)
+
+4:      {
+
+5:          int i = 10;
+
+6:          int j = 10;
+
+7:          boolean b = false;
+
+8:          
+
+9:          if( b = i == j)
+
+10:            System.out.println("True");
+
+11:         else
+
+12:            System.out.println("False");
+
+13:       }
+
+14:    }
+
+A. 第9行出现编译错误；
+
+B. 第9行出现运行错误；
+
+C. 输出 True
+
+D. 输出 False
+
+8）以下程序的编译和运行结果为？e
+
+class test {
+
+   static boolean check;
+
+   public static void main(String args[]) {
+
+       int i;
+
+       if(check == true)
+
+         i=1;
+
+       else
+
+         i=2;
+
+       if(i=2) i=i+2;
+
+       else i = i + 4;
+
+       System.out.println(i);
+
+    }
+
+}
+
+A. 3    B. 4    C. 5    D. 6    E. 语句if(i=2)编译出错 
+
+9) 以下代码： d
+
+if (a >4)
+
+System.out.println("test1");
+
+else if (a >9)
+
+System.out.println("test2");
+
+else
+
+System.out.println("test3");                     
+
+a为何值将有输出结果test2 ？
+
+A.  小于 0 
+
+B.  小于 4 
+
+C.  4 和9之间 
+
+D.  大于9 
+
+E.  无任何可能
+
+10）有如下代码段：bc
+
+switch ( x ){
+
+     case 1:System.out.println("One");break;
+
+    case 2:
+
+    case 3:System.out.println("Two");break;
+
+    default:System.out.println("end");
+
+}
+
+变量x的取值下列哪些情形时，能使程序输出"Two" 。 
+
+A. 1   B. 2    C. 3   D. default
+
+11）以下程序的输出结果为c
+
+  public class test {
+
+     public  static void main(String agrs[]) {
+
+       char c1=’B’,c2=’C’;
+
+       if (c1+1<c2) 
+       ++c1;
+
+       System.out.println(c1);
+
+     }
+
+  }
+
+  A. B    B. b    C. C     D. c 
+
+12) 假设a是int类型变量，并初始化为1，则下列哪个为合法的条件语句？d
+
+  A.  if (a) {  }       B.  if (a<<3)  {  } 
+
+  C.  if (a=2) {   }    D.  if (true)  {   }
+

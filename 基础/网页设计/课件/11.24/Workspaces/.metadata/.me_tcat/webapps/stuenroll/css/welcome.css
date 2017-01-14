@@ -1,0 +1,75 @@
+/* CSS Document */
+.page{
+	margin-left:auto;
+	margin-right:auto;
+	width:1024px;
+	padding-top:0px;
+}
+.font_1{
+	font-size:34px;
+	font-family:黑体;
+	line-height:50px;
+	color: #fff;
+	filter:glow(color=#666,strength=4);
+}
+.font_2{
+	font-size:30px;
+	font-family:黑体;
+	text-decoration:underline;
+	color: #fff;
+	filter:glow(color=#666,strength=6);
+	
+}
+.font_3{
+	font-size:30px;
+	font-family:黑体;
+	text-decoration:underline;
+	color: #fff;
+	filter:glow(color=#2260ae,strength=6);
+	
+}
+.font_4{
+	font-size:30px;
+	font-family:黑体;
+	text-decoration:underline;
+	color: #fff;
+	filter:glow(color=#00CD66,strength=6);
+	
+}
+.div_1{
+	height: 750px;
+	background-image: url("../pic/welcome.jpg");
+	background-repeat: no-repeat;
+	margin-top: 30px;
+}
+.div_2{
+	position:relative;
+	top:300px;
+	left:310px;
+	width: 300px;
+	display: 2;
+}
+.div_3{
+	position:relative;
+	top:310px;
+	left:390px;
+	cursor:pointer;
+	width: 300px;
+	display: 3;
+}
+.div_4{
+	position:relative;
+	top:325px;
+	left:390px;
+	cursor:pointer;
+	width: 300px;
+	display: 3;
+}
+.div_5{
+	position:relative;
+	top:335px;
+	left:390px;
+	cursor:pointer;
+	width: 300px;
+	display: 3;
+}

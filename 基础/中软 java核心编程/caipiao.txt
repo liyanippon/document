@@ -1,0 +1,50 @@
+package caipiao;
+
+import java.util.Scanner;
+
+public class caipiao {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		     
+		     Scanner sc = new Scanner(System.in);
+		     System.out.println("请输入3个数字:(1-12)");
+		     int aa = sc.nextInt();
+		     int bb = sc.nextInt();
+		     int cc = sc.nextInt();
+		     System.out.println("您输入的三个数为："+aa+"\t"+bb+"\t"+cc);
+		     int ss[] = new int[5];
+		     int sum = 0;
+     	     do{
+		    	
+		     for(int i=0; i<5; i++){
+		    	 ss[i]=(int)((12-1)*Math.random()+1);
+				 //System.out.println(ss[i]);
+     	     }
+		     if(ss[0]!=ss[1] && ss[0]!=ss[2] &&  ss[0]!=ss[3] && ss[0]!=ss[4] && ss[1]!=ss[2] && ss[1]!=ss[3] && ss[1]!=ss[4] && ss[2]!=ss[3] && ss[2]!=ss[4] && ss[3]!=ss[4]){
+		    	break;
+		     }
+		     }while(true);
+     	     System.out.println("此轮抽出的5个号码为：");
+		     for(int i=0; i<5; i++){
+				 System.out.print(ss[i]+"\t");
+     	     }
+		     System.out.println();
+		     for(int i=0; i<5; i++){
+		    	 if(aa==ss[i]||bb==ss[i]||cc==ss[i]){
+		 			sum = sum + 1;
+     	     }
+		     }
+		     if(sum==3){
+		    	 System.out.println("恭喜您中奖啦！！！！！");
+		     }
+		     else {
+		    	 System.out.println("好遗憾啊~再来一次吧！！");
+		     }
+
+	
+
+	}
+}

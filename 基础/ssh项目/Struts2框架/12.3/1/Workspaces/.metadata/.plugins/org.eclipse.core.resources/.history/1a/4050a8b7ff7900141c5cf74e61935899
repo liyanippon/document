@@ -1,0 +1,44 @@
+package com.action;
+
+import com.dao.PersonDAO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class LoginAction extends ActionSupport{
+
+	private String name;
+	private String ps;
+	
+	@Override
+	public void validate() {
+		if(name.equals("")){
+			this.addFieldError("name", "姓名不能为空");
+		}if(ps.equals("")){
+			this.addFieldError("ps","密码不能为空");
+		}
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getPs() {
+		return ps;
+	}
+	public void setPs(String ps) {
+		this.ps = ps;
+	}
+	public String execute() throws Exception{
+		boolean b = new PersonDAO().check(name, ps);
+		if(b){
+			
+			return "ok";
+			
+		}else{
+			
+			this.addActionError("姓名和密码都不能为空");
+			
+			return "error";
+		}
+	}
+}

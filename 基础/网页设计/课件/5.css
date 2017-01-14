@@ -1,0 +1,51 @@
+body {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	cursor: default;
+}
+
+#left {
+	width: 250px;
+	height: 400px;
+	float: left;
+	border: solid 1px #999;
+	background-color: #ddd;
+}
+
+#center {
+	width: 80px;
+	height: 400px;
+	float: left;
+}
+
+#right {
+	width: 250px;
+	height: 400px;
+	float: left;
+	border: solid 1px #999;
+	background-color: #ddd;
+}
+
+.option {
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 14px;
+	line-height: 40px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.option:hover {
+	background-color: #ACE600;
+}
+
+.select {
+	background-color: #1AC5FF;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 14px;
+	line-height: 40px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}

@@ -1,0 +1,38 @@
+package dao;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.classic.Session;
+
+import po.Person;
+
+public class PersonDAO {
+	public static SessionFactory getSessionFaction(){
+		Configuration conf=new Configuration();
+		conf.configure("hibernate.cfg.xml");
+		SessionFactory sessionFactory=conf.buildSessionFactory();
+		return sessionFactory;
+		
+	}
+	
+	public void add(Person p){
+		Session session=PersonDAO.getSessionFaction().openSession();
+		Transaction tr=session.beginTransaction();
+		
+		session.save(p);
+		tr.commit();
+	}
+	
+	public void delete(Person p){
+		Session session=PersonDAO.getSessionFaction().openSession();
+		Transaction tr=session.beginTransaction();
+		
+		
+	}
+	public static void main(String args[]){
+		Person p=new Person();
+		new PersonDAO().add(p);
+		
+	} 
+}

@@ -1,0 +1,10 @@
+package action;
+
+public class TestAction {
+private String request_locale;
+
+
+public String execute(){
+	return "success";
+}
+}

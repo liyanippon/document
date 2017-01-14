@@ -1,0 +1,5 @@
+1.在org.stuenroll.dao包内创建SpecialtyDAO类
+2.LoginServlet去除重定向，调用DAO查询数据，保存数据，请求转发
+3.在index.jsp内加上<base>标签
+4.在index.jsp内部使用<%@ taglib %>引用JSTL标签
+5.在index.jsp内部使用JSTL生成下拉列表数据

@@ -1,0 +1,43 @@
+package emp;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+
+
+import test1.ConnectionFactory;
+
+public class EmpDAO {
+public void updateEname(int empno,char sex,String ename) throws SQLException{
+	Connection con=ConnectionFactory.getConnection();
+	con.setAutoCommit(false);
+	String sql="UPDATE emp SET ename=?   WHERE empno=?";
+	PreparedStatement pst=con.prepareStatement(sql);
+	pst.setString(1, ename);
+	
+	pst.setInt(2, empno);
+	pst.execute();
+	con.commit();
+	con.close();
+}
+	public void updateSalary(int year,float money) throws SQLException{
+		Connection con=ConnectionFactory.getConnection();
+		con.setAutoCommit(false);
+		String sql="UPDATE emp SET salary=salary+? WHERE DATEDIFF(NOW(),hiredate)/365>=?";
+		PreparedStatement pst=con.prepareStatement(sql);
+		pst.setFloat(1, money);
+		pst.setInt(2, year);
+		pst.execute();
+		pst.close();
+	}
+	public void deleteByEmpno(int empno) throws SQLException{
+		Connection con=ConnectionFactory.getConnection();
+		con.setAutoCommit(false);
+		String sql="DELETE　FROM　emp　WHERE　empno=?";
+		PreparedStatement pst=con.prepareStatement(sql);
+		pst.setInt(1, empno);
+		pst.execute();
+		pst.close();
+	}
+}

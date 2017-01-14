@@ -1,0 +1,14 @@
+$(document).ready(function(){
+	$(".option").click(function(){
+		if($(this).attr("class")=="option"){
+			$(this).attr("class","select");
+		}
+		     
+		 else{
+			$(this).attr("class","option");
+		 }	
+		
+	});
+	
+	
+});

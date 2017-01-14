@@ -1,0 +1,95 @@
+package dao;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.classic.Session;
+
+import po.Person;
+
+public class PersonDAO {
+	public static SessionFactory getSessionFaction(){
+		Configuration conf=new Configuration();
+		conf.configure("hibernate.cfg.xml");
+		SessionFactory sessionFactory=conf.buildSessionFactory();
+		return sessionFactory;
+		
+	}
+	
+	public void add(Person p){
+		Session session=PersonDAO.getSessionFaction().openSession();
+		Transaction tr=session.beginTransaction();
+		
+		session.save(p);
+		tr.commit();
+	}
+	
+	public void update(Person p){
+		Session session=PersonDAO.getSessionFaction().openSession();
+		Transaction tr=session.beginTransaction();
+		session.update(p);
+		tr.commit();
+	}
+		
+	public void delete(Person p){
+		Session session=PersonDAO.getSessionFaction().openSession();
+		Transaction tr=session.beginTransaction();
+		session.delete(p);
+		tr.commit();
+		
+	}
+	
+	//≤È—Ø
+	public Person get(Person p){
+		Session session=PersonDAO.getSessionFaction().openSession();
+		Person p1=(Person)session.get(Person.class,p.getPid());
+		return p1;
+		
+	} 
+	
+	public Person load(Person p){
+		Session session=PersonDAO.getSessionFaction().openSession();
+		Person p1=(Person)session.load(Person.class, p.getPid());
+		return p1;
+	}
+	
+	public List<Person> getAll(){
+		Session session=PersonDAO.getSessionFaction().openSession();
+		Query query=session.createQuery("from person");
+		return query.list();
+		
+	}
+	
+	public List<Person> test1(){
+		Session session=PersonDAO.getSessionFaction().openSession();
+		Query query=session.createQuery("select new Person(p.name,p.password) from Person p");
+		return query.list();
+		
+	}
+	
+	public List<Person> test2(String name){
+		Session session=PersonDAO.getSessionFaction().openSession();
+		Query query=session.createQuery("form Person p where p.name=?");
+		query.setParameter(0, name);
+		return query.list();
+		
+	}
+	
+	public List<Person> test3(int pageSize,int count){
+		Session session=PersonDAO.getSessionFaction().openSession();
+		Query query=session.createQuery("from Person");
+		query.setFirstResult((pageSize-1)*count);
+		query.setMaxResults(count);
+		return query.list();
+		
+	}
+	
+	public static void main(String args[]){
+		Person p=new Person(8,"huangjiaxing","asd","huanghe");
+		new PersonDAO().add(p);
+		
+	} 
+}

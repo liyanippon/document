@@ -1,0 +1,43 @@
+create table students(
+  SCODE    NUMBER(3) primary key not null,
+  SNAME    VARCHAR2(20) not null,
+  SADDRESS VARCHAR2(100),
+  SGRADE   NUMBER(3),
+  SEMAIL   VARCHAR2(200),
+  SSEX     NUMBER(1) default 0 not null
+);
+
+create table score(
+  scoreId   number(3) primary key not null,
+  courseId  number(3) not null,
+  score     number(3),
+  studentId number(3) not null
+);
+
+create table course(
+  COURSEID   NUMBER(3) primary key not null,
+  COURSENAME VARCHAR2(20) not null
+);
+
+create sequence students_seq
+  START WITH 6
+  INCREMENT BY 1
+  MAXVALUE 2000;
+
+INSERT INTO Students VALUES (1,'张青裁','上海松江',1,'xcgf@Sohu.com',0); 
+INSERT INTO Students VALUES (2,'张无忌','河北武当山',1,'xdgf@Sohu.com',0); 
+INSERT INTO Students VALUES (3,'张三','上海松江',1,'dfg555@Sohu.com',1); 
+INSERT INTO Students VALUES (4,'郭靖','浙江牛家村',2,null,0); 
+INSERT INTO Students VALUES (5,'段誉','云南大理',3,null,0); 
+
+INSERT INTO course VALUES (1,'java');
+INSERT INTO course VALUES (2,'sql');
+INSERT INTO course VALUES (3,'OOP');
+
+INSERT INTO score VALUES (1,1,90,1); 
+INSERT INTO score VALUES (2,2,60,1); 
+INSERT INTO score VALUES (3,3,89,1); 
+INSERT INTO score VALUES (4,1,50,2); 
+INSERT INTO score VALUES (5,2,78,2); 
+INSERT INTO score VALUES (6,1,62,3); 
+INSERT INTO score VALUES (7,2,43,3); 

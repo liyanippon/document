@@ -1,0 +1,113 @@
+ 定义一个名为Vehicles（交通工具）的基类，该类中应包含String类型的成员属性brand（商标）和color（颜色）
+  还应包含成员方法run（行驶，在控制台显示“我已经开动了”）和showInfo（显示信息，在控制台显示商标和颜色），并编写构造方法初始化其成员属性。
+编写Car（小汽车）类继承于Vehicles类，增加int型成员属性seats（座位），还应增加成员方法showCar（在控制台显示小汽车的信息），并编写构造方法。
+编写Truck（卡车）类继承于Vehicles类，增加float型成员属性load（载重），还应增加成员方法showTruck（在控制台显示卡车的信息），并编写构造方法。
+在main方法中测试以上各类。
+
+
+
+
+交通工具都包含启动、停止、加速和减速等方法，但作为交通工具的具体类型，不同种类的交通工具的操作是不一样的
+1. 定义抽象类 交通工具类 Vehicle
+    含有抽象方法:  启动 start()
+    含有抽象方法:  停止 stop()
+含有抽象方法:  运输 traffic()
+
+2. 陆地交通工具 LandVehicle类继承了抽象类 交通工具
+    并实现了抽象方法 启动、停止
+但运输方法未能实现 
+
+3. 公交车类 Bus 继承了陆地交通工具 LandVehicle
+并且实现了运输方法traffic()
+
+4. 出租车类 Texi 继承了陆地交通工具 LandVehicle
+    并且实现了运输方法traffic()
+
+5. 构建人类，人类要出门，这时就使用交通工具
+    构建出门方法  goOff（），传递参数 交通工具 Vechicle
+    实现人类出门功能
+
+
+abstract class Vehicle{
+	abstract void start();
+	abstract void stop();
+	abstract void traffic();
+}
+abstract class LandVehicle extends Vehicle{
+	void start(){
+		System.out.println("启动");
+	}
+	void stop(){
+		System.out.println("停止");
+	}
+}
+class Bus extends LandVehicle{
+	void traffic(){
+		System.out.println("坐公交车");
+	}
+}
+class Texi extends LandVehicle{
+	void traffic(){
+		System.out.println("打车");
+	}
+}
+public class Ren {
+	Vehicle x;
+	void goOff(Vehicle x){
+		 x.traffic();
+	 }
+ public static void main(String args[]){
+	 Vehicle b1=new Bus();
+	 Ren r1=new Ren();
+	 r1.goOff(b1);
+ }
+}
+
+
+
+ 用面向对象的思想定义一个接口Area，其中包含一个计算面积的方法CalsulateArea()，然后设计MyCircle和MyRectangle两个类都实现这个接口中的方法CalsulateArea()，分别计算圆和矩形的面积，最后写出测试以上类和方法的程序。
+
+interface Area1{
+	float CalsulateArea();
+}
+class MyCircle implements Area1{
+	float r,area;
+	MyCircle(float r){
+		this.r=r;
+	}
+	public float CalsulateArea(){
+		area=3.14f*r*r;
+		return area;
+	}
+}
+class MyRectangle implements Area1{
+	float a,b,area;
+	MyRectangle(float a,float b){
+		this.a=a;
+		this.b=b;
+	}
+	public float CalsulateArea(){
+		area=a*b;
+		return area;
+	}
+}
+public class JiekouTest {
+	public static void main(String[] args) {
+		MyCircle c=new MyCircle(5);
+		MyRectangle r=new MyRectangle(3,5);
+		System.out.println("圆的面积为："+c.CalsulateArea());
+		System.out.println("矩形的面积为："+r.CalsulateArea());
+	}
+}
+
+
+
+
+模拟照相过程
+步骤一 声明能拍照的工具类型 Photographable,并添加拍照方法 takePhoto()
+步骤二 声明照相机zi类Camera jicheng拍照chouxianglei
+声明照手机类 Phone jihceng拍照chouxianglei
+步骤三 添加人类，并具有照明的功能，用不同的设备去照相
+
+
+

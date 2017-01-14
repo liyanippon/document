@@ -1,0 +1,70 @@
+一、Servlet的种类
+1.普通Servlet
+	(1)普通Servlet的作用就是为浏览器提供服务
+	(2)Servlet里面包含doGet和doPost方法
+	(3)普通类型的Servlet可以被浏览器访问
+	(4)普通Servlet可以在web.xml文件中配置URL地址
+	(5)需要继承HttpServlet父类
+
+2.过滤器Servlet
+	(1)过滤器Servlet是一种过滤HTTP请求和响应的Servlet，
+		这种Servlet不能被浏览器访问，但是浏览器发送的请求
+		和服务器返回浏览器的响应都会被过滤器拦截。
+	(2)过滤器Servlet不会生成任何的动态画面
+	(3)过滤器Servlet里面没有doGet和doPost方法
+	(4)过滤器Servlet必须实现Filter接口，实现doFilter方法
+	(5)过滤器Servlet必须要在web.xml文件中配置
+		<filter>
+			<filter-name>别名</filter-name>
+			<filter-class>类路径</filter-class>
+		</filter>
+		<filter-mapping>
+			<filter-name>别名</filter-name>
+			<url-pattern>监护地址</url-pattern>
+		</filter-mapping>
+		
+		监护地址的写法：
+		A. /*	本网站下面所有的网页和Servlet都要被过滤器监护
+		B. /jsp/*	jsp目录里面的所有网页被过滤器监护
+		
+		错误的写法
+		A. /*/*	
+		B. /*.jsp
+		C. /*.*
+	(6) 过滤器完成拦截之后需要调用chain.doFilter()方法
+
+3.监听器Servlet
+	(1)主要用于监视Tomcat运行的状态
+	(2)监听器Servlet不能被浏览器访问，也不能为网站提供拦截器功能
+	(3)监听器可以扩展多个接口
+		ServletContextListener	监听Tomcat启动和关闭
+		ServletContextAttributeListener 监听application范围数据绑定
+		ServletRequestAttributeListener 监听request范围数据绑定
+		HttpSessionAttributeListener 监听session范围数据绑定
+		PageContextAttributeListener 监听page范围数据绑定
+	(4)监听器必须在web.xml文件中配置类路径
+		<listener>
+			<listener-class>类路径</listener-class>
+		</listener>
+
+
+JSP内置对象
+(1)在JSP页面里面编写<%%>Java脚本的时候需要用到一些对象，由于JSP
+	没有doGet和doPost方法，无法得到常用的请求和响应对象，那么就需要
+	Tomcat把一些常见的对象创建出来保存到变量里面，以便JSP脚本使用
+(2)因为JSP页面禁止使用Java代码，所以JSP脚本的内置对象也就不再使用了
+
+	<%
+		request.setAttribute("name","tom");
+	%>
+	
+	内置对象名称		对象类型
+	page				Object
+	pageContext			PageContext
+	request				HttpServletRequest
+	session				HttpSession
+	application			ServletContext
+	response			HttpServletResponse
+	out					JspWriter
+	config				ServletConfig
+		

@@ -1,0 +1,27 @@
+package com.action;
+
+import java.sql.SQLException;
+
+import com.dao.PersonDAO;
+
+public class RegisterAction {
+	private String name;
+	private String ps;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getPs() {
+		return ps;
+	}
+	public void setPs(String ps) {
+		this.ps = ps;
+	}
+	public String add() throws SQLException{
+		new PersonDAO().insert(name, ps);
+		return "login";
+	}
+
+}

@@ -1,0 +1,5 @@
+1.编写EnrollDAO里面的delete方法
+2.EnrollServlet里面的toPage和start变量的声明放到if语句内部，参见107和108行
+3.EnrollServlet里面添加if语句判断删除，参见125-129行
+4.index.jsp加入form表单，参见93和139行
+5.backyard.js里面加入点击事件，105-107行

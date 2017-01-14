@@ -1,0 +1,1132 @@
+!SESSION 2005-11-01 04:13:33.171 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_13
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.jface 2 0 2005-11-01 04:14:08.515
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2005-11-01 04:14:08.515
+!MESSAGE A conflict occurred for SHIFT+DEL:
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.datatools.sqltools.result.removeAllInstances,Remove All Visible Results,
+		,
+		Category(org.eclipse.datatools.sqltools.result.category,SQL Results View,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.cut,Cut,
+		Cut the selection to the clipboard,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.handlers.WidgetMethodHandler@1413e5a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.topcased.modeler.deleteModelObject,Delete From Model,
+		Allows the user to delete the selected graph element and its associated model element in a Topcased editor.,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2005-11-01 04:14:21.296
+!MESSAGE Installed snippet library: C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\119\1\.cp\snippets\html\css_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2005-11-01 04:14:21.437
+!MESSAGE Installed snippet library: C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\119\1\.cp\snippets\html\forms_lists_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2005-11-01 04:14:21.531
+!MESSAGE Installed snippet library: C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\119\1\.cp\snippets\html\html_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2005-11-01 04:14:21.593
+!MESSAGE Installed snippet library: C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\119\1\.cp\snippets\html\htmlform_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2005-11-01 04:14:21.687
+!MESSAGE Installed snippet library: C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\119\1\.cp\snippets\html\javascript_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2005-11-01 04:14:21.781
+!MESSAGE Installed snippet library: C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\119\1\.cp\snippets\jsp\jsf_f_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2005-11-01 04:14:21.937
+!MESSAGE Installed snippet library: C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\119\1\.cp\snippets\jsp\jsf_h_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2005-11-01 04:14:22.031
+!MESSAGE Installed snippet library: C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\119\1\.cp\snippets\jsp\struts_bean_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2005-11-01 04:14:22.140
+!MESSAGE Installed snippet library: C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\119\1\.cp\snippets\jsp\struts_html_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2005-11-01 04:14:22.234
+!MESSAGE Installed snippet library: C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\119\1\.cp\snippets\jsp\struts_logic_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2005-11-01 04:14:22.328
+!MESSAGE Installed snippet library: C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\119\1\.cp\snippets\jsp\struts_tiles_snippets.xml
+
+!ENTRY org.maven.ide.eclipse 4 0 2005-11-01 04:15:43.031
+!MESSAGE Unable to update index for central|http://repo1.maven.org/maven2
+!STACK 0
+java.io.IOException: Not in GZIP format
+	at java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:137)
+	at java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:58)
+	at org.sonatype.nexus.index.updater.IndexDataReader.<init>(IndexDataReader.java:40)
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater.unpackIndexData(DefaultIndexUpdater.java:562)
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater.loadIndexDirectory(DefaultIndexUpdater.java:252)
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater.access$300(DefaultIndexUpdater.java:74)
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater$LuceneIndexAdaptor.setIndexFile(DefaultIndexUpdater.java:815)
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:995)
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:159)
+	at org.maven.ide.eclipse.internal.index.NexusIndexManager.updateRemoteIndex(NexusIndexManager.java:1073)
+	at org.maven.ide.eclipse.internal.index.NexusIndexManager.updateIndex(NexusIndexManager.java:1013)
+	at org.maven.ide.eclipse.internal.index.NexusIndexManager$1.run(NexusIndexManager.java:624)
+	at org.maven.ide.eclipse.internal.index.IndexUpdaterJob.run(IndexUpdaterJob.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:15:51.031
+!MESSAGE NLS missing message: JavaMetaUtils_warning_default_package in: com.genuitec.eclipse.core.platformmessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:15:51.031
+!MESSAGE NLS missing message: JavaVMUtility_dialog_jdk_doesnt_exist_message in: com.genuitec.eclipse.core.platformmessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:15:51.031
+!MESSAGE NLS missing message: JavaVMUtility_dialog_jdk_doesnt_exist_title in: com.genuitec.eclipse.core.platformmessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:15:51.031
+!MESSAGE NLS missing message: JavaVMUtility_dialog_jdk_not_jre_message in: com.genuitec.eclipse.core.platformmessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:15:51.031
+!MESSAGE NLS missing message: JavaVMUtility_dialog_jdk_not_jre_title in: com.genuitec.eclipse.core.platformmessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:15:51.031
+!MESSAGE NLS missing message: JavaVMUtility_launchconfig_default_server_type_id_attr in: com.genuitec.eclipse.core.platformmessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:15:51.031
+!MESSAGE NLS missing message: MELibraryFieldEditor_dialog_browse_jar_title in: com.genuitec.eclipse.core.platformmessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:15:51.031
+!MESSAGE NLS missing message: MELibraryFieldEditor_dialog_invalidfile_message in: com.genuitec.eclipse.core.platformmessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:15:51.031
+!MESSAGE NLS missing message: MELibraryFieldEditor_dialog_invalidfile_title in: com.genuitec.eclipse.core.platformmessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:15:51.031
+!MESSAGE NLS missing message: MELibraryFieldEditor_button_add_label in: com.genuitec.eclipse.core.platformmessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:15:51.031
+!MESSAGE NLS missing message: MELibraryFieldEditor_button_down_label in: com.genuitec.eclipse.core.platformmessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:15:51.031
+!MESSAGE NLS missing message: MELibraryFieldEditor_button_edit_label in: com.genuitec.eclipse.core.platformmessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:15:51.031
+!MESSAGE NLS missing message: MELibraryFieldEditor_button_remove_label in: com.genuitec.eclipse.core.platformmessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:15:51.031
+!MESSAGE NLS missing message: MELibraryFieldEditor_button_up_label in: com.genuitec.eclipse.core.platformmessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:15:51.031
+!MESSAGE NLS missing message: MELibraryWizardPage_description in: com.genuitec.eclipse.core.platformmessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:15:51.031
+!MESSAGE NLS missing message: MELibraryWizardPage_error_selection_onlyone in: com.genuitec.eclipse.core.platformmessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:15:51.046
+!MESSAGE NLS missing message: MELibraryWizardPage_error_selection_zero in: com.genuitec.eclipse.core.platformmessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:15:51.046
+!MESSAGE NLS missing message: MELibraryWizardPage_list_library_selector_label in: com.genuitec.eclipse.core.platformmessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:15:51.046
+!MESSAGE NLS missing message: MELibraryWizardPage_title in: com.genuitec.eclipse.core.platformmessages
+
+!ENTRY org.eclipse.ui.workbench 2 0 2005-11-01 04:19:05.343
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2005-11-01 04:19:05.343
+!MESSAGE Conflict for 'com.genuitec.eclipse.ast.deploy.core.runonservershortcut.debug':
+HandlerActivation(commandId=com.genuitec.eclipse.ast.deploy.core.runonservershortcut.debug,
+	handler=org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension$LaunchCommandHandler@a65066,
+	expression=,sourcePriority=0)
+HandlerActivation(commandId=com.genuitec.eclipse.ast.deploy.core.runonservershortcut.debug,
+	handler=org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension$LaunchCommandHandler@e88b23,
+	expression=,sourcePriority=0)
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:19:24.250
+!MESSAGE NLS unused message: WizardNewFileCreationPage_title in: com.genuitec.eclipse.springframework.messages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:19:24.250
+!MESSAGE NLS unused message: WizardNewFileCreationPage_errorTitle in: com.genuitec.eclipse.springframework.messages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:19:24.250
+!MESSAGE NLS unused message: WizardNewFileCreationPage_internalErrorTitle in: com.genuitec.eclipse.springframework.messages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:19:24.250
+!MESSAGE NLS unused message: WizardNewFileCreationPage_internalErrorMessage in: com.genuitec.eclipse.springframework.messages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:21:23.578
+!MESSAGE NLS unused message: ContentAssistProposal_label in: org.hibernate.eclipse.console.HibernateConsoleMessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:21:23.578
+!MESSAGE NLS unused message: ContentAssistProposal_tooltip in: org.hibernate.eclipse.console.HibernateConsoleMessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:21:23.578
+!MESSAGE NLS unused message: ContentAssistProposal_image in: org.hibernate.eclipse.console.HibernateConsoleMessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:21:23.578
+!MESSAGE NLS unused message: ContentAssistProposal_description in: org.hibernate.eclipse.console.HibernateConsoleMessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:21:23.578
+!MESSAGE NLS unused message: ContentAssistTip_label in: org.hibernate.eclipse.console.HibernateConsoleMessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:21:23.578
+!MESSAGE NLS unused message: ContentAssistTip_tooltip in: org.hibernate.eclipse.console.HibernateConsoleMessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:21:23.578
+!MESSAGE NLS unused message: ContentAssistTip_image in: org.hibernate.eclipse.console.HibernateConsoleMessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:21:23.578
+!MESSAGE NLS unused message: ContentAssistTip_description in: org.hibernate.eclipse.console.HibernateConsoleMessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:21:23.578
+!MESSAGE NLS unused message: ContentFormat_label in: org.hibernate.eclipse.console.HibernateConsoleMessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:21:23.578
+!MESSAGE NLS unused message: ContentFormat_tooltip in: org.hibernate.eclipse.console.HibernateConsoleMessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:21:23.578
+!MESSAGE NLS unused message: ContentFormat_image in: org.hibernate.eclipse.console.HibernateConsoleMessages
+
+!ENTRY org.eclipse.osgi 2 1 2005-11-01 04:21:23.578
+!MESSAGE NLS unused message: ContentFormat_description in: org.hibernate.eclipse.console.HibernateConsoleMessages
+
+!ENTRY org.springframework.ide.eclipse.core 4 0 2005-11-01 04:24:54.000
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [po [in src [in ssh]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:502)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:246)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:504)
+	at org.eclipse.jdt.internal.core.CompilationUnit.openAncestors(CompilationUnit.java:1170)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:240)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:515)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:252)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:238)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:193)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:207)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getTypes(CompilationUnit.java:920)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getAllTypes(CompilationUnit.java:605)
+	at org.springframework.ide.eclipse.core.java.TypeStructureCache.hasStructuralChanges(TypeStructureCache.java:133)
+	at org.springframework.ide.eclipse.core.java.TypeStructureState.hasStructuralChanges(TypeStructureState.java:32)
+	at org.springframework.ide.eclipse.aop.core.util.AopReferenceModelUtils.getAffectedFiles(AopReferenceModelUtils.java:130)
+	at org.springframework.ide.eclipse.aop.core.builder.AopReferenceModelProjectBuilder.getAffectedResources(AopReferenceModelProjectBuilder.java:48)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$ResourceDeltaVisitor.visit(SpringProjectContributionManager.java:293)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:48)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.getAffectedResources(SpringProjectContributionManager.java:135)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:98)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2005-11-01 04:24:54.000
+!MESSAGE po [in src [in ssh]] does not exist
+
+!ENTRY org.springframework.ide.eclipse.core 4 0 2005-11-01 04:24:54.015
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [po [in src [in ssh]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:502)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:246)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:504)
+	at org.eclipse.jdt.internal.core.CompilationUnit.openAncestors(CompilationUnit.java:1170)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:240)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:515)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:252)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:238)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:193)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:207)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getTypes(CompilationUnit.java:920)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getAllTypes(CompilationUnit.java:605)
+	at org.springframework.ide.eclipse.core.java.TypeStructureCache.hasStructuralChanges(TypeStructureCache.java:133)
+	at org.springframework.ide.eclipse.core.java.TypeStructureState.hasStructuralChanges(TypeStructureState.java:32)
+	at org.springframework.ide.eclipse.beans.core.internal.model.validation.BeansConfigValidator.getAffectedResources(BeansConfigValidator.java:136)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$ResourceDeltaVisitor.visit(SpringProjectContributionManager.java:293)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:48)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.getAffectedResources(SpringProjectContributionManager.java:135)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:107)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2005-11-01 04:24:54.015
+!MESSAGE po [in src [in ssh]] does not exist
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 04:30:07.687
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for FilterDefinitionFactoryBean [in FilterDefinitionFactoryBean.class [in org.springframework.orm.hibernate3 [in C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\98\1\.cp\data\2.5\dist\modules\spring-orm.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.springframework.ide.eclipse.beans.ui.editor.util.BeansEditorUtils.createAdditionalProposalInfo(BeansEditorUtils.java:266)
+	at org.springframework.ide.eclipse.beans.ui.editor.contentassist.BeansJavaCompletionProposal.getAdditionalProposalInfo(BeansJavaCompletionProposal.java:250)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 04:30:07.687
+!MESSAGE Unknown javadoc format for FilterDefinitionFactoryBean [in FilterDefinitionFactoryBean.class [in org.springframework.orm.hibernate3 [in C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\98\1\.cp\data\2.5\dist\modules\spring-orm.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 04:30:07.937
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HibernateAccessor [in HibernateAccessor.class [in org.springframework.orm.hibernate3 [in C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\98\1\.cp\data\2.5\dist\modules\spring-orm.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.springframework.ide.eclipse.beans.ui.editor.util.BeansEditorUtils.createAdditionalProposalInfo(BeansEditorUtils.java:266)
+	at org.springframework.ide.eclipse.beans.ui.editor.contentassist.BeansJavaCompletionProposal.getAdditionalProposalInfo(BeansJavaCompletionProposal.java:250)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 04:30:07.937
+!MESSAGE Unknown javadoc format for HibernateAccessor [in HibernateAccessor.class [in org.springframework.orm.hibernate3 [in C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\98\1\.cp\data\2.5\dist\modules\spring-orm.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 04:30:09.359
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HibernateInterceptor [in HibernateInterceptor.class [in org.springframework.orm.hibernate3 [in C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\98\1\.cp\data\2.5\dist\modules\spring-orm.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.springframework.ide.eclipse.beans.ui.editor.util.BeansEditorUtils.createAdditionalProposalInfo(BeansEditorUtils.java:266)
+	at org.springframework.ide.eclipse.beans.ui.editor.contentassist.BeansJavaCompletionProposal.getAdditionalProposalInfo(BeansJavaCompletionProposal.java:250)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 04:30:09.359
+!MESSAGE Unknown javadoc format for HibernateInterceptor [in HibernateInterceptor.class [in org.springframework.orm.hibernate3 [in C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\98\1\.cp\data\2.5\dist\modules\spring-orm.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 04:30:13.359
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HibernateJdbcException [in HibernateJdbcException.class [in org.springframework.orm.hibernate3 [in C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\98\1\.cp\data\2.5\dist\modules\spring-orm.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.springframework.ide.eclipse.beans.ui.editor.util.BeansEditorUtils.createAdditionalProposalInfo(BeansEditorUtils.java:266)
+	at org.springframework.ide.eclipse.beans.ui.editor.contentassist.BeansJavaCompletionProposal.getAdditionalProposalInfo(BeansJavaCompletionProposal.java:250)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 04:30:13.359
+!MESSAGE Unknown javadoc format for HibernateJdbcException [in HibernateJdbcException.class [in org.springframework.orm.hibernate3 [in C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\98\1\.cp\data\2.5\dist\modules\spring-orm.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 04:30:13.625
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HibernateObjectRetrievalFailureException [in HibernateObjectRetrievalFailureException.class [in org.springframework.orm.hibernate3 [in C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\98\1\.cp\data\2.5\dist\modules\spring-orm.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.springframework.ide.eclipse.beans.ui.editor.util.BeansEditorUtils.createAdditionalProposalInfo(BeansEditorUtils.java:266)
+	at org.springframework.ide.eclipse.beans.ui.editor.contentassist.BeansJavaCompletionProposal.getAdditionalProposalInfo(BeansJavaCompletionProposal.java:250)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 04:30:13.625
+!MESSAGE Unknown javadoc format for HibernateObjectRetrievalFailureException [in HibernateObjectRetrievalFailureException.class [in org.springframework.orm.hibernate3 [in C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\98\1\.cp\data\2.5\dist\modules\spring-orm.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 04:30:13.875
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HibernateOptimisticLockingFailureException [in HibernateOptimisticLockingFailureException.class [in org.springframework.orm.hibernate3 [in C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\98\1\.cp\data\2.5\dist\modules\spring-orm.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.springframework.ide.eclipse.beans.ui.editor.util.BeansEditorUtils.createAdditionalProposalInfo(BeansEditorUtils.java:266)
+	at org.springframework.ide.eclipse.beans.ui.editor.contentassist.BeansJavaCompletionProposal.getAdditionalProposalInfo(BeansJavaCompletionProposal.java:250)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 04:30:13.875
+!MESSAGE Unknown javadoc format for HibernateOptimisticLockingFailureException [in HibernateOptimisticLockingFailureException.class [in org.springframework.orm.hibernate3 [in C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\98\1\.cp\data\2.5\dist\modules\spring-orm.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 04:30:14.156
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HibernateQueryException [in HibernateQueryException.class [in org.springframework.orm.hibernate3 [in C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\98\1\.cp\data\2.5\dist\modules\spring-orm.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.springframework.ide.eclipse.beans.ui.editor.util.BeansEditorUtils.createAdditionalProposalInfo(BeansEditorUtils.java:266)
+	at org.springframework.ide.eclipse.beans.ui.editor.contentassist.BeansJavaCompletionProposal.getAdditionalProposalInfo(BeansJavaCompletionProposal.java:250)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 04:30:14.156
+!MESSAGE Unknown javadoc format for HibernateQueryException [in HibernateQueryException.class [in org.springframework.orm.hibernate3 [in C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\98\1\.cp\data\2.5\dist\modules\spring-orm.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 04:30:14.718
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HibernateSystemException [in HibernateSystemException.class [in org.springframework.orm.hibernate3 [in C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\98\1\.cp\data\2.5\dist\modules\spring-orm.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.springframework.ide.eclipse.beans.ui.editor.util.BeansEditorUtils.createAdditionalProposalInfo(BeansEditorUtils.java:266)
+	at org.springframework.ide.eclipse.beans.ui.editor.contentassist.BeansJavaCompletionProposal.getAdditionalProposalInfo(BeansJavaCompletionProposal.java:250)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 04:30:14.718
+!MESSAGE Unknown javadoc format for HibernateSystemException [in HibernateSystemException.class [in org.springframework.orm.hibernate3 [in C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\98\1\.cp\data\2.5\dist\modules\spring-orm.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 04:30:15.125
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HibernateTemplate [in HibernateTemplate.class [in org.springframework.orm.hibernate3 [in C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\98\1\.cp\data\2.5\dist\modules\spring-orm.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.springframework.ide.eclipse.beans.ui.editor.util.BeansEditorUtils.createAdditionalProposalInfo(BeansEditorUtils.java:266)
+	at org.springframework.ide.eclipse.beans.ui.editor.contentassist.BeansJavaCompletionProposal.getAdditionalProposalInfo(BeansJavaCompletionProposal.java:250)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 04:30:15.125
+!MESSAGE Unknown javadoc format for HibernateTemplate [in HibernateTemplate.class [in org.springframework.orm.hibernate3 [in C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\98\1\.cp\data\2.5\dist\modules\spring-orm.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 04:30:15.343
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HibernateTransactionManager [in HibernateTransactionManager.class [in org.springframework.orm.hibernate3 [in C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\98\1\.cp\data\2.5\dist\modules\spring-orm.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.springframework.ide.eclipse.beans.ui.editor.util.BeansEditorUtils.createAdditionalProposalInfo(BeansEditorUtils.java:266)
+	at org.springframework.ide.eclipse.beans.ui.editor.contentassist.BeansJavaCompletionProposal.getAdditionalProposalInfo(BeansJavaCompletionProposal.java:250)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 04:30:15.343
+!MESSAGE Unknown javadoc format for HibernateTransactionManager [in HibernateTransactionManager.class [in org.springframework.orm.hibernate3 [in C:\Program Files\Genuitec\MyEclipse 8.5\configuration\org.eclipse.osgi\bundles\98\1\.cp\data\2.5\dist\modules\spring-orm.jar]]]
+
+!ENTRY org.eclipse.core.jobs 4 2 2005-11-01 06:29:00.437
+!MESSAGE An internal error occurred during: "Generating Artifacts".
+!STACK 0
+org.hibernate.exception.JDBCConnectionException: Getting database metadata
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:74)
+	at org.hibernate.cfg.reveng.dialect.AbstractMetaDataDialect.getMetaData(AbstractMetaDataDialect.java:64)
+	at org.hibernate.cfg.reveng.dialect.AbstractMetaDataDialect.caseForSearch(AbstractMetaDataDialect.java:163)
+	at org.hibernate.cfg.reveng.dialect.JDBCMetaDataDialect.getTables(JDBCMetaDataDialect.java:22)
+	at org.hibernate.cfg.reveng.JDBCReader.processTables(JDBCReader.java:476)
+	at org.hibernate.cfg.reveng.JDBCReader.readDatabaseSchema(JDBCReader.java:74)
+	at com.genuitec.eclipse.hibernate.wizards.MEJDBCMetaDataConfiguration$1.readDatabaseSchema(MEJDBCMetaDataConfiguration.java:104)
+	at org.hibernate.cfg.JDBCBinder.readFromDatabase(JDBCBinder.java:92)
+	at com.genuitec.eclipse.hibernate.wizards.MEJDBCMetaDataConfiguration.readFromJDBC(MEJDBCMetaDataConfiguration.java:137)
+	at com.genuitec.eclipse.hibernate.wizards.GenerateArtifactsJob$7.execute(GenerateArtifactsJob.java:891)
+	at org.hibernate.console.execution.DefaultExecutionContext.execute(DefaultExecutionContext.java:64)
+	at org.hibernate.console.ConsoleConfiguration.execute(ConsoleConfiguration.java:95)
+	at com.genuitec.eclipse.hibernate.wizards.GenerateArtifactsJob.buildConfiguration(GenerateArtifactsJob.java:872)
+	at com.genuitec.eclipse.hibernate.wizards.GenerateArtifactsJob.run(GenerateArtifactsJob.java:412)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Cannot load connection class because of underlying exception: 'java.lang.NumberFormatException: For input string: "3306>]"'.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.Util.getInstance(Util.java:384)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1015)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:989)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:984)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:929)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:294)
+	at org.hibernate.console.FakeDelegatingDriver.connect(FakeDelegatingDriver.java:40)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:154)
+	at org.hibernate.connection.DriverManagerConnectionProvider.getConnection(DriverManagerConnectionProvider.java:110)
+	at org.hibernate.cfg.reveng.dialect.AbstractMetaDataDialect.getConnection(AbstractMetaDataDialect.java:122)
+	at org.hibernate.cfg.reveng.dialect.AbstractMetaDataDialect.getMetaData(AbstractMetaDataDialect.java:61)
+	... 13 more
+Caused by: java.lang.NumberFormatException: For input string: "3306>]"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:48)
+	at java.lang.Integer.parseInt(Integer.java:456)
+	at java.lang.Integer.parseInt(Integer.java:497)
+	at com.mysql.jdbc.NonRegisteringDriver.port(NonRegisteringDriver.java:776)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	... 19 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2005-11-01 06:30:15.671
+!MESSAGE An internal error occurred during: "Generating Artifacts".
+!STACK 0
+org.hibernate.exception.JDBCConnectionException: Getting database metadata
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:74)
+	at org.hibernate.cfg.reveng.dialect.AbstractMetaDataDialect.getMetaData(AbstractMetaDataDialect.java:64)
+	at org.hibernate.cfg.reveng.dialect.AbstractMetaDataDialect.caseForSearch(AbstractMetaDataDialect.java:163)
+	at org.hibernate.cfg.reveng.dialect.JDBCMetaDataDialect.getTables(JDBCMetaDataDialect.java:22)
+	at org.hibernate.cfg.reveng.JDBCReader.processTables(JDBCReader.java:476)
+	at org.hibernate.cfg.reveng.JDBCReader.readDatabaseSchema(JDBCReader.java:74)
+	at com.genuitec.eclipse.hibernate.wizards.MEJDBCMetaDataConfiguration$1.readDatabaseSchema(MEJDBCMetaDataConfiguration.java:104)
+	at org.hibernate.cfg.JDBCBinder.readFromDatabase(JDBCBinder.java:92)
+	at com.genuitec.eclipse.hibernate.wizards.MEJDBCMetaDataConfiguration.readFromJDBC(MEJDBCMetaDataConfiguration.java:137)
+	at com.genuitec.eclipse.hibernate.wizards.GenerateArtifactsJob$7.execute(GenerateArtifactsJob.java:891)
+	at org.hibernate.console.execution.DefaultExecutionContext.execute(DefaultExecutionContext.java:64)
+	at org.hibernate.console.ConsoleConfiguration.execute(ConsoleConfiguration.java:95)
+	at com.genuitec.eclipse.hibernate.wizards.GenerateArtifactsJob.buildConfiguration(GenerateArtifactsJob.java:872)
+	at com.genuitec.eclipse.hibernate.wizards.GenerateArtifactsJob.run(GenerateArtifactsJob.java:412)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Cannot load connection class because of underlying exception: 'java.lang.NumberFormatException: For input string: "3306>]"'.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.Util.getInstance(Util.java:384)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1015)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:989)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:984)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:929)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:294)
+	at org.hibernate.console.FakeDelegatingDriver.connect(FakeDelegatingDriver.java:40)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:154)
+	at org.hibernate.connection.DriverManagerConnectionProvider.getConnection(DriverManagerConnectionProvider.java:110)
+	at org.hibernate.cfg.reveng.dialect.AbstractMetaDataDialect.getConnection(AbstractMetaDataDialect.java:122)
+	at org.hibernate.cfg.reveng.dialect.AbstractMetaDataDialect.getMetaData(AbstractMetaDataDialect.java:61)
+	... 13 more
+Caused by: java.lang.NumberFormatException: For input string: "3306>]"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:48)
+	at java.lang.Integer.parseInt(Integer.java:456)
+	at java.lang.Integer.parseInt(Integer.java:497)
+	at com.mysql.jdbc.NonRegisteringDriver.port(NonRegisteringDriver.java:776)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	... 19 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2005-11-01 06:31:23.968
+!MESSAGE An internal error occurred during: "Generating Artifacts".
+!STACK 0
+org.hibernate.exception.JDBCConnectionException: Getting database metadata
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:74)
+	at org.hibernate.cfg.reveng.dialect.AbstractMetaDataDialect.getMetaData(AbstractMetaDataDialect.java:64)
+	at org.hibernate.cfg.reveng.dialect.AbstractMetaDataDialect.caseForSearch(AbstractMetaDataDialect.java:163)
+	at org.hibernate.cfg.reveng.dialect.JDBCMetaDataDialect.getTables(JDBCMetaDataDialect.java:22)
+	at org.hibernate.cfg.reveng.JDBCReader.processTables(JDBCReader.java:476)
+	at org.hibernate.cfg.reveng.JDBCReader.readDatabaseSchema(JDBCReader.java:74)
+	at com.genuitec.eclipse.hibernate.wizards.MEJDBCMetaDataConfiguration$1.readDatabaseSchema(MEJDBCMetaDataConfiguration.java:104)
+	at org.hibernate.cfg.JDBCBinder.readFromDatabase(JDBCBinder.java:92)
+	at com.genuitec.eclipse.hibernate.wizards.MEJDBCMetaDataConfiguration.readFromJDBC(MEJDBCMetaDataConfiguration.java:137)
+	at com.genuitec.eclipse.hibernate.wizards.GenerateArtifactsJob$7.execute(GenerateArtifactsJob.java:891)
+	at org.hibernate.console.execution.DefaultExecutionContext.execute(DefaultExecutionContext.java:64)
+	at org.hibernate.console.ConsoleConfiguration.execute(ConsoleConfiguration.java:95)
+	at com.genuitec.eclipse.hibernate.wizards.GenerateArtifactsJob.buildConfiguration(GenerateArtifactsJob.java:872)
+	at com.genuitec.eclipse.hibernate.wizards.GenerateArtifactsJob.run(GenerateArtifactsJob.java:412)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Cannot load connection class because of underlying exception: 'java.lang.NumberFormatException: For input string: "3306>]"'.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.Util.getInstance(Util.java:384)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1015)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:989)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:984)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:929)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:294)
+	at org.hibernate.console.FakeDelegatingDriver.connect(FakeDelegatingDriver.java:40)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:154)
+	at org.hibernate.connection.DriverManagerConnectionProvider.getConnection(DriverManagerConnectionProvider.java:110)
+	at org.hibernate.cfg.reveng.dialect.AbstractMetaDataDialect.getConnection(AbstractMetaDataDialect.java:122)
+	at org.hibernate.cfg.reveng.dialect.AbstractMetaDataDialect.getMetaData(AbstractMetaDataDialect.java:61)
+	... 13 more
+Caused by: java.lang.NumberFormatException: For input string: "3306>]"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:48)
+	at java.lang.Integer.parseInt(Integer.java:456)
+	at java.lang.Integer.parseInt(Integer.java:497)
+	at com.mysql.jdbc.NonRegisteringDriver.port(NonRegisteringDriver.java:776)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	... 19 more
+
+!ENTRY org.springframework.ide.eclipse.core 4 0 2005-11-01 06:40:53.765
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [AddAction.java [in action [in src [in ssh2]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:502)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:246)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:515)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:252)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:238)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:193)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:207)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getTypes(CompilationUnit.java:920)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getAllTypes(CompilationUnit.java:605)
+	at org.springframework.ide.eclipse.core.java.TypeStructureCache.hasStructuralChanges(TypeStructureCache.java:133)
+	at org.springframework.ide.eclipse.core.java.TypeStructureState.hasStructuralChanges(TypeStructureState.java:32)
+	at org.springframework.ide.eclipse.aop.core.util.AopReferenceModelUtils.getAffectedFiles(AopReferenceModelUtils.java:130)
+	at org.springframework.ide.eclipse.aop.core.builder.AopReferenceModelProjectBuilder.getAffectedResources(AopReferenceModelProjectBuilder.java:48)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$ResourceDeltaVisitor.visit(SpringProjectContributionManager.java:293)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:48)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.getAffectedResources(SpringProjectContributionManager.java:135)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:98)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2005-11-01 06:40:53.765
+!MESSAGE AddAction.java [in action [in src [in ssh2]]] does not exist
+
+!ENTRY org.springframework.ide.eclipse.core 4 0 2005-11-01 06:40:53.765
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [AddAction.java [in action [in src [in ssh2]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:502)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:246)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:515)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:252)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:238)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:193)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:207)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getTypes(CompilationUnit.java:920)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getAllTypes(CompilationUnit.java:605)
+	at org.springframework.ide.eclipse.core.java.TypeStructureCache.hasStructuralChanges(TypeStructureCache.java:133)
+	at org.springframework.ide.eclipse.core.java.TypeStructureState.hasStructuralChanges(TypeStructureState.java:32)
+	at org.springframework.ide.eclipse.beans.core.internal.model.validation.BeansConfigValidator.getAffectedResources(BeansConfigValidator.java:136)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$ResourceDeltaVisitor.visit(SpringProjectContributionManager.java:293)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:48)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.getAffectedResources(SpringProjectContributionManager.java:135)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:107)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2005-11-01 06:40:53.765
+!MESSAGE AddAction.java [in action [in src [in ssh2]]] does not exist
+
+!ENTRY org.springframework.ide.eclipse.core 4 0 2005-11-01 06:41:39.640
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [AddAction.java [in <default> [in src [in ssh2]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:502)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:246)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:515)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:252)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:238)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:193)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:207)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getTypes(CompilationUnit.java:920)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getAllTypes(CompilationUnit.java:605)
+	at org.springframework.ide.eclipse.core.java.TypeStructureCache.hasStructuralChanges(TypeStructureCache.java:133)
+	at org.springframework.ide.eclipse.core.java.TypeStructureState.hasStructuralChanges(TypeStructureState.java:32)
+	at org.springframework.ide.eclipse.aop.core.util.AopReferenceModelUtils.getAffectedFiles(AopReferenceModelUtils.java:130)
+	at org.springframework.ide.eclipse.aop.core.builder.AopReferenceModelProjectBuilder.getAffectedResources(AopReferenceModelProjectBuilder.java:48)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$ResourceDeltaVisitor.visit(SpringProjectContributionManager.java:293)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:48)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.getAffectedResources(SpringProjectContributionManager.java:135)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:98)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2005-11-01 06:41:39.640
+!MESSAGE AddAction.java [in <default> [in src [in ssh2]]] does not exist
+
+!ENTRY org.springframework.ide.eclipse.core 4 0 2005-11-01 06:41:39.640
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [AddAction.java [in <default> [in src [in ssh2]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:502)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:246)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:515)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:252)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:238)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:193)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:207)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getTypes(CompilationUnit.java:920)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getAllTypes(CompilationUnit.java:605)
+	at org.springframework.ide.eclipse.core.java.TypeStructureCache.hasStructuralChanges(TypeStructureCache.java:133)
+	at org.springframework.ide.eclipse.core.java.TypeStructureState.hasStructuralChanges(TypeStructureState.java:32)
+	at org.springframework.ide.eclipse.beans.core.internal.model.validation.BeansConfigValidator.getAffectedResources(BeansConfigValidator.java:136)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$ResourceDeltaVisitor.visit(SpringProjectContributionManager.java:293)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:48)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.getAffectedResources(SpringProjectContributionManager.java:135)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:107)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2005-11-01 06:41:39.640
+!MESSAGE AddAction.java [in <default> [in src [in ssh2]]] does not exist
+
+!ENTRY com.genuitec.eclipse.struts2 1 0 2005-11-01 06:44:04.718
+!MESSAGE 
+!STACK 0
+org.xml.sax.SAXParseException: The markup declarations contained or pointed to by the document type declaration must be well-formed.
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:124)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.getDocument(Struts2XMLFile.java:160)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.parse(Struts2XMLFile.java:196)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processConfigFile(Struts2XMLFile.java:336)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processIncludedConfig(Struts2XMLFile.java:313)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.synchronize(Struts2Project.java:107)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.access$0(Struts2Project.java:98)
+	at com.genuitec.eclipse.struts2.model.Struts2Project$StrutsModelJob.run(Struts2Project.java:370)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.genuitec.eclipse.struts2 1 0 2005-11-01 06:44:04.812
+!MESSAGE Unable to parse Struts configuration file
+!STACK 0
+
+javax.xml.transform.TransformerException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:363)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:122)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:98)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.evaluate(XPathExpressionImpl.java:180)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.parse(Struts2XMLFile.java:199)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processConfigFile(Struts2XMLFile.java:336)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processIncludedConfig(Struts2XMLFile.java:313)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.synchronize(Struts2Project.java:107)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.access$0(Struts2Project.java:98)
+	at com.genuitec.eclipse.struts2.model.Struts2Project$StrutsModelJob.run(Struts2Project.java:370)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.RuntimeException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.axes.NodeSequence.setRoot(NodeSequence.java:212)
+	at com.sun.org.apache.xpath.internal.axes.LocPathIterator.execute(LocPathIterator.java:210)
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:335)
+	... 10 more
+---------
+java.lang.RuntimeException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.axes.NodeSequence.setRoot(NodeSequence.java:212)
+	at com.sun.org.apache.xpath.internal.axes.LocPathIterator.execute(LocPathIterator.java:210)
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:335)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:122)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:98)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.evaluate(XPathExpressionImpl.java:180)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.parse(Struts2XMLFile.java:199)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processConfigFile(Struts2XMLFile.java:336)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processIncludedConfig(Struts2XMLFile.java:313)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.synchronize(Struts2Project.java:107)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.access$0(Struts2Project.java:98)
+	at com.genuitec.eclipse.struts2.model.Struts2Project$StrutsModelJob.run(Struts2Project.java:370)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+--------------- linked to ------------------
+javax.xml.xpath.XPathExpressionException
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.evaluate(XPathExpressionImpl.java:193)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.parse(Struts2XMLFile.java:199)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processConfigFile(Struts2XMLFile.java:336)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processIncludedConfig(Struts2XMLFile.java:313)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.synchronize(Struts2Project.java:107)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.access$0(Struts2Project.java:98)
+	at com.genuitec.eclipse.struts2.model.Struts2Project$StrutsModelJob.run(Struts2Project.java:370)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: javax.xml.transform.TransformerException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:363)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:122)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:98)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.evaluate(XPathExpressionImpl.java:180)
+	... 7 more
+Caused by: java.lang.RuntimeException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.axes.NodeSequence.setRoot(NodeSequence.java:212)
+	at com.sun.org.apache.xpath.internal.axes.LocPathIterator.execute(LocPathIterator.java:210)
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:335)
+	... 10 more
+
+!ENTRY com.genuitec.eclipse.struts2 1 0 2005-11-01 06:44:04.828
+!MESSAGE 
+!STACK 0
+org.xml.sax.SAXParseException: The markup declarations contained or pointed to by the document type declaration must be well-formed.
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:124)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.getDocument(Struts2XMLFile.java:160)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.parse(Struts2XMLFile.java:196)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processConfigFile(Struts2XMLFile.java:336)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processIncludedConfig(Struts2XMLFile.java:313)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.synchronize(Struts2Project.java:108)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.access$0(Struts2Project.java:98)
+	at com.genuitec.eclipse.struts2.model.Struts2Project$StrutsModelJob.run(Struts2Project.java:370)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.genuitec.eclipse.struts2 1 0 2005-11-01 06:44:04.828
+!MESSAGE Unable to parse Struts configuration file
+!STACK 0
+
+javax.xml.transform.TransformerException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:363)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:122)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:98)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.evaluate(XPathExpressionImpl.java:180)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.parse(Struts2XMLFile.java:199)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processConfigFile(Struts2XMLFile.java:336)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processIncludedConfig(Struts2XMLFile.java:313)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.synchronize(Struts2Project.java:108)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.access$0(Struts2Project.java:98)
+	at com.genuitec.eclipse.struts2.model.Struts2Project$StrutsModelJob.run(Struts2Project.java:370)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.RuntimeException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.axes.NodeSequence.setRoot(NodeSequence.java:212)
+	at com.sun.org.apache.xpath.internal.axes.LocPathIterator.execute(LocPathIterator.java:210)
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:335)
+	... 10 more
+---------
+java.lang.RuntimeException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.axes.NodeSequence.setRoot(NodeSequence.java:212)
+	at com.sun.org.apache.xpath.internal.axes.LocPathIterator.execute(LocPathIterator.java:210)
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:335)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:122)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:98)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.evaluate(XPathExpressionImpl.java:180)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.parse(Struts2XMLFile.java:199)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processConfigFile(Struts2XMLFile.java:336)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processIncludedConfig(Struts2XMLFile.java:313)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.synchronize(Struts2Project.java:108)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.access$0(Struts2Project.java:98)
+	at com.genuitec.eclipse.struts2.model.Struts2Project$StrutsModelJob.run(Struts2Project.java:370)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+--------------- linked to ------------------
+javax.xml.xpath.XPathExpressionException
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.evaluate(XPathExpressionImpl.java:193)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.parse(Struts2XMLFile.java:199)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processConfigFile(Struts2XMLFile.java:336)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processIncludedConfig(Struts2XMLFile.java:313)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.synchronize(Struts2Project.java:108)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.access$0(Struts2Project.java:98)
+	at com.genuitec.eclipse.struts2.model.Struts2Project$StrutsModelJob.run(Struts2Project.java:370)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: javax.xml.transform.TransformerException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:363)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:122)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:98)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.evaluate(XPathExpressionImpl.java:180)
+	... 7 more
+Caused by: java.lang.RuntimeException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.axes.NodeSequence.setRoot(NodeSequence.java:212)
+	at com.sun.org.apache.xpath.internal.axes.LocPathIterator.execute(LocPathIterator.java:210)
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:335)
+	... 10 more
+
+!ENTRY com.genuitec.eclipse.struts2 1 0 2005-11-01 06:44:04.828
+!MESSAGE 
+!STACK 0
+org.xml.sax.SAXParseException: The markup declarations contained or pointed to by the document type declaration must be well-formed.
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:124)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.getDocument(Struts2XMLFile.java:160)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.parse(Struts2XMLFile.java:196)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processConfigFile(Struts2XMLFile.java:336)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processIncludedConfig(Struts2XMLFile.java:313)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.synchronize(Struts2Project.java:108)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.access$0(Struts2Project.java:98)
+	at com.genuitec.eclipse.struts2.model.Struts2Project$StrutsModelJob.run(Struts2Project.java:370)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.genuitec.eclipse.struts2 1 0 2005-11-01 06:44:04.828
+!MESSAGE Unable to parse Struts configuration file
+!STACK 0
+
+javax.xml.transform.TransformerException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:363)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:122)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:98)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.evaluate(XPathExpressionImpl.java:180)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.parse(Struts2XMLFile.java:199)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processConfigFile(Struts2XMLFile.java:336)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processIncludedConfig(Struts2XMLFile.java:313)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.synchronize(Struts2Project.java:108)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.access$0(Struts2Project.java:98)
+	at com.genuitec.eclipse.struts2.model.Struts2Project$StrutsModelJob.run(Struts2Project.java:370)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.RuntimeException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.axes.NodeSequence.setRoot(NodeSequence.java:212)
+	at com.sun.org.apache.xpath.internal.axes.LocPathIterator.execute(LocPathIterator.java:210)
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:335)
+	... 10 more
+---------
+java.lang.RuntimeException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.axes.NodeSequence.setRoot(NodeSequence.java:212)
+	at com.sun.org.apache.xpath.internal.axes.LocPathIterator.execute(LocPathIterator.java:210)
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:335)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:122)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:98)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.evaluate(XPathExpressionImpl.java:180)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.parse(Struts2XMLFile.java:199)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processConfigFile(Struts2XMLFile.java:336)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processIncludedConfig(Struts2XMLFile.java:313)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.synchronize(Struts2Project.java:108)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.access$0(Struts2Project.java:98)
+	at com.genuitec.eclipse.struts2.model.Struts2Project$StrutsModelJob.run(Struts2Project.java:370)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+--------------- linked to ------------------
+javax.xml.xpath.XPathExpressionException
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.evaluate(XPathExpressionImpl.java:193)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.parse(Struts2XMLFile.java:199)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processConfigFile(Struts2XMLFile.java:336)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processIncludedConfig(Struts2XMLFile.java:313)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.synchronize(Struts2Project.java:108)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.access$0(Struts2Project.java:98)
+	at com.genuitec.eclipse.struts2.model.Struts2Project$StrutsModelJob.run(Struts2Project.java:370)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: javax.xml.transform.TransformerException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:363)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:122)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:98)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.evaluate(XPathExpressionImpl.java:180)
+	... 7 more
+Caused by: java.lang.RuntimeException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.axes.NodeSequence.setRoot(NodeSequence.java:212)
+	at com.sun.org.apache.xpath.internal.axes.LocPathIterator.execute(LocPathIterator.java:210)
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:335)
+	... 10 more
+
+!ENTRY com.genuitec.eclipse.struts2 1 0 2005-11-01 06:44:04.843
+!MESSAGE 
+!STACK 0
+org.xml.sax.SAXParseException: The markup declarations contained or pointed to by the document type declaration must be well-formed.
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:124)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.getDocument(Struts2XMLFile.java:160)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.parse(Struts2XMLFile.java:196)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processConfigFile(Struts2XMLFile.java:336)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processIncludedConfig(Struts2XMLFile.java:313)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.synchronize(Struts2Project.java:108)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.access$0(Struts2Project.java:98)
+	at com.genuitec.eclipse.struts2.model.Struts2Project$StrutsModelJob.run(Struts2Project.java:370)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.genuitec.eclipse.struts2 1 0 2005-11-01 06:44:04.843
+!MESSAGE Unable to parse Struts configuration file
+!STACK 0
+
+javax.xml.transform.TransformerException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:363)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:122)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:98)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.evaluate(XPathExpressionImpl.java:180)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.parse(Struts2XMLFile.java:199)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processConfigFile(Struts2XMLFile.java:336)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processIncludedConfig(Struts2XMLFile.java:313)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.synchronize(Struts2Project.java:108)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.access$0(Struts2Project.java:98)
+	at com.genuitec.eclipse.struts2.model.Struts2Project$StrutsModelJob.run(Struts2Project.java:370)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.RuntimeException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.axes.NodeSequence.setRoot(NodeSequence.java:212)
+	at com.sun.org.apache.xpath.internal.axes.LocPathIterator.execute(LocPathIterator.java:210)
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:335)
+	... 10 more
+---------
+java.lang.RuntimeException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.axes.NodeSequence.setRoot(NodeSequence.java:212)
+	at com.sun.org.apache.xpath.internal.axes.LocPathIterator.execute(LocPathIterator.java:210)
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:335)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:122)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:98)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.evaluate(XPathExpressionImpl.java:180)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.parse(Struts2XMLFile.java:199)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processConfigFile(Struts2XMLFile.java:336)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processIncludedConfig(Struts2XMLFile.java:313)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.synchronize(Struts2Project.java:108)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.access$0(Struts2Project.java:98)
+	at com.genuitec.eclipse.struts2.model.Struts2Project$StrutsModelJob.run(Struts2Project.java:370)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+--------------- linked to ------------------
+javax.xml.xpath.XPathExpressionException
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.evaluate(XPathExpressionImpl.java:193)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.parse(Struts2XMLFile.java:199)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processConfigFile(Struts2XMLFile.java:336)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processIncludedConfig(Struts2XMLFile.java:313)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.synchronize(Struts2Project.java:108)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.access$0(Struts2Project.java:98)
+	at com.genuitec.eclipse.struts2.model.Struts2Project$StrutsModelJob.run(Struts2Project.java:370)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: javax.xml.transform.TransformerException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:363)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:122)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:98)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.evaluate(XPathExpressionImpl.java:180)
+	... 7 more
+Caused by: java.lang.RuntimeException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.axes.NodeSequence.setRoot(NodeSequence.java:212)
+	at com.sun.org.apache.xpath.internal.axes.LocPathIterator.execute(LocPathIterator.java:210)
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:335)
+	... 10 more
+
+!ENTRY com.genuitec.eclipse.struts2 1 0 2005-11-01 06:44:04.859
+!MESSAGE 
+!STACK 0
+org.xml.sax.SAXParseException: The markup declarations contained or pointed to by the document type declaration must be well-formed.
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:124)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.getDocument(Struts2XMLFile.java:160)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.parse(Struts2XMLFile.java:196)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processConfigFile(Struts2XMLFile.java:336)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processIncludedConfig(Struts2XMLFile.java:313)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.synchronize(Struts2Project.java:108)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.access$0(Struts2Project.java:98)
+	at com.genuitec.eclipse.struts2.model.Struts2Project$StrutsModelJob.run(Struts2Project.java:370)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.genuitec.eclipse.struts2 1 0 2005-11-01 06:44:04.859
+!MESSAGE Unable to parse Struts configuration file
+!STACK 0
+
+javax.xml.transform.TransformerException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:363)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:122)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:98)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.evaluate(XPathExpressionImpl.java:180)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.parse(Struts2XMLFile.java:199)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processConfigFile(Struts2XMLFile.java:336)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processIncludedConfig(Struts2XMLFile.java:313)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.synchronize(Struts2Project.java:108)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.access$0(Struts2Project.java:98)
+	at com.genuitec.eclipse.struts2.model.Struts2Project$StrutsModelJob.run(Struts2Project.java:370)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.RuntimeException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.axes.NodeSequence.setRoot(NodeSequence.java:212)
+	at com.sun.org.apache.xpath.internal.axes.LocPathIterator.execute(LocPathIterator.java:210)
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:335)
+	... 10 more
+---------
+java.lang.RuntimeException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.axes.NodeSequence.setRoot(NodeSequence.java:212)
+	at com.sun.org.apache.xpath.internal.axes.LocPathIterator.execute(LocPathIterator.java:210)
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:335)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:122)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:98)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.evaluate(XPathExpressionImpl.java:180)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.parse(Struts2XMLFile.java:199)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processConfigFile(Struts2XMLFile.java:336)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processIncludedConfig(Struts2XMLFile.java:313)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.synchronize(Struts2Project.java:108)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.access$0(Struts2Project.java:98)
+	at com.genuitec.eclipse.struts2.model.Struts2Project$StrutsModelJob.run(Struts2Project.java:370)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+--------------- linked to ------------------
+javax.xml.xpath.XPathExpressionException
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.evaluate(XPathExpressionImpl.java:193)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.parse(Struts2XMLFile.java:199)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processConfigFile(Struts2XMLFile.java:336)
+	at com.genuitec.eclipse.struts2.model.Struts2XMLFile.processIncludedConfig(Struts2XMLFile.java:313)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.synchronize(Struts2Project.java:108)
+	at com.genuitec.eclipse.struts2.model.Struts2Project.access$0(Struts2Project.java:98)
+	at com.genuitec.eclipse.struts2.model.Struts2Project$StrutsModelJob.run(Struts2Project.java:370)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: javax.xml.transform.TransformerException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:363)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:122)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.eval(XPathExpressionImpl.java:98)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.evaluate(XPathExpressionImpl.java:180)
+	... 7 more
+Caused by: java.lang.RuntimeException: Unable to evaluate expression using this context
+	at com.sun.org.apache.xpath.internal.axes.NodeSequence.setRoot(NodeSequence.java:212)
+	at com.sun.org.apache.xpath.internal.axes.LocPathIterator.execute(LocPathIterator.java:210)
+	at com.sun.org.apache.xpath.internal.XPath.execute(XPath.java:335)
+	... 10 more

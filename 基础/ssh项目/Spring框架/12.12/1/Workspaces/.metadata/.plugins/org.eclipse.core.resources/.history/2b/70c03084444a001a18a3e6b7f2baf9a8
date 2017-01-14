@@ -1,0 +1,5 @@
+package dao.inter;
+
+public interface PersonDAO {
+	public void add(Person p);
+}

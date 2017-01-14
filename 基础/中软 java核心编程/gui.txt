@@ -1,0 +1,42 @@
+猜数字游戏
+package gf;
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.GridLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class  test extends JFrame {
+	public static void main(String[] args) {
+	test aa = new test();
+	aa.setTitle("猜数字");
+	Container cc=aa.getContentPane();
+	cc.setLayout(new BorderLayout());
+	JTextField jt = new JTextField();
+	JLabel j1=new JLabel("请输入一个整数");
+	cc.add(jt,BorderLayout.NORTH);
+	cc.add(j1,BorderLayout.CENTER);
+	JPanel jp=new JPanel();
+	jp.setLayout(new GridLayout(1,3));
+	JButton jbu1 =new JButton("猜");
+	JButton jbu2 =new JButton("重新来");
+	JButton jbu3 =new JButton("退出游戏");
+	jp.add(jbu1);
+	jp.add(jbu2);
+	jp.add(jbu3);
+	cc.add(BorderLayout.SOUTH,jp);
+	aa.setSize(500,300);
+	aa.setResizable(false);
+	aa.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	aa.setVisible(true);
+	}
+
+	
+	
+	
+	
+}

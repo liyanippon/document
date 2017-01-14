@@ -1,0 +1,99 @@
+EL表达式
+一、简介
+1.EL表达式是一种通用的表达式语言，可以运用在JSP、PHP和ASP里面
+2.EL表达式一种向页面数据结果的表达式
+3.EL表达式不是一种编程语言，更不是脚本语言
+4.JAVA领域EL表达式只能写在JSP页面里面
+
+二、语法
+1.语法格式：${表达式}
+2.EL表达式严格区分大小写、不区分单双引号
+3.EL表达式支持的运算符号
+	1.算术运算符：+ - * / % ()
+		${255+3/2}
+	2.逻辑运算符：&& || !
+		${true&&false}
+	3.比较运算符：> >= < <= == !=
+		${10*3<6}
+		${10==20}
+	4.三元运算符
+		${表达式 ? 结果1 : 结果2 }
+		${10>5?'A':'B'}
+	5.EL表达式的字符串
+		${'username'}
+		${"username"}
+		${username}	输出的是保存的变量值
+	6.EL表达式输出数组或者集合的数据
+		<%
+			String[] param={"A","B","C","D"};
+			request.setAttribute("test",param);
+		%>
+		${test[0]}
+	7.输出对象的属性
+		public class Student{
+			private String name;
+			private String sex;
+			private int age;
+			set/get方法
+		}
+		<%
+			Student s=new Student();
+			s.setName("tom");
+			s.setSex("male");
+			s.setAge(23);
+			request.setAttribute("one",s);
+		%>
+		${one.name}
+		${one.sex}
+	8.EL表达式的作用域
+		可以保存数据的四个作用域
+			对象名称		类名			作用域名称
+		(1) pageContext		PageContext		page
+			pageConext.setAttribute("user","scott");
+			
+			page范围保存的数据只能在当前网页上面使用，其它网页
+			无法使用
+			
+		(2)	request			HttpServletRequest	request
+			request.setAttribute("user","scott");
+			
+			request范围保存的数据是request对象经过的页面，
+			例如Servlet请求转发到JSP
+			
+		(3) session			HttpSession			session
+			session.setAttribute("user","scott");
+			
+			session范围保存的数据可以被网站所有网页使用，
+			同时session里面保存的数据保存的时间也很长
+			
+			多次使用session的时候，如果每次使用间隔时间不超过15
+			分钟，那么session中的数据就会保存下去，否则就会清空
+			
+			web.xml文件可以修改session对象的超时时间，默认是15分
+			<session-config>
+				<session-timeout>1</session-timeout>
+			</session-config>
+		
+		(4) application		ServletContext		application
+			application.setAttribute("user","scott");
+			
+			application范围保存的数据可以被网站所有网页使用，
+			同时没有超时时间，数据会永久在内存中保存，直到Tomcat
+			关闭的时候才清除数据。
+			
+		<%
+			request.setAttribute("role","admin");
+			session.setAttribute("role","test");
+		%>
+		${role}
+		默认情况下，EL表达式会到四个作用域分别查找数据，优先显示
+		最先找到的数据。还可以通过指定作用域的方式查找数据。
+		
+		pageScope	page
+		requestScope request
+		sessionScope session
+		applicationScope application
+		${sessionScope.role}
+		
+			
+		

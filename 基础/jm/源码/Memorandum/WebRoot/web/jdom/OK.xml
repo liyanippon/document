@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MyInfo comment="个人信息">
+  <姓名>whp</姓名>
+  <年龄>25</年龄>
+  <工作经验>
+    <公司>大连信开数码软件有限公司</公司>
+    <部门>国际部</部门>
+    <email value="wang_830608@163.com" />
+  </工作经验>
+</MyInfo>
+

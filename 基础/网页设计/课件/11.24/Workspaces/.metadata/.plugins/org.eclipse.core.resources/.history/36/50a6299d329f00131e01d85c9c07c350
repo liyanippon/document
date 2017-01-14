@@ -1,0 +1,12 @@
+package org.stuenroll.dao;
+
+import javax.jms.ConnectionFactory;
+
+import com.mysql.jdbc.Connection;
+
+public class UserDAO {
+	public boolean login(String name,String password){
+		String sql="SELECT COUNT(*) AS ct FROM user WHERE usernsme=? password=?";
+			Connection con=ConnectionFactory.getConnection();
+	}
+}

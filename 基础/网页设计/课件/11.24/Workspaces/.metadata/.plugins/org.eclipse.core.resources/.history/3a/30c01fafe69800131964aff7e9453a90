@@ -1,0 +1,27 @@
+function calArea(){
+	var text=document.getElementById("r");
+	var r=text.value;
+	var temp="圆面积"+3.14*r*r;
+	document.getElementById(area).innerHTML=temp;
+}
+
+function gen(){
+	var temp=new Array();
+	while(temp.length<7){
+		var num=Math.ceil(Math.random()*35);
+		var bool=false;
+		for(var i=0;i<temp.length;i++){
+			if(temp[i]==num){
+				bool=true;
+				break;
+			}
+		}
+		if(bool!=true){
+			temp.push(num);
+		}
+	}
+	temp.sort(function(a,b){
+		return b-a;
+	});
+	document.getElementById("rs").innerHTML=temp;
+}

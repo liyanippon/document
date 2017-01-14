@@ -1,0 +1,5 @@
+1.index.jsp保留四个翻页按钮，其余代码可以删除，详见153行
+2.index.jsp页面的文本框id改成now，详见161行
+3.index.jsp页面的toPage隐藏字段value=1，详见37行
+4.index.js页面添加方法，详见5-26行
+5.编写EnrollServlet

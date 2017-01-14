@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="default" extends="struts-default">
+         <interceptors>
+             <interceptor name="myInterceptor" class="chao.tool.MyInterceptor"/>
+         </interceptors>
+         <global-results>
+             <result name="login">/login.jsp</result>
+         </global-results>
+         <action name="login" class="chao.action.DlAction">
+             <result name="success">/main.jsp</result>
+             <result name="error">/login.jsp</result>
+         </action>
+         
+         
+          <action name="addXsView" class="chao.action.XsAction" method="addXsView">
+             <result name="success">/addXsView.jsp</result>
+             <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action>
+         <action name="addXs" class="chao.action.XsAction" method="addXs">
+             <result name="success">/success.jsp</result>
+             <result name="error">/existXh.jsp</result>
+            <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action>
+         <action name="xsInfo" class="chao.action.XsAction">
+             <result name="success">/xsInfo.jsp</result>
+             <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action>
+         <action name="getImage" class="chao.action.XsAction" method="getImage">
+             <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action>
+         <action name="findXs" class="chao.action.XsAction" method="findXs">
+             <result name="success">/moretail.jsp</result>
+             <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action>
+         <action name="updateXsView" class="chao.action.XsAction" method="updateXsView">
+             <result name="success">/updateXsView.jsp</result>
+             <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action>
+         <action name="deleteXs" class="chao.action.XsAction" method="deleteXs">
+             <result name="success">/success.jsp</result>
+             <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action>
+         <action name="updateXs" class="chao.action.XsAction" method="updateXs">
+             <result name="success">/success.jsp</result>
+             <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action>
+        
+         
+         <action name="addKcView" class="chao.action.KcAction">
+             <result name="success">/addKcView.jsp</result>
+             <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action>
+         <action name="addKc" class="chao.action.KcAction" method="addKc">
+             <result name="success">/success.jsp</result>
+             <result name="error">/existKch.jsp</result>
+             <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action>
+         <action name="kcInfo" class="chao.action.KcAction" method="kcInfo">
+             <result name="success">/kcInfo.jsp</result>
+             <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action>
+         <action name="findKc" class="chao.action.KcAction" method="findKc">
+             <result name="success">/kcmoretail.jsp</result>
+             <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action>
+         <action name="deleteKc" class="chao.action.KcAction" method="deleteKc">
+             <result name="success">/success.jsp</result>
+             <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action> 
+         <action name="updateKcView" class="chao.action.KcAction" method="updateKcView">
+             <result name="success">/updateKcView.jsp</result>
+             <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action>
+         <action name="updateKc" class="chao.action.KcAction" method="updateKc">
+             <result name="success">/success.jsp</result>
+             <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action>
+        
+        
+        
+         <action name="addXscjView" class="chao.action.CjAction">
+             <result name="success">/addXscjView.jsp</result>
+             <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action>
+          <action name="addCj" class="chao.action.CjAction" method="addCj">
+             <result name="success">/success.jsp</result>
+             <result name="error">/existCj.jsp</result>
+             <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action>
+         <action name="xscjInfo" class="chao.action.CjAction" method="xscjInfo">
+             <result name="success">/xscjInfo.jsp</result>
+             <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action>
+         <action name="findXscj" class="chao.action.CjAction" method="findXscj">
+             <result name="success">/oneXscj.jsp</result>
+             <result name="error">/noXscj.jsp</result>
+             <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action>
+         <action name="findCj" class="chao.action.CjAction" method="findCj">
+             <result name="success">/cjmoretail.jsp</result>
+             <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action>
+         <action name="deleteCj" class="chao.action.CjAction" method="deleteCj">
+             <result name="success">/success.jsp</result>
+             <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action> 
+         <action name="updateCjView" class="chao.action.CjAction" method="updateCjView">
+             <result name="success">/updateCjView.jsp</result>
+             <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action>
+         <action name="updateXscj" class="chao.action.CjAction" method="updateXscj">
+             <result name="success">/success.jsp</result>
+             <!--<interceptor-ref name="defaultStack"></interceptor-ref>
+             <interceptor-ref name="myInterceptor"></interceptor-ref>-->
+         </action>
+    </package>
+</struts> 

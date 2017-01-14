@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>4.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    <table>
+    <tr>
+    <td><a href="">公司介绍</a></td>
+    <td><a href="">企业新闻</a></td>
+    <td><a href="">产品目录</a></td>
+    <td><a href="">技术咨询</a></td>
+    <td><a href="">员工风采</a></td>
+    <td><a href="">人员招聘</a></td>
+    <td><a href="">登录系统</a></td>
+    </tr>
+</table>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="po.Person"/>
+<fullyQualifiedTypeName name="dao.inter.PersonDAO"/>
+<fullyQualifiedTypeName name="org.springframework.orm.hibernate3.HibernateTemplate"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ModelDriven"/>
+</qualifiedTypeNameHistroy>

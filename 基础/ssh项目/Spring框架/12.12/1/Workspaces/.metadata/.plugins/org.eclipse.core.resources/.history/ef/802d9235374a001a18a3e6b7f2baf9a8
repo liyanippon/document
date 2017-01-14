@@ -1,0 +1,19 @@
+package vo;
+
+public class Inaccount {
+	private String accountid;//数据库没有主键
+	private double inbalance;
+	public String getAccountid() {
+		return accountid;
+	}
+	public void setAccountid(String accountid) {
+		this.accountid = accountid;
+	}
+	public String getInbalance() {
+		return inbalance;
+	}
+	public void setInbalance(String inbalance) {
+		this.inbalance = inbalance;
+	}
+	
+}

@@ -1,0 +1,7 @@
+#Tue Nov 24 22:04:19 CST 2009
+LIBRARY_PATH="e\:\\Program Files\\Genuitec\\Common\\binary\\com.sun.java.jre.win32.x86_1.5.0.011\\bin;E\:\\Program Files\\Genuitec\\Common\\plugins\\com.genuitec.eclipse.easie.tomcat.myeclipse_7.0.0.zmyeclipse70020081206\\tomcat\\bin"
+tomcat.configuration.version.current=2
+eclipse.preferences.version=1
+JDK_HOME=e\:\\Program Files\\Genuitec\\Common\\binary\\com.sun.java.jre.win32.x86_1.5.0.011
+ENDORSED_DIRS="E\:\\Program Files\\Genuitec\\Common\\plugins\\com.genuitec.eclipse.easie.tomcat.myeclipse_7.0.0.zmyeclipse70020081206\\tomcat/common/endorsed"
+JDK_INSTALLATION_NAME=Sun JRE 1.5.0_11

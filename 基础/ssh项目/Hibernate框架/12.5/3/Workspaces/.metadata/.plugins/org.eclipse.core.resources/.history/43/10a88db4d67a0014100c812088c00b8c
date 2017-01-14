@@ -1,0 +1,24 @@
+package com.action;
+
+import java.sql.SQLException;
+
+import com.dao.PersonDAO;
+import com.vo.Person;
+
+public class RegisterAction {
+	private Person p;
+	
+	public Person getP() {
+		return p;
+	}
+
+	public void setP(Person p) {
+		this.p = p;
+	}
+
+	public String add() throws SQLException{
+		new PersonDAO().insert(p.getPid(),p.getName(),p.getPassword(),p.getAddress());
+		return "login";
+	}
+
+}

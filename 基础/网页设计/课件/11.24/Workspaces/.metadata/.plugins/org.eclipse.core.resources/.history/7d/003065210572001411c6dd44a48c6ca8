@@ -1,0 +1,24 @@
+package org.stuenroll.dao;
+
+import java.util.ArrayList;
+
+public class EnrollDAO {
+	public ArrayList search(String name,String pid,String specialty_id,
+			String school_id,String class_id,String state_id,
+			Integer start,Integer num
+			){
+		StringBuffer sql=new StringBuffer();
+		sql.append("SELECT *  ");
+		sql.append(" FROM enroll e JOIN student_state ss ");
+		sql.append(" ON e.state_id=ss.id ");
+		sql.append(" LEFT JOIN school s ON e.school_id=s.id ");
+		sql.append(" LEFT JOIN class c ON c.id=e.class_id ");
+		sql.append(" LEFT JOIN specialty sp ON ");
+		sql.append(" sp.id=e.specialty_id");
+		sql.append("");
+		sql.append("");
+		sql.append("");
+		sql.append("");
+		sql.append("");
+		return null;}
+}

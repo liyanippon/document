@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+<!-- ///////////////////////////////////////////////////////////////// -->
+	<!-- hou tai xiang guan lian jie -->
+	<definition name="backgroundlink-definition" 
+		extends="base-definition">
+		<put name="content" value="/luntan/backgroundlink.jsp" />
+	</definition>
+	<!-- hou tai wang zhan gong gao -->
+	<definition name="backgroundaffiche-definition"
+		extends="base-definition">
+		<put name="content" value="/luntan/backgroundaffiche.jsp" />
+	</definition>
+	<definition name="backgroundcourses-definition"
+		extends="base-definition">
+		<put name="content" value="/luntan/backgroundcourses.jsp" />
+	</definition>
+	
+	<definition name="backgroundnews-definition"
+		extends="base-definition">
+		<put name="content" value="/luntan/backgroundnews.jsp" />
+	</definition>
+	
+	
+	
+<!-- ///////////////////////////////////////////////////////////////// -->
+	<!--guan li tie zi fa bu -->
+	<definition name="articleissuetiezi-definition"
+		extends="base-definition">
+		<put name="content" value="/luntan/articleissuetiezi.jsp" />
+	</definition>
+
+	<!-- tie zi guan li  -->
+	<definition name="articleselect-definition"
+		extends="base-definition">
+		<put name="content" value="/luntan/articleselect.jsp" />
+	</definition>
+
+	<definition name="luntantianjiavi-definition"
+		extends="base-definition">
+		<put name="content" value="/luntan/luntantianjiavi.jsp"></put>
+	</definition>
+
+	<definition name="ltgllanmu-definition" extends="base-definition">
+		<put name="content" value="/luntan/ltgllanmumokuai.jsp" />
+	</definition>
+
+	<definition name="ltglinsert-definition"
+		extends="base-definition">
+		<put name="content" value="/luntan/ltglinsert.jsp" />
+	</definition>
+
+	<!-- lun tan lan mu -->
+	<definition name="ltglforward-definition"
+		extends="base-definition">
+		<put name="content" value="/luntan/ltgllanmu.jsp" />
+	</definition>
+
+	<definition name="sidebar-definition"
+		path="/tiles/sidebar-layout.jsp">
+		<put name="top" value="/tiles/flags.jsp" />
+		<put name="bottom" value="/tiles/sidebar-links.jsp" />
+	</definition>
+
+	<definition name="base-definition" path="/tiles/layout.jsp">
+		<put name="sidebar" value="sidebar-definition"
+			type="definition" />
+		<put name="header" value="/tiles/header.jsp" />
+		<!-- <put name="header"  value="/web/jdom/OK.xml"/> -->
+		<put name="content" value="" />
+		<put name="footer" value="/tiles/footer.jsp" />
+	</definition>
+
+	<!-- /////////////////////////////////QIAN TAI ye mian ///////////////////////////////// -->
+	<!-- qian tai ye mian -->
+	<definition name="view-definition" path="/view/layout.jsp">
+		<put name="bottom" value="/view/bottom.jsp" />
+		<put name="content" value="" />
+	</definition>
+
+	<definition name="viewindex-definition" extends="view-definition">
+		<put name="content" value="/view/index.jsp" />
+	</definition>
+	
+	<definition name="viewsnews-definition" extends="view-definition">
+		<put name="content" value="/view/viewsnews.jsp" />
+	</definition>
+	
+	<definition name="viewsplacard-definition" extends="view-definition">
+		<put name="content" value="/view/viewsplacard.jsp" />
+	</definition>
+	
+	<definition name="viewsplacardselect-definition" extends="view-definition">
+		<put name="content" value="/view/viewsplacardselect.jsp" />
+	</definition>
+	
+	<definition name="viewsnewsselect-definition" extends="view-definition">
+		<put name="content" value="/view/viewsnewsselect.jsp" />
+	</definition>
+	
+	<definition name="viewsacademy-definition" extends="view-definition">
+		<put name="content" value="/view/viewsacademy.jsp" />
+	</definition>
+	
+	<definition name="viewsacademyselect-definition" extends="view-definition">
+		<put name="content" value="/view/viewsacademyselect.jsp" />
+	</definition>
+	
+	<definition name="viewslinks-definition" extends="view-definition">
+		<put name="content" value="/view/viewslinks.jsp" />
+	</definition>
+	
+	<definition name="bbsindex-definition" extends="view-definition">
+		<put name="content" value="/view/bbs.jsp" />
+	</definition>
+	
+	<definition name="vbbsedition-definition" extends="view-definition">
+		<put name="content" value="/view/vbbsedition.jsp" />
+	</definition>
+	
+	
+	<definition name="editionbbsselect-definition" extends="view-definition">
+		<put name="content" value="/view/editionbbsselect.jsp" />
+	</definition>
+	
+	
+	<definition name="editionbbsselectbbsid-definition" extends="view-definition">
+		<put name="content" value="/view/bbsid.jsp" />
+	</definition>
+	
+	<definition name="bbslogin-definition" extends="view-definition">
+		<put name="content" value="/view/bbslogin.jsp" />
+	</definition>
+	
+	<definition name="zhuce-definition"
+		extends="view-definition">
+		<put name="content" value="/view/zhuce.jsp" />
+	</definition>
+	
+	
+	
+	
+	
+	
+
+	<!-- /////////////////////////////////QIAN TAI ye mian ///////////////////////////////// -->
+
+
+
+	<definition name="index-definition" extends="base-definition">
+		<put name="content" value="/web/indexContent.jsp" />
+	</definition>
+
+	<!-- guo ji xin wen update delete productupdatedelete-definition -->
+	<definition name="productupdatedelete-definition"
+		extends="base-definition">
+		<put name="content" value="/web/product_update_delete.jsp" />
+	</definition>
+
+	<!-- guo ji xin wen update productupdate-definition -->
+	<definition name="productupdate-definition"
+		extends="base-definition">
+		<put name="content" value="/web/productupdate.jsp" />
+	</definition>
+
+	<definition name="product-definition" extends="base-definition">
+		<put name="content" value="/web/productContent.jsp" />
+	</definition>
+
+	<!-- aoyun xin wen update olympicgamesproductContentupdate-definition -->
+	<definition name="olympicgamesproductContentupdate-definition"
+		extends="base-definition">
+		<put name="content"
+			value="/web/olympicgamesproductContentupdate-definition.jsp" />
+	</definition>
+
+	<!-- aoyun xin wen update delete olympicgamesproductupdatedelete-definition -->
+	<definition name="olympicgamesproductupdatedelete-definition"
+		extends="base-definition">
+		<put name="content"
+			value="/web/olympicgamesproductContent_update_delete.jsp" />
+	</definition>
+
+	<definition name="olympicgamesproduct-definition"
+		extends="base-definition">
+		<put name="content" value="/web/olympicgamesproductContent.jsp" />
+	</definition>
+
+	<definition name="olympicgameaddemd-definition"
+		extends="base-definition">
+		<put name="content" value="/web/olympicgameaddemd.jsp" />
+	</definition>
+	<definition name="addemd-definition" extends="base-definition">
+		<put name="content" value="/web/addemd.jsp" />
+	</definition>
+	<!-- fen ye cha xun wen zhang -->
+	<definition name="select-definition" extends="base-definition">
+		<put name="content" value="/web/select.jsp" />
+	</definition>
+	<!-- tian jia fen ye shu ju -->
+	<definition name="update-definition" extends="base-definition">
+		<put name="content" value="/web/updateok.jsp" />
+	</definition>
+
+	<definition name="stat-definition" extends="base-definition">
+		<put name="content" value="/web01/report-Stat.jsp" />
+	</definition>
+
+	<definition name="blur-definition" extends="base-definition">
+		<put name="content" value="/web01/blur-select.jsp" />
+	</definition>
+	
+</tiles-definitions>

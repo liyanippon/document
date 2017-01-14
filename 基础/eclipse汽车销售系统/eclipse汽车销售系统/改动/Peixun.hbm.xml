@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-6-20 22:54:03 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bmw.sale.value.Employee" table="peixun" catalog="carsell">
+        <id name="peixunid" type="java.lang.Integer">
+            <column name="peixunid" />
+            <generator class="identity" />
+        </id>
+        <property name="peixunname" type="string">
+            <column name="peixunname" length="8" not-null="true" />
+        </property>
+        <property name="peixundate" type="date">
+            <column name="peixundate" length="10" not-null="true" />
+        </property>
+        <property name="peixunkemu" type="string">
+            <column name="peixunkemu" length="10" not-null="true" />
+        </property>
+        <property name="zhuangtai" type="string">
+            <column name="zhuangtai" length="10" not-null="true" />
+        </property>
+       
+       <!--不知是否正确  -->
+       <!--  <set name="services" table="service" inverse="true" lazy="false" fetch="select">
+            <key>
+                <column name="clientid" />
+            </key>
+            <one-to-many class="com.bmw.sale.value.Service" />
+        </set> -->
+        
+    </class>
+</hibernate-mapping>

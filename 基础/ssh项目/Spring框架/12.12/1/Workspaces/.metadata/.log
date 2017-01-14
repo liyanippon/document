@@ -1,0 +1,371 @@
+!SESSION 2005-11-01 01:08:54.000 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_13
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+This is a continuation of log file C:\Documents and Settings\F608\Workspaces\.metadata\.bak_0.log
+Created Time: 2005-11-01 03:29:08.234
+
+!ENTRY org.eclipse.core.jobs 4 2 2005-11-01 03:29:08.234
+!MESSAGE An internal error occurred during: "Generating Artifacts".
+!STACK 0
+org.hibernate.exception.JDBCConnectionException: Getting database metadata
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:74)
+	at org.hibernate.cfg.reveng.dialect.AbstractMetaDataDialect.getMetaData(AbstractMetaDataDialect.java:64)
+	at org.hibernate.cfg.reveng.dialect.AbstractMetaDataDialect.caseForSearch(AbstractMetaDataDialect.java:163)
+	at org.hibernate.cfg.reveng.dialect.JDBCMetaDataDialect.getTables(JDBCMetaDataDialect.java:22)
+	at org.hibernate.cfg.reveng.JDBCReader.processTables(JDBCReader.java:476)
+	at org.hibernate.cfg.reveng.JDBCReader.readDatabaseSchema(JDBCReader.java:74)
+	at com.genuitec.eclipse.hibernate.wizards.MEJDBCMetaDataConfiguration$1.readDatabaseSchema(MEJDBCMetaDataConfiguration.java:104)
+	at org.hibernate.cfg.JDBCBinder.readFromDatabase(JDBCBinder.java:92)
+	at com.genuitec.eclipse.hibernate.wizards.MEJDBCMetaDataConfiguration.readFromJDBC(MEJDBCMetaDataConfiguration.java:137)
+	at com.genuitec.eclipse.hibernate.wizards.GenerateArtifactsJob$7.execute(GenerateArtifactsJob.java:891)
+	at org.hibernate.console.execution.DefaultExecutionContext.execute(DefaultExecutionContext.java:64)
+	at org.hibernate.console.ConsoleConfiguration.execute(ConsoleConfiguration.java:95)
+	at com.genuitec.eclipse.hibernate.wizards.GenerateArtifactsJob.buildConfiguration(GenerateArtifactsJob.java:872)
+	at com.genuitec.eclipse.hibernate.wizards.GenerateArtifactsJob.run(GenerateArtifactsJob.java:412)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Cannot load connection class because of underlying exception: 'java.lang.NumberFormatException: For input string: "3306>]"'.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.Util.getInstance(Util.java:384)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1015)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:989)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:984)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:929)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:294)
+	at org.hibernate.console.FakeDelegatingDriver.connect(FakeDelegatingDriver.java:40)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:154)
+	at org.hibernate.connection.DriverManagerConnectionProvider.getConnection(DriverManagerConnectionProvider.java:110)
+	at org.hibernate.cfg.reveng.dialect.AbstractMetaDataDialect.getConnection(AbstractMetaDataDialect.java:122)
+	at org.hibernate.cfg.reveng.dialect.AbstractMetaDataDialect.getMetaData(AbstractMetaDataDialect.java:61)
+	... 13 more
+Caused by: java.lang.NumberFormatException: For input string: "3306>]"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:48)
+	at java.lang.Integer.parseInt(Integer.java:456)
+	at java.lang.Integer.parseInt(Integer.java:497)
+	at com.mysql.jdbc.NonRegisteringDriver.port(NonRegisteringDriver.java:776)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	... 19 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2005-11-01 03:32:06.562
+!MESSAGE An internal error occurred during: "Generating Artifacts".
+!STACK 0
+org.hibernate.exception.JDBCConnectionException: Getting database metadata
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:74)
+	at org.hibernate.cfg.reveng.dialect.AbstractMetaDataDialect.getMetaData(AbstractMetaDataDialect.java:64)
+	at org.hibernate.cfg.reveng.dialect.AbstractMetaDataDialect.caseForSearch(AbstractMetaDataDialect.java:163)
+	at org.hibernate.cfg.reveng.dialect.JDBCMetaDataDialect.getTables(JDBCMetaDataDialect.java:22)
+	at org.hibernate.cfg.reveng.JDBCReader.processTables(JDBCReader.java:476)
+	at org.hibernate.cfg.reveng.JDBCReader.readDatabaseSchema(JDBCReader.java:74)
+	at com.genuitec.eclipse.hibernate.wizards.MEJDBCMetaDataConfiguration$1.readDatabaseSchema(MEJDBCMetaDataConfiguration.java:104)
+	at org.hibernate.cfg.JDBCBinder.readFromDatabase(JDBCBinder.java:92)
+	at com.genuitec.eclipse.hibernate.wizards.MEJDBCMetaDataConfiguration.readFromJDBC(MEJDBCMetaDataConfiguration.java:137)
+	at com.genuitec.eclipse.hibernate.wizards.GenerateArtifactsJob$7.execute(GenerateArtifactsJob.java:891)
+	at org.hibernate.console.execution.DefaultExecutionContext.execute(DefaultExecutionContext.java:64)
+	at org.hibernate.console.ConsoleConfiguration.execute(ConsoleConfiguration.java:95)
+	at com.genuitec.eclipse.hibernate.wizards.GenerateArtifactsJob.buildConfiguration(GenerateArtifactsJob.java:872)
+	at com.genuitec.eclipse.hibernate.wizards.GenerateArtifactsJob.run(GenerateArtifactsJob.java:412)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Cannot load connection class because of underlying exception: 'java.lang.NumberFormatException: For input string: "3306>]"'.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.Util.getInstance(Util.java:384)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1015)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:989)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:984)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:929)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:294)
+	at org.hibernate.console.FakeDelegatingDriver.connect(FakeDelegatingDriver.java:40)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:154)
+	at org.hibernate.connection.DriverManagerConnectionProvider.getConnection(DriverManagerConnectionProvider.java:110)
+	at org.hibernate.cfg.reveng.dialect.AbstractMetaDataDialect.getConnection(AbstractMetaDataDialect.java:122)
+	at org.hibernate.cfg.reveng.dialect.AbstractMetaDataDialect.getMetaData(AbstractMetaDataDialect.java:61)
+	... 13 more
+Caused by: java.lang.NumberFormatException: For input string: "3306>]"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:48)
+	at java.lang.Integer.parseInt(Integer.java:456)
+	at java.lang.Integer.parseInt(Integer.java:497)
+	at com.mysql.jdbc.NonRegisteringDriver.port(NonRegisteringDriver.java:776)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	... 19 more
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 03:35:00.531
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for Hibernate [in Hibernate.class [in org.hibernate [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\hibernate3.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:548)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 03:35:00.531
+!MESSAGE Unknown javadoc format for Hibernate [in Hibernate.class [in org.hibernate [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\hibernate3.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 03:35:02.046
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HibernateEntityManager [in HibernateEntityManager.class [in org.hibernate.ejb [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\entitymanager\hibernate-entitymanager.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:548)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 03:35:02.046
+!MESSAGE Unknown javadoc format for HibernateEntityManager [in HibernateEntityManager.class [in org.hibernate.ejb [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\entitymanager\hibernate-entitymanager.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 03:35:02.296
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HibernateEntityManagerFactory [in HibernateEntityManagerFactory.class [in org.hibernate.ejb [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\entitymanager\hibernate-entitymanager.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:548)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 03:35:02.296
+!MESSAGE Unknown javadoc format for HibernateEntityManagerFactory [in HibernateEntityManagerFactory.class [in org.hibernate.ejb [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\entitymanager\hibernate-entitymanager.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 03:35:02.531
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HibernateEntityManagerImplementor [in HibernateEntityManagerImplementor.class [in org.hibernate.ejb [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\entitymanager\hibernate-entitymanager.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:548)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 03:35:02.531
+!MESSAGE Unknown javadoc format for HibernateEntityManagerImplementor [in HibernateEntityManagerImplementor.class [in org.hibernate.ejb [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\entitymanager\hibernate-entitymanager.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 03:35:02.750
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HibernateException [in HibernateException.class [in org.hibernate [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\hibernate3.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:548)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 03:35:02.750
+!MESSAGE Unknown javadoc format for HibernateException [in HibernateException.class [in org.hibernate [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\hibernate3.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 03:35:03.000
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HibernateIterator [in HibernateIterator.class [in org.hibernate.engine [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\hibernate3.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:548)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 03:35:03.000
+!MESSAGE Unknown javadoc format for HibernateIterator [in HibernateIterator.class [in org.hibernate.engine [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\hibernate3.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 03:35:04.062
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HibernatePermission [in HibernatePermission.class [in org.hibernate.secure [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\hibernate3.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:548)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 03:35:04.062
+!MESSAGE Unknown javadoc format for HibernatePermission [in HibernatePermission.class [in org.hibernate.secure [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\hibernate3.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 03:35:04.328
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HibernatePersistence [in HibernatePersistence.class [in org.hibernate.ejb [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\entitymanager\hibernate-entitymanager.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:548)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 03:35:04.328
+!MESSAGE Unknown javadoc format for HibernatePersistence [in HibernatePersistence.class [in org.hibernate.ejb [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\entitymanager\hibernate-entitymanager.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 03:35:04.562
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HibernateProxy [in HibernateProxy.class [in org.hibernate.proxy [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\hibernate3.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:548)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 03:35:04.562
+!MESSAGE Unknown javadoc format for HibernateProxy [in HibernateProxy.class [in org.hibernate.proxy [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\hibernate3.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 03:35:04.765
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HibernateProxyHelper [in HibernateProxyHelper.class [in org.hibernate.proxy [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\hibernate3.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:548)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 03:35:04.765
+!MESSAGE Unknown javadoc format for HibernateProxyHelper [in HibernateProxyHelper.class [in org.hibernate.proxy [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\hibernate3.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 03:35:05.078
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HibernateQuery [in HibernateQuery.class [in org.hibernate.ejb [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\entitymanager\hibernate-entitymanager.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:548)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 03:35:05.078
+!MESSAGE Unknown javadoc format for HibernateQuery [in HibernateQuery.class [in org.hibernate.ejb [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\entitymanager\hibernate-entitymanager.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 03:35:05.312
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HibernateSearchEventListenerRegister [in HibernateSearchEventListenerRegister.class [in org.hibernate.cfg.search [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\entitymanager\hibernate-annotations.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:548)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 03:35:05.312
+!MESSAGE Unknown javadoc format for HibernateSearchEventListenerRegister [in HibernateSearchEventListenerRegister.class [in org.hibernate.cfg.search [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\entitymanager\hibernate-annotations.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 03:35:05.640
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HibernateService [in HibernateService.class [in org.hibernate.jmx [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\hibernate3.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:548)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 03:35:05.640
+!MESSAGE Unknown javadoc format for HibernateService [in HibernateService.class [in org.hibernate.jmx [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\hibernate3.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 03:35:05.890
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for HibernateServiceMBean [in HibernateServiceMBean.class [in org.hibernate.jmx [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\hibernate3.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:548)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 03:35:05.890
+!MESSAGE Unknown javadoc format for HibernateServiceMBean [in HibernateServiceMBean.class [in org.hibernate.jmx [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\hibernate3.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 03:41:03.453
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for Hibernate {key=Lorg/hibernate/Hibernate;} [in Hibernate.class [in org.hibernate [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\hibernate3.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:555)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:512)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:495)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 03:41:03.453
+!MESSAGE Unknown javadoc format for Hibernate {key=Lorg/hibernate/Hibernate;} [in Hibernate.class [in org.hibernate [in E:\Program Files\Genuitec\Common\plugins\com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716\myeclipse-data\3.3\lib\hibernate3.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2005-11-01 03:41:11.781
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for TODO {key=Lcom/sun/xml/internal/bind/v2/TODO;} [in TODO.class [in com.sun.xml.internal.bind.v2 [in E:\Program Files\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\lib\rt.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:555)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:512)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:495)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2005-11-01 03:41:11.781
+!MESSAGE Unknown javadoc format for TODO {key=Lcom/sun/xml/internal/bind/v2/TODO;} [in TODO.class [in com.sun.xml.internal.bind.v2 [in E:\Program Files\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\lib\rt.jar]]]

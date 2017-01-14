@@ -1,0 +1,59 @@
+package j2me;
+
+import java.awt.GridLayout;
+import java.awt.event.ActionListener;
+import java.util.List;
+
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+
+public class Saima extends JFrame implements ActionListener{
+
+	/**
+	 * @param args
+	 */
+	//设置中间布局的三个按钮和一个文本框
+	JButton start,replay,exit;
+	JTextField gamble=new JTextField();
+	//初始钱数
+	int cash=10000;
+	int j,i=0,p=0;
+	//四匹马四个对象
+	sai race1,race2,race3,race4;
+	//List result=new List();
+	//设置四个单选按钮
+	JRadioButton num1,num2,num3,num4;
+	//设置一系列文字
+	JLabel select=new JLabel("请你选择要下注的宝马：");
+	JLabel xiazhu=new JLabel("请您下注：");
+	JLabel remain=new JLabel("您所拥有的金额：$"+cash);
+	JLabel race,option,option1,jp1,jp2,jp3,jp4;
+	Saima(){
+	this.setTitle("赛马游戏");
+	setSize(680,480);
+	this.setLocation(200,200);	
+	this.setResizable(false);
+	this.getContentPane().setLayout(new GridLayout(2,1));
+	
+	num1=new JRadioButton("1号白龙马");
+	num2=new JRadioButton("2号白龙马");
+	num3=new JRadioButton("3号白龙马");
+	num4=new JRadioButton("4号白龙马");
+	ButtonGroup bg=new ButtonGroup();
+	bg.add(num1);
+	bg.add(num2);
+	bg.add(num3);
+	bg.add(num4);
+	num1.setSelected(true);
+	}
+	public static void main(String[] args) {
+		race1=new sai(this);
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.dao;
+
+/**
+ * Person entity. @author MyEclipse Persistence Tools
+ */
+public class Person  implements java.io.Serializable {
+
+	// Constructors
+
+	/** default constructor */
+	public Person() {
+	}
+
+	/** minimal constructor */
+	
+
+}

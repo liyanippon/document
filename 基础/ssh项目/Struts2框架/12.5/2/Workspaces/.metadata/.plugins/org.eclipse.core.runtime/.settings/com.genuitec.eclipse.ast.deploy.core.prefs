@@ -1,0 +1,13 @@
+#Fri Dec 05 21:24:31 CST 2014
+myeclipseTomcatServer.i18n.isExploded=true
+myeclipseTomcatServer.i18n.contextRoot=/i18n
+myeclipseTomcatServer.i18n.type=WebDeployment
+myeclipseTomcatServer.i18n.isUptoDate=true
+myeclipseTomcatServer.i18n.deploymentPath=C\:\\Users\\liany_arsong\\Workspaces\\.metadata\\.me_tcat\\webapps\\i18n
+myeclipseTomcatServer.i18n.shouldOverwrite=false
+myeclipseTomcatServer.i18n.shouldBackup=false
+myeclipseTomcatServer.i18n.deployIsOverProject=false
+myeclipseTomcatServer.i18n.altContextRoot=
+myeclipseTomcatServer.i18n.IEARProjectName=
+myeclipseTomcatServer.i18n.isDeployed=true
+eclipse.preferences.version=1

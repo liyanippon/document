@@ -1,0 +1,3 @@
+数据库名：xscj_chao.sql
+数据库映射文件：MyConn
+MySQL数据库密码：123456

@@ -1,0 +1,7 @@
+package service.inter;
+
+import vo.Inaccount;
+
+public interface InAccountServices {
+	public void test(Inaccount inAccount);
+}

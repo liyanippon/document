@@ -1,0 +1,47 @@
+A:link {
+	FONT-SIZE: 9pt; 
+	COLOR: #000000; 
+	TEXT-DECORATION: none
+}
+A:hover {
+	FONT-SIZE: 9pt; 
+	COLOR: #000000; 
+	TEXT-DECORATION: none
+}
+A:visited {
+	FONT-SIZE: 9pt; 
+	COLOR: #000000; 
+	TEXT-DECORATION: none
+}
+.title1 {
+	font-family: 新宋体;
+	FONT-SIZE: 20pt; 
+	COLOR: #990000; 
+	font-weight: bold;
+	margin-top: 10px
+}
+.title2 {
+	font-family: 新宋体;
+	FONT-SIZE: 12pt; 
+	COLOR: #990000; 
+	font-weight: bold;
+	margin-top: 10px
+}
+.title3 {
+	font-family: 新宋体;
+	FONT-SIZE: 15pt; 
+	COLOR: #990000; 
+	font-weight: bold;
+	margin-top: 10px
+}
+.body {
+	FONT-SIZE: 9pt; 
+	COLOR: #000000; 
+	TEXT-DECORATION: none
+}
+.list {
+	font-family: "宋体";
+	font-size: 9pt;
+}
+td {font-size: 10pt}
+tr {height:30}

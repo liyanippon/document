@@ -1,0 +1,51 @@
+package com.action;
+
+import java.sql.SQLException;
+
+import com.dao.PersonDAO;
+import com.vo.Person;
+
+public class RegisterAction {
+	private int pid;
+	private String name;
+	private String password;
+	private String address;
+	
+	public int getPid() {
+		return pid;
+	}
+
+	public void setPid(int pid) {
+		this.pid = pid;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String add() throws SQLException{
+		Person p=new Person(pid,name,password,address); 
+		return "login";
+	}
+
+}

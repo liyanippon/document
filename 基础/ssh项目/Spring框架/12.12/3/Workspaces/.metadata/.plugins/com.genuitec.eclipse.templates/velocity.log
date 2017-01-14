@@ -1,0 +1,36 @@
+Tue Nov 01 04:15:53 CST 2005  [debug] AvalonLogSystem initialized using logfile 'C:\Documents and Settings\F608\Workspaces\.metadata\.plugins\com.genuitec.eclipse.templates\velocity.log'
+Tue Nov 01 04:15:53 CST 2005   [info] ************************************************************** 
+Tue Nov 01 04:15:53 CST 2005   [info] Starting Jakarta Velocity v1.4
+Tue Nov 01 04:15:53 CST 2005   [info] RuntimeInstance initializing.
+Tue Nov 01 04:15:53 CST 2005   [info] Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+Tue Nov 01 04:15:53 CST 2005   [info] Trying to use logger class org.apache.velocity.runtime.log.AvalonLogSystem
+Tue Nov 01 04:15:53 CST 2005   [info] Using logger class org.apache.velocity.runtime.log.AvalonLogSystem
+Tue Nov 01 04:15:53 CST 2005   [info] Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+Tue Nov 01 04:15:53 CST 2005   [info] Resource Loader Instantiated: com.genuitec.eclipse.templates.internal.PluginResourceLoader
+Tue Nov 01 04:15:53 CST 2005   [info] ResourceCache : initialized. (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+Tue Nov 01 04:15:53 CST 2005   [info] Default ResourceManager initialization complete.
+Tue Nov 01 04:15:53 CST 2005   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+Tue Nov 01 04:15:53 CST 2005   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+Tue Nov 01 04:15:53 CST 2005   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+Tue Nov 01 04:15:53 CST 2005   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Include
+Tue Nov 01 04:15:53 CST 2005   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+Tue Nov 01 04:15:53 CST 2005   [info] Created: 20 parsers.
+Tue Nov 01 04:15:53 CST 2005   [info] Velocimacro : initialization starting.
+Tue Nov 01 04:15:53 CST 2005   [info] Velocimacro : adding VMs from VM library template : VM_global_library.vm
+Tue Nov 01 04:15:53 CST 2005  [error] ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.
+Tue Nov 01 04:15:53 CST 2005   [info] Velocimacro : error using  VM library template VM_global_library.vm : org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'
+Tue Nov 01 04:15:53 CST 2005   [info] Velocimacro :  VM library template macro registration complete.
+Tue Nov 01 04:15:53 CST 2005   [info] Velocimacro : allowInline = true : VMs can be defined inline in templates
+Tue Nov 01 04:15:53 CST 2005   [info] Velocimacro : allowInlineToOverride = true : VMs defined inline may replace previous VM definitions
+Tue Nov 01 04:15:53 CST 2005   [info] Velocimacro : allowInlineLocal = true : VMs defined inline will be local to their defining template only.
+Tue Nov 01 04:15:53 CST 2005   [info] Velocimacro : messages on  : VM system will output logging messages
+Tue Nov 01 04:15:53 CST 2005   [info] Velocimacro : autoload off  : VM system will not automatically reload global library macros
+Tue Nov 01 04:15:53 CST 2005   [info] Velocimacro : initialization complete.
+Tue Nov 01 04:15:53 CST 2005   [info] Velocity successfully started.
+Tue Nov 01 04:15:53 CST 2005   [info] ResourceManager : found templates/web.xml.vm with loader com.genuitec.eclipse.templates.internal.PluginResourceLoader
+Tue Nov 01 04:15:54 CST 2005   [info] ResourceManager : found /templates/velocity/welcome/Jsp.vtl with loader com.genuitec.eclipse.templates.internal.PluginResourceLoader
+Tue Nov 01 04:19:57 CST 2005   [info] ResourceManager : found data/1.2/applicationContext-template-2.xml.vtl with loader com.genuitec.eclipse.templates.internal.PluginResourceLoader
+Tue Nov 01 06:19:36 CST 2005   [info] ResourceManager : found templates/web.xml.vm with loader com.genuitec.eclipse.templates.internal.PluginResourceLoader
+Tue Nov 01 06:19:36 CST 2005   [info] ResourceManager : found /templates/velocity/welcome/Jsp.vtl with loader com.genuitec.eclipse.templates.internal.PluginResourceLoader
+Tue Nov 01 06:26:07 CST 2005   [info] ResourceManager : found data/1.2/applicationContext-template-2.xml.vtl with loader com.genuitec.eclipse.templates.internal.PluginResourceLoader
+Tue Nov 01 06:43:48 CST 2005   [info] ResourceManager : found data/2.1/struts.xml.vtl with loader com.genuitec.eclipse.templates.internal.PluginResourceLoader

@@ -1,0 +1,33 @@
+-- 起征点3500元		（工资-3500)*税率-扣除数
+-- 1. 不超过1500	3%	0
+-- 2. 不超过4500	10%	105
+-- 3. 不超过9000	20%	555
+-- 4. 不超过35000	25%	1005
+-- 5. 不超过55000	30%	2755
+-- 6. 不超过80000	35%	5505
+-- 7. 80000以上	45%	13505
+-- 假设美元汇率 1美元=6.1199人民币
+
+-- 显示员工编号，姓名，性别，部门编号，月收入（工资+奖金），个税
+-- 注意：个税精确到小数点后两位，强制进位，例如363.1111变成363.12
+
+SELECT 
+	empno,ename,sex,deptno,(salary+IFNULL(comm,0))*6.1199 AS "月收入",
+	CEILING(CASE
+		WHEN (salary+IFNULL(comm,0))*6.1199-3500<0 THEN 0
+		WHEN (salary+IFNULL(comm,0))*6.1199-3500<=1500 
+			THEN ((salary+IFNULL(comm,0))*6.1199-3500)*0.03-0
+		WHEN (salary+IFNULL(comm,0))*6.1199-3500<=4500 
+			THEN ((salary+IFNULL(comm,0))*6.1199-3500)*0.10-105
+		WHEN (salary+IFNULL(comm,0))*6.1199-3500<=9000 
+			THEN ((salary+IFNULL(comm,0))*6.1199-3500)*0.20-555
+		WHEN (salary+IFNULL(comm,0))*6.1199-3500<=35000 
+			THEN ((salary+IFNULL(comm,0))*6.1199-3500)*0.25-1005
+		WHEN (salary+IFNULL(comm,0))*6.1199-3500<=55000 
+			THEN ((salary+IFNULL(comm,0))*6.1199-3500)*0.30-2755
+		WHEN (salary+IFNULL(comm,0))*6.1199-3500<=80000 
+			THEN ((salary+IFNULL(comm,0))*6.1199-3500)*0.35-5505
+		ELSE 
+			((salary+IFNULL(comm,0))*6.1199-3500)*0.45-13505
+	END*100)/100 AS "个税"
+FROM emp;

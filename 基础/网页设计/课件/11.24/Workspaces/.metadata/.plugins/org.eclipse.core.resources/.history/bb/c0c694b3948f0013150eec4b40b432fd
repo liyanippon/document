@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>我的网页</title>
+	
+    <meta http-equiv="keywords" content="网页,中国新,首">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+ 	bgcolor="#000000" 
+ 	 你好吗？how are you? お元気ですか?<br>
+ 	 私は中国人です。
+  </body>
+</html>

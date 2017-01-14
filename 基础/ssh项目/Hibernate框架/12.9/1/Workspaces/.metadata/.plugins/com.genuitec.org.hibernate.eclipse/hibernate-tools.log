@@ -1,0 +1,4 @@
+2009-12-09 18:42:51,296 0      [      Worker-17] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in employee. Asking rev.eng. strategy
+2009-12-09 18:42:51,406 110    [      Worker-17] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for employee
+2009-12-09 18:43:50,359 59063  [      Worker-17] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in employee. Asking rev.eng. strategy
+2009-12-09 18:43:50,359 59063  [      Worker-17] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for employee

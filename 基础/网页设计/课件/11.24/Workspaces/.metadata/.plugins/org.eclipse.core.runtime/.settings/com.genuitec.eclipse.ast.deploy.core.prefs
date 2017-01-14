@@ -1,0 +1,12 @@
+#Thu Nov 26 18:03:24 CST 2009
+myeclipseTomcatServer.stuenroll.isExploded=true
+myeclipseTomcatServer.stuenroll.type=WebDeployment
+myeclipseTomcatServer.stuenroll.isUptoDate=true
+myeclipseTomcatServer.stuenroll.deployIsOverProject=false
+myeclipseTomcatServer.stuenroll.contextRoot=/stuenroll
+myeclipseTomcatServer.stuenroll.isDeployed=true
+myeclipseTomcatServer.stuenroll.deploymentPath=D\:\\Workspaces\\.metadata\\.me_tcat\\webapps\\stuenroll
+myeclipseTomcatServer.stuenroll.shouldBackup=false
+eclipse.preferences.version=1
+myeclipseTomcatServer.stuenroll.shouldOverwrite=false
+myeclipseTomcatServer.stuenroll.earProjectName=

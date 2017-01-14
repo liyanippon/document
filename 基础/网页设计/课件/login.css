@@ -1,0 +1,94 @@
+body {
+	background-color: #4F545D;
+	padding: 0px;
+	margin: 0px;
+}
+
+.main {
+	width: 300px;
+	height: 500px;
+	background-color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	border-radius: 3px;
+	box-shadow: 0px 2px 10px 0px #000;
+	border-top: #39A188 8px solid;
+}
+
+.photo {
+	background-image: url(../pic/photo.png);
+	background-size: cover;
+	width: 150px;
+	height: 150px;
+	border-radius: 75px;
+	margin-left: auto;
+	margin-right: auto;
+	border: solid 1px #aaa;
+	position: relative;
+	top: 7px;
+	box-shadow:0px 0px 5px 0px #333 inset;
+}
+
+.border {
+	margin-top: 50px;
+	height: 166px;
+	width: 166px;
+	border-radius: 83px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #cecece;
+}
+.loginForm{
+	width: 70%;
+	height: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	border: solid 1px #bbb;
+	background-color: #efefef;
+}
+.loginForm .line{
+	border-bottom: solid 1px #bbb;
+}
+.f1{
+	font-size: 14px;
+}
+.f2{
+	padding-left: 10px;
+	width:60px;
+}
+.text{
+	border: none;
+	outline: none;
+	background-color: rgba(0,0,0,0);
+	width: 100%;
+	font-size: 14px;
+}
+.btn{
+	width: 100%;
+	height:40px;
+	margin-top: 30px;
+	border: solid 1px #777;
+	background-color: #39A188;
+	color: #fff;
+	font-weight: bold;
+	font-size: 14px;
+	outline: none;
+	box-shadow:0px 1px 2px 0px #666;
+}
+.btn:active{
+	border: solid 1px #333;
+	box-shadow:0px 0px 3px 0px #333 inset;
+}
+.forget{
+	font-size: 12px;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50px;
+	text-align: center;
+}
+.forget a{
+	text-decoration: none;;
+}

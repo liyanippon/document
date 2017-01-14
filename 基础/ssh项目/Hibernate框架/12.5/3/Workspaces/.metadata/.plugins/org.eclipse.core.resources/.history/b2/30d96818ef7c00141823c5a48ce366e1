@@ -1,0 +1,11 @@
+package dao;
+
+import org.hibernate.cfg.Configuration;
+import org.hibernate.classic.Session;
+
+public class PersonDAO {
+	
+	public static void main(String args[]){
+		
+	} 
+}

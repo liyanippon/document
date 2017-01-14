@@ -1,0 +1,20 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.bottom {
+	width: 1024px;
+	height: 48px;
+	background-color: #C92258;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.bottom table {
+	text-decoration: none;
+	font-family: 微软雅黑;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+}

@@ -1,0 +1,6 @@
+function calArea(){
+	var text=document.getElementById("r");
+	var r=text.value;
+	var temp="圆面积"+3.14*r*r;
+	document.getElementById(area).innerHTML=temp;
+}

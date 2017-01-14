@@ -1,0 +1,18 @@
+package com.action;
+
+import com.vo.Person;
+
+public class UpdateAction {
+private Person p;
+
+public Person getP() {
+	return p;
+}
+
+public void setP(Person p) {
+	this.p = p;
+}
+public String update(){
+	new Person
+}
+}

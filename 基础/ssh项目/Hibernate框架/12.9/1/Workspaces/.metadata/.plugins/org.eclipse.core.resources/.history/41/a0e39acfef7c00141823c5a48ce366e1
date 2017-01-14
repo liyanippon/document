@@ -1,0 +1,16 @@
+package dao;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.classic.Session;
+
+public class PersonDAO {
+	public static SessionFactory getSessionFaction(){
+		Configuration conf=new Configuration();
+		conf.configure("hibernate.cfg.xml");
+		
+	}
+	public static void main(String args[]){
+		
+	} 
+}

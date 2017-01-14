@@ -1,0 +1,78 @@
+课后练习1
+华氏温度转换为摄氏温度
+转换公式: c= 5.0 / 9 (F – 32)
+要求从键盘输入华氏温度，从控制台输出摄氏温度
+
+
+课后练习2：用户输入一个数，只能被5整除，输出只能被5整除，只能被6整除，输出，只能被6整除，同时整除，输出同时整除
+import java.util.Scanner;
+
+
+public class kdks {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner dd=new Scanner(System.in);
+		System.out.println("一个数字：");
+		int F=dd.nextInt();
+		if(F%5==0){
+		if(F%6==0){System.out.println("既能被5又能被6整除！");}
+		else System.out.println("能被5整除！");
+		}
+		else if(F%6==0){System.out.println("能被6整除！");}
+		else System.out.println("都不能被整除！");
+	}
+	
+}
+
+课后练习3：用户输入一个浮点数，最多保留2位小数再输出，例如3.1415927，输出3.14   2.4564444-----2.45
+课后练习4：用户输入一个不大于1000的三位数，把每个位的数字相加，求出和输出
+345=3 + 4 + 5=12          123--6  789---24
+import java.util.Scanner;
+
+
+public class lian {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		int F,gewei,shiwei,baiwei,qianwei,sum;
+		Scanner dd=new Scanner(System.in);
+		System.out.println("输入不大于1000的三位数：");
+		F=dd.nextInt();
+		if(F>=100&&F<1000){gewei=F%10;
+		shiwei=F/10%10;
+		baiwei=F/10/10%10;
+		sum=gewei+shiwei+baiwei;
+		System.out.println("sum="+sum);
+		}
+		else System.out.println("输入有误！");
+	}
+
+}
+
+
+
+课后练习6：
+输入成绩，判断相应的等级（switch()实现）
+¨ >=90 : A
+¨ >=80 : B
+¨ >=70 : C
+¨ >=60 : D
+¨ <60 : E
+
+
+课后练习7：
+用户输入三个整数，代表三角形的三条边 TestSanJiaoXing.java
+判断是否是三角形
+不是 ==》 “不是三角形”
+是==》
+	“等边三角形”
+	“等腰三角形”
+	“直角三角形”
+	“普通三角形”
+

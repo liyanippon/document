@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="xscj_chao"
+  id="myeclipse.1293263164093"
+  context-root="/xscj_chao"
+  j2ee-spec="5.0"
+  archive="xscj_chao.war">
+  <attributes>
+    <attribute name="webrootdir" value="/WebRoot" />
+  </attributes>
+</project-module>
+

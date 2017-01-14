@@ -1,0 +1,13 @@
+-- 查询每个部门员工工资等级在2级以上，
+-- 并且这样的员工多余3人，显示员工的编号，名字，部门名称，
+-- 符合要求的人数，工资等级，工资
+ SELECT 
+ 	ep.empno,ep.ename ,d.dname,t.ct,gr.grade,ep.salary
+ FROM emp ep JOIN 
+ (
+ SELECT e.deptno,count(*) AS "ct" FROM emp e JOIN grade g
+ ON e.salary BETWEEN g.min_salary AND g.max_salary
+ WHERE g.grade>=2 GROUP BY e.deptno HAVING count(*)>=3) t
+ ON ep.deptno=t.deptno JOIN dept d ON d.deptno=ep.deptno
+JOIN grade gr ON ep.salary BETWEEN gr.min_salary AND gr.max_salary;
+

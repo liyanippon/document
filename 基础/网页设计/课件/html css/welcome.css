@@ -1,0 +1,72 @@
+body{
+	background-color: #83AF9B;
+	margin: 0px;
+	padding: 0px;
+}
+.main{
+	background-color: #fff;
+	width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	margin-bottom:40px;
+	border-radius:5px;
+	box-shadow:#555 0px 5px 15px 0px;
+}
+.title{
+	width: 90%;
+	border-bottom: #ddd solid 1px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 35px;
+	padding-bottom: 10px;
+	margin-bottom: 40px;
+}
+.f1{
+	font-family: 微软雅黑;
+	font-size: 20px;
+	font-weight: bold;
+}
+.f2{
+	font-size: 12px;
+	text-indent: 2em;
+	line-height: 24px;
+	color: #555;
+}
+.f3{
+	font-size: 12px;
+	line-height: 24px;
+	color: #555;
+}
+.btn-border{
+	width: 300px;
+	height: 80px;
+	background-color: #e4e4e4;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius:40px;
+	border: #cacaca 1px solid;
+	box-shadow:inset #CACACA 0px 1px 5px 0px;
+	margin-bottom: 60px;
+}
+.btn{
+	width: 280px;
+	height: 60px;
+	background-color: #e9622a;
+	border-radius:30px; 
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top:9px;
+	color: #fff;
+	text-align: center;
+	line-height: 60px;
+	font-size: 20px;
+	font-family: 微软雅黑;
+	letter-spacing: 3px;
+	border:#B44213 solid 1px;
+	box-shadow:inset #eee 0px 1px 1px 0px;
+}
+.btn:active{
+	box-shadow:#111 0px 1px 1px 0px inset;
+}

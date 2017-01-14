@@ -1,0 +1,210 @@
+关于异常
+
+
+步骤一  River 类（江河类）
+     属性： waterLine      当前水位
+	   		warningLine    警戒水位
+     生成属性的get/set方法
+     添加方法：
+	flow（）  用于测试水位
+	若当前水位超过警戒水位 10 米，则抛出异常，显示异常信息  "决堤了"
+	否则，抑制台输出“河水静静流”
+
+
+
+class River{
+	double waterLine,warningLine;
+	River(double waterLine,double warningLine){
+		this.waterLine=waterLine;
+		this.warningLine=warningLine;
+	}
+	public double getWaterLine() {
+		return waterLine;
+	}
+
+	public void setWaterLine(double waterLine) {
+		this.waterLine = waterLine;
+	}
+
+	public double getWarningLine() {
+		return warningLine;
+	}
+
+	public void setWarningLine(double warningLine) {
+		this.warningLine = warningLine;
+	}
+	void flow() throws Exception{
+		if(waterLine-warningLine>10){
+			throw(new Exception());
+		}
+		System.out.println("河水静静流");
+	}
+}
+public class YichangTest {
+	public static void main(String[] args) {
+		River r=new River(10,10);
+		try{
+			r.flow();
+		}catch(Exception e){
+			System.out.println("决堤了");
+		}
+	}
+}
+
+
+
+
+
+步骤二 YellowRiver类（黄河类）
+     该类继承 River 类
+     重写父类中的  flow（）方法
+	若黄河水位高出警戒水位5时，抛出异常
+	否则，抑制台输出“黄河在流：黄河之水天上来”
+
+步骤三 LongRiver类（长江类）
+     该类继承 River 类
+     重写父类中的  flow（）方法
+	若长江水位高出警戒水位9时，抛出异常
+	否则，抑制台输出“长江在流：孤帆远影碧空尽，惟见长江天际流”
+
+步骤四 Party类 （共产党类）
+     共产党检测江河，添加测试方法 watch(River river)
+     一旦发生异常（即 江河泛滥），本方法内部处理该异常，输出“共产党抢险”
+
+
+
+class River{
+	double waterLine,warningLine;
+	River(double waterLine,double warningLine){
+		this.waterLine=waterLine;
+		this.warningLine=warningLine;
+	}
+	public double getWaterLine() {
+		return waterLine;
+	}
+
+	public void setWaterLine(double waterLine) {
+		this.waterLine = waterLine;
+	}
+
+	public double getWarningLine() {
+		return warningLine;
+	}
+
+	public void setWarningLine(double warningLine) {
+		this.warningLine = warningLine;
+	}
+	void flow() throws Exception{
+		if(waterLine-warningLine>10){
+			throw(new Exception("江河泛滥"));
+		}
+		System.out.println("河水静静流");
+	}
+}
+class YellowRiver extends River{
+	YellowRiver(double waterLine, double warningLine) {
+		super(waterLine, warningLine);
+	}
+	void flow() throws Exception{
+		if(waterLine-warningLine>5){
+			throw(new Exception("黄河泛滥"));
+		}
+		System.out.println("黄河在流：黄河之水天上来");
+	}
+}
+class LongRiver extends River{
+	LongRiver(double waterLine, double warningLine) {
+		super(waterLine, warningLine);
+	}
+	void flow() throws Exception{
+		if(waterLine-warningLine>9){
+			throw(new Exception("长江泛滥"));
+		}
+		System.out.println("长江在流：孤帆远影碧空尽，惟见长江天际流");
+	}
+}
+class Party{
+	void watch(River river){
+		try{
+			river.flow();
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+			System.out.println("共产党抢险");
+		}
+	}
+}
+public class YichangTest {
+	public static void main(String[] args) {
+		Party p=new Party();
+		p.watch(new LongRiver(18,10));
+		p.watch(new YellowRiver(18,10));
+	}
+}
+
+
+
+
+
+
+
+银行系统模拟
+学会利用异常处理突发事件
+编程实践：模拟银行存取款系统 
+目标
+（1）编写程序实现一个银行存取款模拟系统的简单实现。
+（2）自定义一个异常类，我们对Banker类中的余额进行判断，如果欲取出的金额大于余额则手动抛出该异常。
+
+class MoneyException extends Exception
+{
+	String str;
+	int yu;
+	MoneyException(String str,int yu)
+	{
+		super(str);
+		this.yu=yu;
+	}
+	public int getYu()
+	{
+		return yu;
+	}
+}
+class Banker
+{
+	int qu;
+	int yu;
+	void quqian(int qu,int yu)throws MoneyException
+	{
+		this.qu=qu;
+		this.yu=yu;
+		if(qu>yu)
+		{
+			throw new MoneyException("余额不足",yu);
+		}
+
+			System.out.println("over"+"取钱后余额为："+(yu-qu));
+
+	}
+}
+
+
+public class Exep_7_18_no2 {
+	public static void main(String[] args)
+	{
+		Banker p=new Banker();
+		try
+		{
+			p.quqian(800, 600);
+		}
+		catch(MoneyException me)
+		{
+			System.out.println(me.getMessage()+"  当前余额为"+me.getYu());
+		}
+	}
+}
+
+
+
+
+
+
+

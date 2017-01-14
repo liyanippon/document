@@ -1,0 +1,23 @@
+package org.stuenroll.dao;
+
+import javax.jms.ConnectionFactory;
+import javax.resource.cci.ResultSet;
+
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.PreparedStatement;
+
+public class UserDAO {
+	public boolean login(String name,String password){
+		String sql="SELECT COUNT(*) AS ct FROM user WHERE username=? AND password=?";
+		Connection con=ConnectionFactory.getConnection();
+		PreparedStatement pst=con.prepareStatement(sql);
+		pst.setObject(1, username);
+		pst.setObject(2, password);
+		ResultSet set=pst.executeQuery();
+		set.next();
+		int ct=set.getInt("ct");
+		con.close();
+		return ct==1?true:false;
+		
+	}
+}

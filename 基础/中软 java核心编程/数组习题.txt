@@ -1,0 +1,160 @@
+1、求以下所有数之和 1 3 5 4 7 89 66 123
+
+2求以下数的平均值 2 455 78 99 100
+
+3求以下数的最大值 5 3 7 8 9 288 2 34
+
+4求以下所有数的最小值 4 3 67 56 64 
+
+5用冒泡进行排序 78 34 56 2 333 998 10
+
+6、定义整形数组，输入元素，并求其最大值
+
+7、二维数组3X3，求其对角线元素之和
+
+8、把一个数组的元素逆序交换， 
+int[] a = { 5, 11, 15, 24, 36, 47, 59, 66 };
+交换元素后
+int[] a = { 66 ,59 ,47 ,36 ,24,15 ,11 ,5 };
+
+
+9、有一个数列：8，4，2，1，23，344，12
+
+ 1）求数列中所有数值的和
+ 2）循环输出数列的值
+
+10、有一个数列：8，4，2，1，23，344，12
+
+ 1）猜数游戏：从键盘中任意输入一个数据，判断数列中是否包含此数
+
+
+
+
+
+
+
+        int aa[]=new int[]{2, 455, 78, 99, 100};
+	double sum=0,average=0;
+	for(int i=0;i<aa.length;i++){
+		sum+=aa[i];
+	}
+	average=sum/aa.length;
+	System.out.println("平均数"+average);
+	
+	int bb[]=new int[]{ 5 ,3, 7, 8, 9, 288, 2, 34};
+	int max=0,min=0;
+	max=bb[0];
+	for(int j=1;j<bb.length;j++){
+		if(max<bb[j]){
+			max=bb[j];
+		}
+		 
+	}
+	System.out.println("最大值为："+max);
+	
+	
+	int cc[]=new int[]{4 ,3 ,67, 56, 64 };
+	
+	min=cc[0];
+	for(int k=1;k<cc.length;k++){
+		if(min>cc[k]){
+			min =cc[k];
+		}
+		 
+	}
+	System.out.println("最小值为："+min);
+	
+	
+	
+	
+算对角线之和与二维数组之和	
+
+public class jjhh {
+public static void main(String[] args) {
+	int a[][]={{1,2,3},{4,5,6},{7,8,9}},i,j,sum1=0,sum2=0;
+	for(i=0;i<a.length;i++){
+		for(j=0;j<a[i].length;j++){
+			if(i==j||i==2-j){
+				sum1+=a[i][j];
+			}	
+		}	
+	}
+	System.out.println("对角线之和"+sum1);
+	
+	int b[][]={{1},{3,7},{100,23,45},{4,9}};
+	for(i=0;i<b.length;i++){
+		for(j=0;j<b[i].length;j++){
+		sum2+=b[i][j];	
+		}
+	}
+	System.out.println("二维数组之和"+sum2);
+}
+}
+排序
+public class jhd {
+public static void main(String[] args) {	
+	int bb[]=new int[]{78 ,34, 56, 2, 333, 998, 10};
+	int i,j,temp;
+	for(i=0;i<bb.length;i++){
+		for(j=i+1;j<bb.length;j++){
+		if(bb[i]<bb[j]){
+			temp=bb[i];
+			bb[i]=bb[j];
+			bb[j]=temp;
+		}	
+		}
+	}
+	for(int aa:bb){
+		System.out.println(aa);
+	}
+}
+}
+	
+
+
+
+
+
+
+public class CopyOfjhd {
+public static void main(String[] args) {	
+	int bb[]=new int[]{78 ,34, 56, 2, 333, 998, 10};
+	Arrays.sort(bb);
+	for(int aa:bb){
+		System.out.println(aa);
+	}
+}
+}
+
+
+
+
+
+import java.io.InputStream;
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+
+public class CopyOfjhd {
+public static void main(String[] args) {	
+
+	Scanner sc=new Scanner(System.in);
+	int bb[]=new int [5];
+	System.out.println("请输入5个数字：");
+	for(int i=0;i<bb.length;i++){
+	bb[i]=sc.nextInt();
+	}
+	
+	Arrays.sort(bb);
+	System.out.print("排序后为：");
+	for(int aa:bb){
+		System.out.print(aa+"\t");
+	}
+}
+
+
+}
+	
+
+

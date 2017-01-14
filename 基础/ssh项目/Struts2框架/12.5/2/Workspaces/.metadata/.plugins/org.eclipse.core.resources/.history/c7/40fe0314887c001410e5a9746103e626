@@ -1,0 +1,16 @@
+package action;
+
+public class TestAction {
+private String request_locale;
+
+public String getRequst_locale() {
+	return request_locale;
+}
+
+public void setRequst_locale(String requstLocale) {
+	request_locale = requestLocale;
+}
+public String execute(){
+	return "success";
+}
+}

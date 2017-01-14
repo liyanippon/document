@@ -1,0 +1,23 @@
+-- 查询每个部门里面工龄在五年以内的员工数量超过3人，
+-- 并且这样的员工的工资低于所在部门平均工资，那么给这样
+-- 的员工涨工资，涨工资的条件如下：
+-- 1.保安部的员工，工资上涨8%
+-- 2.技术部的员工，工资增加600元
+-- 3.后勤部的员工，工资增加7%
+-- 4.其余人员基本工资增加实际月收入的4.5%
+-- 输出员工编号，姓名，部门名称，部门平均工资，员工的原始工资，
+-- 修改后的工资
+ SELECT 
+ e.empno,e.ename,d.dname,t.g,e.salary,
+ CASE
+		WHEN d.dname='保安部' THEN salary*1.08
+		WHEN d.dname='技术部' THEN salary+600
+		WHEN d.dname='后勤部' THEN salary*1.07
+		ELSE (salary+IFNULL(comm,0))*1.045
+ END AS "工资"
+ FROM emp e JOIN
+ (SELECT deptno,AVG(salary) AS "g" FROM emp 
+ WHERE DATEDIFF(NOW(),hiredate)/365<5
+ GROUP BY deptno HAVING COUNT(*)>=3) t
+ ON e.deptno=t.deptno JOIN dept d ON e.deptno=d.deptno
+WHERE e.salary<t.g;

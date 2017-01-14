@@ -1,0 +1,6 @@
+1.在EnrollDAO里面添加count方法
+2.在LoginServlet里面加上查询总页数和总记录数的代码
+3.在index.jsp里面173和174行加入EL表达式显示页数
+		<input id="toPage" type="text" class="page_in" value="${now }" onmouseover="inToPageArea=true;" onmouseout="inToPageArea=false;" title='输入页码按回车'/>
+		/<span id="totlePage">${page }</span>页
+4.编写EnrollServlet的doPost方法

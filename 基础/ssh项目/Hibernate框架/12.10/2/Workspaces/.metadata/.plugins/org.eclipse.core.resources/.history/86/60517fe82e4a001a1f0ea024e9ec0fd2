@@ -1,0 +1,26 @@
+package com.dao;
+
+
+
+/**
+ * Person entity. @author MyEclipse Persistence Tools
+ */
+public class Person extends AbstractPerson implements java.io.Serializable {
+
+    // Constructors
+
+    /** default constructor */
+    public Person() {
+    }
+
+	/** minimal constructor */
+    public Person(Integer pid) {
+        super(pid);        
+    }
+    
+    /** full constructor */
+    public Person(Integer pid, String name, String password, String address) {
+        super(pid, name, password, address);        
+    }
+   
+}

@@ -1,0 +1,11 @@
+1.创建org.stuenroll.dao包，编写UserDAO类
+
+2.LoginServlet方法外面定义DAO对象创建
+UserDAO userDAO=new UserDAO();
+
+3.编写LoginServlet的doPost方法
+
+4.http://localhost:8080/stuenroll/jsp/backyard/login.jsp
+
+admin
+ax105105

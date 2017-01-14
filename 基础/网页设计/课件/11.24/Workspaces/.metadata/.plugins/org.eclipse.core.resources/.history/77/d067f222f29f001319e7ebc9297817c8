@@ -1,0 +1,5 @@
+package org.stuenroll.dao;
+
+public class SpecialtyDAO {
+
+}
